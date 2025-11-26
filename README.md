@@ -16,26 +16,63 @@ This repository serves as a **learning laboratory** where experimental projects,
 programming-lab/
 ├── python/              # Python projects and tutorials
 │   ├── frameworks/      # Django, Flask, Streamlit
+│   │   ├── django/      # Django REST, JWT auth, CI/CD
+│   │   ├── flask/       # Flask web apps, REST APIs
+│   │   └── streamlit/   # Streamlit dashboards
 │   ├── patterns/        # Design patterns
+│   │   └── design-patterns/  # Design Patterns Python I & II
 │   ├── testing/         # TDD, test doubles
-│   └── tools/           # Development tools
+│   │   ├── tdd/         # Test-Driven Development
+│   │   └── test-doubles/ # Test doubles and mocks
+│   ├── tools/           # Development tools
+│   │   └── environments/ # Virtual environments (pipenv, Docker, ASDF)
+│   └── api-integrations/ # API integrations
+│       └── APIBancoCentral/
 ├── nodejs/              # Node.js projects and tutorials
-│   ├── fundamentals/    # Basic Node.js
-│   ├── typescript/      # TypeScript projects
+│   ├── fundamentals/    # Basic Node.js, REST APIs
+│   ├── typescript/      # TypeScript projects and setup
 │   ├── graphql/         # GraphQL implementations
-│   ├── react/           # React projects
-│   ├── orm/             # ORM examples
-│   └── infrastructure/  # Docker, Kafka, Redis
+│   ├── react/           # React projects and hooks
+│   ├── nextjs/          # Next.js projects
+│   ├── orm/             # ORM examples (TypeORM)
+│   └── infrastructure/  # Docker, Kafka, Redis, uploads
 ├── ai-ml/               # AI/ML experiments
 │   ├── tools/           # AI tools and integrations
+│   │   ├── chatbots/    # OpenAI chatbots
+│   │   ├── dashboards/  # AI-powered dashboards
+│   │   ├── ocr/         # Optical Character Recognition
+│   │   ├── langchain/   # LangChain experiments
+│   │   ├── audio/       # Audio generation
+│   │   └── ml-basics/   # Basic ML projects
 │   ├── algorithms/      # Algorithm implementations
-│   └── formations/      # Course materials
+│   │   └── genetic-algorithms/
+│   ├── formations/      # Course materials
+│   │   ├── fiap/        # POS FIAP IA para Devs
+│   │   └── alura/       # Alura formations
+│   └── projects/        # Mature projects
+│       └── Projetos Construidos/  # Imobiliaria, NoMoreSpams, Telegram
 ├── architecture/        # Architecture patterns
-│   └── cqrs-events/     # CQRS and event sourcing
+│   └── cqrs-events/     # CQRS and event sourcing (complete implementation)
 └── docs/                # Documentation
     ├── catalog/         # Project catalog
     └── migration/       # Migration notes
 ```
+
+## Statistics
+
+- **Total Projects**: ~36+ projects migrated
+- **Python Projects**: 18+ projects
+- **Node.js Projects**: 15+ projects
+- **AI/ML Projects**: 11+ projects
+- **Architecture Projects**: 1 complex project (CQRS)
+
+## Quick Navigation
+
+- [Python Projects](./python/README.md)
+- [Node.js Projects](./nodejs/README.md)
+- [AI/ML Projects](./ai-ml/README.md)
+- [Architecture Patterns](./architecture/README.md)
+- [Complete Catalog](./docs/catalog/CATALOGO_PROJETOS.md)
 
 ## Categories
 
