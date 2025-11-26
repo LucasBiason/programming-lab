@@ -1,16 +1,27 @@
+<div align="center">
+  <img src="assets/banner.png" alt="Programming Laboratory Banner" width="100%"/>
+</div>
+
 # Programming Laboratory
 
-A comprehensive laboratory for tracking courses, tutorials, experiments, videos, classes, and learning projects across various technology areas.
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange.svg)](https://github.com/LucasBiason/programming-lab)
 
-## Purpose
+> **Laboratório de Programação Completo**  
+> Um repositório consolidando cursos, tutoriais, experimentos e projetos de aprendizado em diversas áreas tecnológicas.
 
-This repository serves as a **learning laboratory** where experimental projects, tutorials, and study materials are organized. When concepts mature, they either become standalone projects or are moved to specialized knowledge bases:
+## 🎯 Objetivo do Projeto
 
-- **IA/ML projects** → `ia-ml-knowledge-base`
-- **Architecture patterns** → `microservices-knowledge-base`
-- **Other specialized topics** → respective knowledge bases
+Este repositório serve como um **laboratório de aprendizado** onde projetos experimentais, tutoriais e materiais de estudo são organizados. Quando os conceitos amadurecem, eles se tornam projetos independentes ou são movidos para bases de conhecimento especializadas:
 
-## Structure
+- **Projetos IA/ML** → `ia-ml-knowledge-base`
+- **Padrões de arquitetura** → `microservices-knowledge-base`
+- **Outros tópicos especializados** → respectivas bases de conhecimento
+
+## 📁 Estrutura do Projeto
 
 ```
 programming-lab/
@@ -36,20 +47,19 @@ programming-lab/
 │   ├── nextjs/          # Next.js projects
 │   ├── orm/             # ORM examples (TypeORM)
 │   └── infrastructure/  # Docker, Kafka, Redis, uploads
-├── ai-ml/               # AI/ML experiments
-│   ├── tools/           # AI tools and integrations
-│   │   ├── chatbots/    # OpenAI chatbots
-│   │   ├── dashboards/  # AI-powered dashboards
-│   │   ├── ocr/         # Optical Character Recognition
-│   │   ├── langchain/   # LangChain experiments
-│   │   ├── audio/       # Audio generation
-│   │   └── ml-basics/   # Basic ML projects
-│   ├── algorithms/      # Algorithm implementations
-│   │   └── genetic-algorithms/
-│   ├── formations/      # Course materials
-│   │   ├── fiap/        # POS FIAP IA para Devs
-│   │   └── alura/       # Alura formations
-│   └── projects/        # Mature projects
+├── artificial-intelligence/  # AI/ML experiments
+│   ├── tools/               # AI tools and integrations
+│   │   ├── chatbots/        # OpenAI chatbots
+│   │   ├── dashboards/      # AI-powered dashboards
+│   │   ├── ocr/             # Optical Character Recognition
+│   │   ├── langchain/       # LangChain experiments
+│   │   ├── audio/           # Audio generation
+│   │   └── ml-basics/        # Basic ML projects
+│   ├── formations/          # Course materials
+│   │   ├── fiap/            # POS FIAP IA para Devs
+│   │   ├── udemy/           # Udemy formations
+│   │   └── alura/           # Alura formations
+│   └── projects/             # Mature projects
 │       └── Projetos Construidos/  # Imobiliaria, NoMoreSpams, Telegram
 ├── architecture/        # Architecture patterns
 │   └── cqrs-events/     # CQRS and event sourcing (complete implementation)
@@ -58,70 +68,83 @@ programming-lab/
     └── migration/       # Migration notes
 ```
 
-## Statistics
+## 📊 Estatísticas
 
-- **Total Projects**: ~36+ projects migrated
-- **Python Projects**: 18+ projects
-- **Node.js Projects**: 15+ projects
-- **AI/ML Projects**: 11+ projects
-- **Architecture Projects**: 1 complex project (CQRS)
+- **Total de Projetos**: ~36+ projetos migrados
+- **Projetos Python**: 18+ projetos
+- **Projetos Node.js**: 15+ projetos
+- **Projetos IA/ML**: 11+ projetos
+- **Projetos de Arquitetura**: 1 projeto complexo (CQRS)
 
-## Quick Navigation
+## 🚀 Navegação Rápida
 
-- [Python Projects](./python/README.md)
-- [Node.js Projects](./nodejs/README.md)
-- [AI/ML Projects](./ai-ml/README.md)
-- [Architecture Patterns](./architecture/README.md)
-- [Complete Catalog](./docs/catalog/CATALOGO_PROJETOS.md)
+- [Projetos Python](./python/README.md)
+- [Projetos Node.js](./nodejs/README.md)
+- [Projetos IA/ML](./artificial-intelligence/README.md)
+- [Padrões de Arquitetura](./architecture/README.md)
+- [Catálogo Completo](./docs/catalog/CATALOGO_PROJETOS.md)
 
-## Categories
+## 📚 Categorias
 
-### Learning Projects
-Projects created while following courses, tutorials, or learning new concepts.
+### Projetos de Aprendizado
+Projetos criados ao seguir cursos, tutoriais ou aprender novos conceitos.
 
-### Experiments
-Proof of concepts, tests, and experimental code.
+### Experimentos
+Proofs of concept, testes e código experimental.
 
-### Tutorials
-Step-by-step implementations from tutorials and courses.
+### Tutoriais
+Implementações passo a passo de tutoriais e cursos.
 
-### Study Materials
-Notes, notebooks, and learning resources.
+### Materiais de Estudo
+Notas, notebooks e recursos de aprendizado.
 
-## Migration from Legacy Repositories
+## 🔄 Migração de Repositórios Antigos
 
-This repository consolidates content from:
-- `IA-Studies` - AI/ML projects and experiments
-- `Python-Studies` - Python courses and projects
-- `Nodejs-Studies` - Node.js tutorials and examples
-- `CQRS-Events-in-Node.js` - Architecture pattern implementation
+Este repositório consolida conteúdo de:
+- `IA-Studies` - Projetos e experimentos IA/ML
+- `Python-Studies` - Cursos e projetos Python
+- `Nodejs-Studies` - Tutoriais e exemplos Node.js
+- `CQRS-Events-in-Node.js` - Implementação de padrão de arquitetura
 
-See `docs/catalog/` for complete project catalog.
+Veja `docs/catalog/` para o catálogo completo de projetos.
 
-## Organization Principles
+## 🎯 Princípios de Organização
 
-1. **By Technology**: Projects organized by programming language/framework
-2. **By Purpose**: Learning, experimentation, or reference
-3. **Temporary Nature**: Projects remain here until they mature
-4. **Migration Path**: Clear path to knowledge bases when ready
+1. **Por Tecnologia**: Projetos organizados por linguagem/framework
+2. **Por Propósito**: Aprendizado, experimentação ou referência
+3. **Natureza Temporária**: Projetos permanecem aqui até amadurecerem
+4. **Caminho de Migração**: Caminho claro para bases de conhecimento quando pronto
 
-## Contributing
+## 🛠️ Stack Utilizada
 
-This is a personal learning laboratory. Projects are organized for:
-- Easy reference during learning
-- Tracking progress
-- Building knowledge systematically
-- Preparing content for knowledge bases
+### Tecnologias Principais
+- **Python 3.9+** - Linguagem principal para projetos Python
+- **Node.js 18+** - Runtime para projetos JavaScript/TypeScript
+- **TypeScript 5.0+** - Superset do JavaScript com tipagem
+- **Docker & Docker Compose** - Containerização
+- **PostgreSQL** - Banco de dados (em alguns projetos)
+- **Redis** - Cache e filas (em alguns projetos)
 
-## License
+### Frameworks e Bibliotecas
+- **Django/Flask** - Frameworks web Python
+- **Express.js** - Framework web Node.js
+- **React/Next.js** - Frameworks frontend
+- **GraphQL** - Query language para APIs
+- **TypeORM** - ORM para TypeScript/Node.js
 
-MIT License - See LICENSE file for details
+### IA/ML
+- **scikit-learn** - Algoritmos de ML
+- **TensorFlow/PyTorch** - Deep Learning
+- **LangChain** - Framework para LLMs
+- **OpenAI API** - Integração com GPT
 
-## Author
+## 📝 Licença
 
-Lucas Biason - [GitHub](https://github.com/LucasBiason)
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ---
 
-**Note**: This repository is under active organization. Structure may change as projects are migrated and organized.
+**Nota**: Este repositório está em organização ativa. A estrutura pode mudar conforme os projetos são migrados e organizados.
+
+*Desenvolvido com ❤️ por Lucas Biason para consolidar conhecimentos e criar um laboratório de aprendizado completo.*
 
