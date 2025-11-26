@@ -15,34 +15,87 @@ FASE 04 - OpenAI e AWS/
 
 ### OpenAI API
 
-**extrair-dados-contrato.py**
-- API Flask para extrair dados de contratos
-- Processa arquivos .docx e .txt
-- Usa GPT para extrair informações estruturadas
-- Retorna JSON com dados do contrato
+**processador-contratos.py**
+- API Flask para processar contratos e extrair dados
+- Processa arquivos .docx e .txt automaticamente
+- Usa GPT para extrair informações estruturadas em JSON
+- Endpoint `/processar` para upload de arquivos
+- Endpoint `/health` para verificação de status
 
 **Como usar:**
 ```bash
 pip install flask openai python-docx chardet python-dotenv
-python extrair-dados-contrato.py
+python processador-contratos.py
 ```
 
-**Notebooks:**
-- `Aula 03 - APIs OpenAI.ipynb` - Primeiros passos com API
-- `Aula 04 - API-DALLE.ipynb` - Geração de imagens
-- `Aula 05 - Integração e Automação.py` - Automação completa
+**Uso da API:**
+```bash
+curl -X POST http://localhost:5000/processar \
+  -F "arquivo=@contrato.docx"
+```
 
 ### Video Analysis
 
-**deteccao-facial.py**
+**webcam-faces.py**
 - Detecção de faces em tempo real via webcam
-- Usa OpenCV com Haar Cascade
+- Usa OpenCV com classificador Haar Cascade
+- Mostra contador de faces detectadas
 - Interface simples e direta
 
 **Como usar:**
 ```bash
 pip install opencv-python
-python deteccao-facial.py
+python webcam-faces.py
+```
+
+**analisar-emocoes-video.py**
+- Analisa emoções em vídeos frame por frame
+- Usa DeepFace para detecção de emoções
+- Gera vídeo de saída com emoções marcadas
+- Processa arquivo `video.mp4` e gera `video_emocoes.mp4`
+
+**Como usar:**
+```bash
+pip install opencv-python deepface tqdm
+python analisar-emocoes-video.py
+```
+
+**detectar-poses-video.py**
+- Detecta poses corporais em vídeos
+- Usa MediaPipe para identificar pontos-chave
+- Desenha esqueleto sobre o corpo
+- Gera vídeo processado com poses marcadas
+
+**Como usar:**
+```bash
+pip install opencv-python mediapipe tqdm
+python detectar-poses-video.py
+```
+
+**reconhecer-faces.py**
+- Sistema de reconhecimento facial em tempo real
+- Compara faces da webcam com banco de imagens
+- Carrega imagens da pasta `imagens/`
+- Identifica pessoas conhecidas
+
+**Como usar:**
+```bash
+pip install opencv-python face-recognition numpy
+mkdir imagens
+# Adicione fotos das pessoas na pasta imagens/
+python reconhecer-faces.py
+```
+
+**classificador-texto.py**
+- Classificador de texto usando aprendizado supervisionado
+- Usa Naive Bayes com TF-IDF
+- Classifica textos em categorias (tecnologia, comida, doméstico)
+- Exemplo didático de classificação de texto
+
+**Como usar:**
+```bash
+pip install scikit-learn
+python classificador-texto.py
 ```
 
 **transcricao-audio.py**
