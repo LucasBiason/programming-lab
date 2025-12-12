@@ -1,0 +1,159 @@
+[0:00 - 0:19] undefined:  Bem-vindos e bem-vindas à nossa última aula da disciplina de Fine Tuning e Reg para Documentos.
+
+[0:19 - 0:38] undefined:  Bom, até agora a gente já entendeu o nosso problema, nós conseguimos os dados que a gente precisava tanto para fazer o fine tuning, quanto agora a gente também vai utilizar para o reggae, com algumas diferenças que eu vou mostrar ao longo dessa aula.
+
+[0:39 - 1:01] undefined:  Na segunda aula, a gente teve uma conversa sobre os LLMs, sobre foundation models, sobre como que eles funcionam por trás, um pouco ali, pelo menos da base matemática dos modelos, para a gente conseguir também compreender como que funcionam essas tecnologias.
+
+[1:02 - 1:14] undefined:  Então, no segundo vídeo da segunda aula, a gente realizou o fine tuning, a gente treinou o nosso modelo e pudemos gerar algumas inferências a partir dele.
+
+[1:14 - 1:47] undefined:  Então, muito bem, a gente chega aqui na nossa última aula para falar sobre reggae. Então, o RAG não é apenas uma ferramenta específica, mas sim uma técnica que pode ser utilizada de diversas formas para a gente conseguir que o modelo retorne não apenas o output que a gente espera, mas também de onde ele está buscando qualquer fonte que ele utilizou para dar aquela resposta para a gente.
+
+[1:47 - 2:15] undefined:  Então, como que funciona o RAG? O RAG vai ser basicamente uma técnica para aprimorar ainda mais o nosso modelo, uma vez que se a gente pensa no chat GPT ou em outros modelos, se você pergunta alguma coisa ali, se você sobe o seu prompt, ele vai te dar uma resposta sem necessariamente te dizer de onde ele trouxe essa resposta.
+
+[2:15 - 2:30] undefined:  O RAG vai ser utilizado quando não apenas a resposta do nosso modelo é o que a gente precisa, mas também de onde ele trouxe a fonte.
+
+[2:30 - 2:55] undefined:  Se a gente pensa, por exemplo, em um escritório de advocacia que tem ali uma aplicação, um LLM especializado no mundo jurídico, E o advogado ali, o usuário, ele precisa saber de qual lei é determinado artigo ou qual lei fala sobre determinado tema.
+
+[2:55 - 3:18] undefined:  É muito importante não só que a IA retorne para ele o conteúdo ali ou uma explicação sobre aquele tema, mas também, por exemplo, algum livro que foi usado no treinamento da IA e que é versa sobre aquele tema, ou, por exemplo, a própria lei que regulamenta aquele assunto.
+
+[3:18 - 3:56] undefined:  enfim, as aplicações do REG também são as mais diversas do que a gente puder pensar por exemplo, também em um sistema de e-commerce se o usuário precisa de, por exemplo alguma informação sobre um pedido dele seria interessante por exemplo o modelo retorne talvez a nota fiscal ou um descritivo do pedido para aí Então, o RAG é basicamente isso, uma técnica que pode ser utilizada também, junto com o fine tuning,
+
+[3:57 - 4:10] undefined:  para deixar o modelo mais completo e melhor, gerar respostas melhores, respostas que vão estar mais precisas e ainda vão trazer a fonte ali se for preciso.
+
+[4:10 - 4:23] undefined:  Então, como que funciona o RAG, como que é esse pipeline, essa técnica que a gente utiliza, quando nós precisamos, por exemplo, da fonte de onde ele tirou a resposta.
+
+[4:23 - 4:42] undefined:  Aqui, nesse fluxograma, a gente pode pensar nesses documentos como, por exemplo, as notícias, não é mesmo? A gente vai realizar a divisão desse documento, uma vez que a IA não consegue entender textos muito longos.
+
+[4:42 - 5:08] undefined:  Isso tem a ver com as limitações de processamento do modelo, do hardware ali que está rodando aquele modelo. Então, a gente faz uma divisão do documento para ficar mais fácil para a IA conseguir entender o que a gente precisa, entender a fonte de onde ela está tirando aquilo e conseguir gerar uma resposta melhor.
+
+[5:08 - 5:42] undefined:  Então, a partir dos chunks, a gente faz os embeddings. Os embeddings, só para lembrar, seria a transformação da linguagem natural, dos tokens ali, dos chunks, em números, em matrizes que vão conter números decimais ali, que vão ser utilizados pela IA, vão ser muito melhor entendidos, uma vez que um computador, seja uma GPU ou uma CPU, não conseguem compreender a nossa linguagem.
+
+[5:42 - 6:07] undefined:  Então, seria como se fosse um processo de conversão da nossa linguagem para números, que aí sim o hardware consegue processar, e usando as técnicas utilizadas nos LLMs, para construir os LLMs, conseguir entender e criar o contexto ali e melhorar o seu entendimento e a sua performance.
+
+[6:08 - 6:26] undefined:  Esses embeddings a gente guarda dentro de uma VectorDB. Uma VectorDB nada mais é do que um banco de dados que ao invés de guardar, por exemplo, os nossos documentos ou até mesmo os chunks dos documentos, vão guardar os embeddings de uma forma vetorizada.
+
+[6:26 - 6:54] undefined:  vetor, nada mais é. A gente pode pensar dessa forma um array ali, uma lista contendo os números. Por exemplo, se a gente for pensar na matriz de um resultado de um embedding, os números que representam aquele pedaço ou até mesmo aquele texto completo. Isso vai ser para melhorar o retrieval, o retorno dos dados que a gente precisa.
+
+[6:54 - 7:25] undefined:  Ent uma vez que a gente tem a nossa vector DB formada e alimentada a gente j pode pensar aqui no fluxo normal de um NLM de um prompt Ent a partir do nosso prompt por exemplo se a gente for pensar em uma quest como se fosse ah choveu no Brasil nos últimos tempos esse prompt vai ser contextualizado vai ser também feito um embedding e a partir disso
+
+[7:25 - 8:01] undefined:  a vector DB por meio de um retriever vai pegar quais valores ali quais elementos que conversam, de certa forma, com o nosso prompt e vai retornar esse contexto que vai ser relevante para o modelo construir a resposta e retornar o que a gente precisa. Por fim, o nosso LLM vai pegar todas essas informações, os prompts, o contexto, a fonte, vai processar de uma forma que a gente consiga entender melhor, que aí sim
+
+[8:01 - 8:18] undefined:  vai ser o nosso resultado, o nosso output. E aí, a gente pode customizar, a gente pode pedir para ele retornar em um formato específico, mas a gente consegue ali gerar o nosso resultado esperado.
+
+[8:19 - 8:33] undefined:  Uma coisa importante do reg, e eu acho que já é possível de a gente ver, é que o fluxo não é tão linear como, por exemplo, de um LLM normal, até mesmo um LLM com fine-tune.
+
+[8:34 - 8:44] undefined:  Isso vai gerar algumas implicações, tanto de custo quanto de processamento, para o nosso caso. Isso por quê?
+
+[8:45 - 9:09] undefined:  Porque a gente não precisa apenas do LLM rodando, a gente vai precisar de uma vector DB. O simples fato de a gente precisar de um contexto específico e de um documento ali, ou alguma fonte específica, Vai também gerar um custo maior de processamento, o que dependendo da escala do modelo pode gerar um custo financeiro muito alto.
+
+[9:10 - 9:22] undefined:  Outra coisa também é que todo esse fluxo acaba tomando mais tempo do que o fluxo de geração de um output de um LLM comum.
+
+[9:23 - 9:40] undefined:  Então, isso é um pouco do REG. a gente vai já apresentar aqui um pouco das tecnologias que a gente vai usar na nossa aplicação de RAG e principalmente o LangChain, que já é bem importante vocês também darem uma olhada.
+
+[9:42 - 10:06] undefined:  E por quê? O LangChain é mais do que uma biblioteca, ele já é um framework voltado para o mercado de IA, que possibilita várias integrações tanto com as VectorsDBs, porque também são várias, com modelos, eles facilitam a gente carregar os nossos dados.
+
+[10:06 - 10:27] undefined:  Por exemplo, no nosso caso, para fazer o FineTuning, a gente teve que extrair os links do portal, a partir desses links pegar os conteúdos e, a partir dos conteúdos, preparar ali todo o formato do nosso dataset para importar no modelo e realizar o funetone.
+
+[10:27 - 10:44] undefined:  O Langue Chain já disponibiliza outras formas de fazer isso, inclusive uma que a gente vai utilizar aqui que vai facilitar muito a nossa vida. Se a gente vem aqui em Document Loaders, a gente vai ter uma opção de News, de Notícias.
+
+[10:45 - 11:08] undefined:  Vamos pegar aqui. News URL. Então, a gente já consegue ver aqui que a partir apenas do link das notícias, essa função desse loader do LandChain, ele já consegue extrair as informações que a gente precisa.
+
+[11:08 - 11:25] undefined:  Então, aqui eles estão usando alguns exemplos da BBC, e a gente já vê que somente a partir do link, ele já consegue extrair toda a notícia com mais alguns metadados aí que dependendo do caso pode ser relevante ou não.
+
+[11:26 - 11:54] undefined:  Então aqui a gente vai ter vários document loaders então se a gente está pensando que a gente está numa disciplina de fine-tuning reg para documentos o LangChain é uma ótima opção para a gente viabilizar e até mesmo tornar o nosso desenvolvimento e o nosso deploy dependendo do caso, mais rápido, com mais eficiência e sem gerar retrabalho ou coisa do tipo.
+
+[11:55 - 12:09] undefined:  Então, aqui a gente consegue ver que a gente tem vários metadados também, podem agregar valor, mas, para o nosso caso, a gente não vai precisar somente do conteúdo da página.
+
+[12:09 - 12:47] undefined:  então agora sim a gente também vai ver um pouco aqui das vectors db porque se a gente volta no nosso fluxograma aqui sobre reg a vector db é uma das partes mais importantes dessa técnica que é o reg porque é nela que vai conter todos os dados que a gente precisa para dar o contexto certo para poder indicar para o nosso modelo qual que é o dado que ele precisa considerar para montar uma resposta.
+
+[12:47 - 13:01] undefined:  Então, o LangChain já pensando nisso, nessas integrações, ele já tem aqui várias vectors de B que você consegue se integrar.
+
+[13:01 - 13:16] undefined:  No nosso caso, a gente vai usar a Chroma, mas se vocês quiserem testar, e até mesmo nesse nosso caso, outras VectorsDBs, outros Document Loaders, fiquem à vontade.
+
+[13:16 - 13:29] undefined:  A ideia é essa também, é que vocês, a partir do que a gente está passando aqui, consigam desenvolver seus próprios projetos. Então, aqui ele já dá também um exemplo de como fazer essa integração.
+
+[13:29 - 13:48] undefined:  Então, a gente vai utilizar alguns modelos diferentes, mas aqui já contém bastante informação e os códigos necessários para você conseguir gerar os dados vetorizados.
+
+[13:48 - 14:24] undefined:  e aqui você também consegue salvar se você tiver uma estrutura na cloud ou salvar local a Chroma é bem versátil e aberta se você tiver presa e já estiver pagando um software mais avançado também o LangChain tem aqui várias integrações com as VectorsDB ent no pr v a gente vai construir uma aplica de reg a gente vai mostrar a
+
+[14:24 - 14:51] undefined:  como fazer cada parte desse fluxo para que no final a gente consiga gerar e retornar o nosso modelo respondendo não só o que a gente está perguntando, mas também a fonte de onde ele está tirando a base, o conteúdo daquela resposta.
+
+[14:52 - 14:54] undefined:  Então, no próximo vídeo, a gente se vê. Até a próxima.
+
+[15:13 - 15:40] undefined:  Bem-vindos e bem-vindas ao último vídeo da aula 3 da nossa disciplina de Fine Tuning e RAG para documentos. Bom, aqui a gente já conversou sobre vários assuntos, desde coleta, limpeza e tratamento dos dados, nós falamos sobre LLMs, sobre Foundation Models, falamos até um pouco sobre a matemática por trás desses modelos.
+
+[15:40 - 16:12] undefined:  fizemos o fine tuning de um modelo open source, no vídeo anterior deu um overview sobre o RAG e sobre o Langchain, que é uma das principais tecnologias e ferramentas que a gente tem para facilitar o nosso código, para facilitar o nosso desenvolvimento e conseguir gerar uma aplicação que gere valor e que a gente consiga realmente utilizar e desgravar
+
+[16:12 - 16:24] undefined:  o mundo da IA. Então, para a gente finalizar aqui a nossa disciplina, vamos então criar uma aplicação de RAG. Aqui no nosso código, eu já rodei, tá bom?
+
+[16:24 - 16:40] undefined:  A gente pode ver aqui que já tem os outputs e eu só não vou rodar aqui novamente com vocês porque vai acabar tomando muito tempo e a ideia aqui é que vocês também consigam rodar e exercitar isso por aí.
+
+[16:40 - 16:52] undefined:  Tudo bem? Então, a nossa aplicação aqui, a gente instala diversas bibliotecas, tanto para facilitar o carregamento, o loader dos nossos documentos, dos nossos links.
+
+[16:54 - 17:09] undefined:  A gente instala também a própria biblioteca do LandChain, que é esse framework com várias integrações e funcionalidades que vão tornar a nossa vida e o nosso desenvolvimento de IA muito mais fácil e muito mais prático.
+
+[17:10 - 17:24] undefined:  Também a gente vai instalar aqui o ChromaDB, que é exatamente como a gente conversou no vídeo anterior. Vai ser a nossa base de dados vetorizada, que vai guardar ali os nossos documentos e depois vai retornar para a gente.
+
+[17:25 - 17:54] undefined:  Então, muito bem, aqui só fiz o mount no drive. Aqui importando as bibliotecas. Então a gente importa também o test splitter para fazer aquele processo de dividir os documentos em pedaços menores, que aí vai ficar muito mais fácil de a gente guardar na nossa DB e depois fazer o Retrieval, fazer o retorno desses dados quando a gente precisar.
+
+[17:54 - 18:05] undefined:  A gente carrega o próprio Retrieval, que vai fazer essa comunicação com a nossa VectorDB para trazer o que é relevante para o nosso caso.
+
+[18:06 - 18:37] undefined:  E aí a gente importa também o nosso loader, que foi o que a gente mostrou no vídeo anterior, que ao invés de a gente precisar criar um scrapper para entrar em cada site e extrair o conteúdo do artigo de notícia, o LangChain oferece esse document loader que apenas passando a URL da notícia, ele já traz o conteúdo e até mais dados.
+
+[18:37 - 18:55] undefined:  Então, a gente traz aqui também o nosso instrutor e o nosso embed, que a ideia é exatamente nesse processo aqui fazer o embed da linguagem natural para os vetores e isso ser guardado dentro da nossa DB.
+
+[18:56 - 19:17] undefined:  Então, muito bem, aqui a gente já está carregando. Aqui a gente pode ver que a gente não está mais trazendo o documento com os conteúdos, aquele News Content JSON, a gente está usando apenas aquele TXT que a gente gerou na primeira aula que contém apenas o link das notícias.
+
+[19:17 - 19:31] undefined:  Então, aqui a gente faz um teste desse News Loader, só para ver como ele se comporta, se ele está trazendo realmente o que a gente precisa. E a gente pinta aqui só para ver se ele está retornando.
+
+[19:31 - 19:46] undefined:  A gente pode ver no output aqui dessa célula que tem todo o texto da matéria. E também alguns metadados. O título, o link, que vai ser muito importante, os autores, a linguagem, enfim.
+
+[19:46 - 19:57] undefined:  vários metadados que dependendo novamente do seu use case pode ser bem relevante. Mas para a gente, só o conteúdo basta.
+
+[19:59 - 20:24] undefined:  Aqui a gente está carregando o nosso instrutor. E aqui novamente, importante, a gente está trazendo isso do HuginFace, que é aquele ecossistema de quase como se fosse um GitHub, onde você pode encontrar modelos, É encontrar datasets, open source, então você pode baixar, reutilizar, treinar, enfim.
+
+[20:25 - 20:35] undefined:  Aqui a gente carregou, a gente deu um max length de 512 tokens, então vai ser o tamanho máximo da nossa instrução.
+
+[20:36 - 20:49] undefined:  Então, o que a gente vai passar para ele não pode passar nesses 512 tokens. Então, aqui na próxima célula, a gente vai fazer a criação da nossa VectorDB, utilizando o Instructor Embedding.
+
+[20:50 - 21:21] undefined:  Então, só reforçando, se a gente não salvar os documentos aqui que a gente está gerando pelo Colab em uma pasta do Drive, ou até mesmo na nossa máquina local, então, da próxima vez que você abrir, esse documento vai estar perdido, até mesmo a DB que você criou, dependendo do tamanho que ela seja, pode gerar um retrabalho às vezes até de horas. Então, para cada item na nossa base de dados ali, nos nossos
+
+[21:21 - 21:40] undefined:  links a gente vai pegar apenas o page content Ent a gente n se preocupa com aqueles metadados a gente vai pegar somente o conte Ent muito similar ao que a gente fez na nossa primeira aula a gente preparou os dados limpou os dados Aqui a gente consegue fazer isso de uma forma muito mais simples.
+
+[21:40 - 22:04] undefined:  Então aqui a gente vai ter também as informações da fonte, a gente vai pegar apenas o link, porque a nossa ideia é que a gente faça uma pergunta e ele retorne ali com uma informação que seja relevante para aquela pergunta, para aquele prompt, mas também a fonte, o link, nesse caso.
+
+[22:05 - 22:37] undefined:  Então agora, a partir de todas essas configurações dos nossos conteúdos, das nossas fontes, do nosso embedding, a gente inicializa, a gente cria a nossa base vetorizada no Chroma a partir disso, e a gente vê que é muito simples graças ao LangChain, que já tem essa integração com o Chroma com apenas uma função, a gente já consegue criar a nossa VectorDB então, muito bem, uma vez que a gente já tem isso formado
+
+[22:37 - 22:48] undefined:  a nossa base alimentada a gente vai apenas declarar o nosso modelo de Inverg que a gente pegou também do Hugging Face, como eu falei.
+
+[22:49 - 23:05] undefined:  A gente vai pegar também o diretório onde está a nossa DB. Vamos criar um objeto da nossa DB para que a gente possa se comunicar com a nossa DB aqui de uma forma muito mais simples.
+
+[23:05 - 23:18] undefined:  Então, a gente vai criar o Retriever, que voltando aqui no nosso fluxo, É o que vai conversar com a nossa DB para pegar o conteúdo, o contexto ali, o conteúdo da notícia e também a fonte no nosso caso.
+
+[23:19 - 23:32] undefined:  A gente cria isso e a gente pede para pegar esse contexto e ver se ele está gerando. No nosso caso, eu fiz aqui uma pergunta que é onde no Brasil teve um instante recente.
+
+[23:32 - 23:43] undefined:  Por quê? Porque eu já sei, por exemplo, que dos nossos links ali que a gente pegou, tinha uma notícia falando sobre a enchente que acabou acontecendo no Rio Grande do Sul.
+
+[23:44 - 23:55] undefined:  E aqui a gente pega exatamente o que a base de dados está retornando para a gente, que é a notícia sobre as enchentes lá no Rio Grande do Sul.
+
+[23:56 - 24:13] undefined:  E no final a gente vê aqui a nossa fonte. Então, a nossa base retorna não apenas o conteúdo, para, num segundo momento, ele informar a resposta, mas ele também traz a fonte.
+
+[24:13 - 24:37] undefined:  Então, aqui, no nosso caso, está retornando a notícia completa. Aí vai depender muito do caso de uso. Se a gente for pensar no exemplo que eu dei de um escritório de advocacia, Aqui pode retornar, por exemplo, a lei, o conteúdo da lei ou do livro sobre aquele tema que o usuário questionou, mas também a fonte ali.
+
+[24:37 - 25:03] undefined:  Aí a fonte pode ser um link, mas pode ser também o número da lei ou outra coisa aí, dependendo do nosso caso de uso. E aqui a gente vê que com um código simples, mas bem integrado ali, que preenche todos os requisitos e todos os passos do nosso processo do reg, da técnica de reg, a gente conseguiu a partir dos nossos documentos.
+
+[25:04 - 25:30] undefined:  E aqui os documentos, nesse caso, foram apenas os links, a gente não precisou fazer nenhum pré-processamento dos dados. a gente gerou a nossa VectorDB, a gente criou o nosso Retriever, e a partir de um prompt, a gente conseguiu gerar o nosso resultado aqui, que aqui em uma aplicação simples vai trazer o conteúdo do documento e também a fonte.
+
+[25:30 - 25:56] undefined:  Então pessoal, a gente vê que para se desenvolver uma IA, uma aplicação de IA usando o RAG ou usando o FindTuning, a gente já tem aí muitas ferramentas, muitas técnicas já amplamente utilizadas e documentadas que vão viabilizar os nossos projetos de uma forma muito mais simples.
+
+[25:56 - 26:37] undefined:  se vocês tiverem algum outro projeto aí eu já faço aqui um gancho para o desafio da disciplina é muito importante que vocês olhem sim os códigos que foram passados aqui tentem rodar aí novamente se vocês não tiverem uma chave da OpenAI a gente já tem todos os arquivos de treino no repositório da disciplina e também os códigos então é muito importante que vocês assistam aos vídeos, olhem o material de apoio, rodem os códigos até mesmo para ver se na máquina de vocês está tudo rodando,
+
+[26:37 - 26:52] undefined:  porque a gente sabe, como eu reforcei muito nessa disciplina, é um ambiente, um ecossistema dentro da tecnologia, esse de LLMs, de IA, de Machine Learning, que está crescendo e se modificando continuamente.
+
+[26:52 - 27:03] undefined:  E aí sempre está de olho no Hugging Face, no Land Chain, porque assim você vai conseguir ser um desenvolvedor de IA diferenciado.
+
+[27:04 - 27:36] undefined:  Você vai ter várias ferramentas ali que vão facilitar muito o seu desenvolvimento. E, sempre que preciso, voltem aqui, rodem os códigos, façam integrações, tentem alterar alguma coisa, tentem criar projetos próprios, porque, realmente, dentro do mercado de IA, quanto mais ferramentas você souber, mais diferenciado você vai ser.
+
+[27:37 - 28:07] undefined:  Com isso, a gente encerra a nossa disciplina. espero que vocês tenham aproveitado tenham assistido a todos os vídeos fica aí a recomendação de olhar o material de apoio de procurar também conteúdos por conta própria porque é um ecossistema que muda muito sinceramente e também se vocês tiverem alguma dificuldade para rodar o código, tiverem alguma dúvida
+
+[28:07 - 28:29] undefined:  tem o grupo do Discord se vocês quiserem ali trocar uma ideia, tirar uma dúvida fazer um pair é muito importante ir na programação quanto mais cabeças pensando, melhor então pessoal, muito obrigado por me acompanharem aqui nessa disciplina e é isso valeu

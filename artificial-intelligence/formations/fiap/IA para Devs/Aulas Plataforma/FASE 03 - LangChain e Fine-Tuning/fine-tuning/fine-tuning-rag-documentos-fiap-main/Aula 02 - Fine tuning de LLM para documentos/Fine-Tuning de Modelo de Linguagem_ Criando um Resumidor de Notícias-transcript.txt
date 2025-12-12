@@ -1,0 +1,373 @@
+[0:22 - 0:53] SPEAKER_00: [BLANK_AUDIO] Bem-vindos e bem-vindas aqui a nossa aula 2 da disciplina de Fine Tuning Reg para documentos. Bom, na aula anterior, a gente pegou o nosso dataset, a gente extraiu do portal de notícias da CNN, a gente preparou os dados, fizemos as validações e formatações necessárias, agregamos ao nosso dataset um dataset complementar do Hugging Face, e a ideia dessa aula aqui é que a gente consiga realizar o fine tuning de um modelo fundacional
+
+[0:53 - 1:09] SPEAKER_00:  utilizando o nosso dataset para que no final ele funcione como resumidor de notícias. Se a gente parar para pensar, o que é um Foundation Model ou um LLM?
+
+[1:09 - 1:41] SPEAKER_00:  Basicamente, se a gente pensa em um modelo de linguagem natural, qual é a função dele? A partir de um texto em português, ou inglês, ou na linguagem que seja, ele consiga entender, compreender aquilo que o usuário está pedindo ou está perguntando e responda com um conteúdo útil e prestativo para o usuário.
+
+[1:42 - 2:13] SPEAKER_00:  Então, como que funcionam esses modelos? basicamente todos os modelos LLM que a gente tem hoje, os maiores o GPT da OpenAI, o LLAMA da Meta, o Gemini e o BALID do Facebook eles nada mais são do que grandes redes neurais de deep learning, então eles contém bilhões de parâmetros e de neurônios
+
+[2:13 - 2:30] SPEAKER_00:  então a gente precisa entender antes mesmo de utilizar o nosso modelo, compreender um pouco melhor de onde que surgiram e como que funciona um LLM, um Foundation Mobile.
+
+[2:31 - 2:49] SPEAKER_00:  Então aqui, nessa foto da NVIDIA, a gente consegue ver muito bem como que funciona esse treinamento, esse primeiro treinamento, que na a nomenclatura de seria o pré-treinamento do modelo.
+
+[2:49 - 3:06] SPEAKER_00:  Ou seja, ele vai ser pré-treinado para gerar um modelo ali, base um modelo que já consiga entender e compreender linguagem natural, mas que ainda não tem nenhuma especialidade ou em alguma tarefa específica.
+
+[3:06 - 3:23] SPEAKER_00:  Então, se a gente pensa no modelo cru, somente na rede neural, é como se fosse um bebê. O bebê ainda não sabe de muita coisa, ele está ali conhecendo o mundo, ele está aprendendo com os dados que ele recebe do mundo exterior.
+
+[3:24 - 3:44] SPEAKER_00:  E, com o passar do tempo, esses dados, esses estímulos que ele vai recebendo vão formando quem ele é. Então, a gente pode pensar nesses dados externos, estímulos, como a escola, a família, os amigos, como os dados de pré-treinamento dele na vida.
+
+[3:44 - 3:57] SPEAKER_00:  Uma vez que ele já está treinado, ele vai, dali um adolescente, os seus 17 anos, ele vai precisar, né, precisar de uma faculdade, enfim, se especializar em alguma tarefa para poder trabalhar.
+
+[3:57 - 4:14] SPEAKER_00:  Não é mesmo? Então, o adolescente, nesse ponto, ele é o nosso foundation model. Ele já tem uma bagagem extensa, uma bagagem muito boa, mas ele ainda não tem uma aplicação, uma tarefa, uma especialidade que possa ser útil.
+
+[4:14 - 4:38] SPEAKER_00:  Então, a ideia daqui é que a gente pegue esse adolescente e faça uma faculdade nele. Aqui, obviamente, é uma metáfora, a gente está trabalhando com um modelo de linguagem, então eles são capazes de compreender a linguagem natural e de responder também em linguagem natural.
+
+[4:39 - 4:56] SPEAKER_00:  Nessa foto aqui, a gente pode pensar no data, nesses dados, como os textos, imagens, voz, dados estruturados ou sinais, como os estímulos que uma criança e um bebê recebem ao longo da vida.
+
+[4:56 - 5:15] SPEAKER_00:  Mas aqui a gente pode pensar também que o LLM não vai estar limitado a isso, ele pode também receber informações de outros lugares, desde que você organize seus dados, estruture, como a gente fez na aula anterior.
+
+[5:16 - 5:29] SPEAKER_00:  Então, a partir desses dados que foram coletados no começo, a gente pré-treina, na realidade, o nosso modelo ali, a nossa rede neural, e ela vai se tornando um Foundation Model.
+
+[5:29 - 5:40] SPEAKER_00:  Se a gente pensa, por exemplo, no GPT, o GPT é um Foundation Model que foi pré-treinado com os dados de praticamente toda a internet aberta.
+
+[5:40 - 5:42] null: [BLANK_AUDIO]
+
+[5:42 - 6:23] SPEAKER_00:  e por exemplo no GPT-4 ele foi treinado com os dados até 2021 então pensa no tamanho da internet em 2021 e outra coisa importante desses modelos é que eles são treinados utilizando grandes clusters de GPUs milhares e dezenas de milhares dependendo do modelo de GPUs porque a GPU é o hardware vamos dizer assim, preferido para treinar esses modelos, porque ele trabalha muito melhor com números decimais do que o próprio CPU.
+
+[6:23 - 6:55] SPEAKER_00:  Então, entendido isso, a gente compreendeu aqui um pouco do que é o nosso Foundation Model, e a partir desse Foundation Model, a gente consegue, dependendo do nosso caso de uso, treinar ele para responder questões, para fazer análise de sentimento, para conseguir até às vezes descrever o que tem em uma imagem, para ser um chatbot, às vezes de um suporte de algum e-commerce, por exemplo,
+
+[6:55 - 7:15] SPEAKER_00:  ou um suporte de alguma empresa, vamos pensar aqui, no ramo da saúde, planos de saúde, hospitais. Então, as aplicações dos LLMs hoje em dia são as mais diversas possíveis e cada vez mais vão surgindo novas aplicações, novas tecnologias também.
+
+[7:16 - 7:37] SPEAKER_00:  Então, é sempre importante a gente estar atualizado, porque como eu disse na última aula, esse ecossistema está super vivo, super rico, está se enriquecendo cada vez mais ao longo de praticamente, se a gente pensa, 3, 4 anos, a partir do lançamento da primeira versão do chat GPT.
+
+[7:38 - 8:03] SPEAKER_00:  Então, é sempre importante se manter atualizado sobre as novidades. Então, entendido isso, é importante também salientar que esses modelos são praticamente grandes modelos matemáticos que utilizam ali de ferramentas da estatística, da álgebra linear, para fazer esses cálculos.
+
+[8:03 - 8:17] SPEAKER_00:  A partir do input do usuário, ele vai conseguir ali prever qual que é a palavra, mas com maior probabilidade de aparecer dado aquele input.
+
+[8:17 - 8:50] SPEAKER_00:  Então, se vocês querem entender um pouco melhor Como funciona essa parte de matemática Porque IAR não é apenas programação A programação é a ferramenta Que vai fazer rodar o modelo Vai treinar o modelo Enfim, mas não é a única base A IAR se alimenta muito da matemática Desses campos que eu falei Como a estatística, a algebra linear, o cálculo Se vocês estiverem mais interessados e quiserem entender de uma forma bem visual,
+
+[8:50 - 9:09] SPEAKER_00:  eu recomendo muito essa playlist aqui de vídeos, do canal chama 3Blue1Brown, de um inglês, e ele explica bem visualmente como funciona uma rede neural, o que é backpropagation e como isso se explica matematicamente também.
+
+[9:09 - 9:46] SPEAKER_00:  Então fica aqui a sugestão saindo desse vídeo, e o Pau acaba nessa aula, se vocês quiserem assistir, fica a recomendação também. Pensando nesse processo do LLM, que ele não é apenas um pedaço de código ou um arquivo ali que a gente só roda, um executável, eu acho que é legal a gente dar um passo para trás também e entender um pouco melhor do processo, de como que ele faz essas previsões e essas gerações de texto, por exemplo, a partir do input do usuário.
+
+[9:47 - 9:57] SPEAKER_00:  Então aqui é um código bem simples, só para a gente conseguir visualizar melhor como que funciona o modelo. Aí vamos autenticar aqui.
+
+[9:57 - 10:08] SPEAKER_00:  Então aqui a gente está usando a biblioteca espaço, que é uma bem famosa no ecossistema de machine learning, de IA.
+
+[10:08 - 10:21] SPEAKER_00:  Aqui a gente também vai fazer um download de um arquivo dessa biblioteca, para a gente conseguir gerar emberges, conseguir entender melhor como que os modelos funcionam.
+
+[10:21 - 10:53] SPEAKER_00:  Então vamos só esperar acabar de rodar. Acabou. Muito bem. agora vamos entender um pouquinho do código aqui que a gente está fazendo então, a gente está carregando esse arquivo que a gente baixou e criando algumas funções aqui que vão simular de certa forma os processos que acontecem por trás do modelo até mesmo na próxima aula a gente vai treinar o modelo, mas a gente não vai conseguir
+
+[10:53 - 11:26] SPEAKER_00:  ver essa parte isso é feito por trás pelo próprio modelo pelo próprio código que a gente vai gerar então aqui a gente vai fazer a tokenização a tokenização ela nada mais é do que pegar uma frase, por exemplo quebrar ela em pedaços esses pedaços são exatamente os tokens então aqui se a gente pega essa frase let's pode ser um token esse gene pode ser outro token
+
+[11:26 - 11:56] SPEAKER_00:  porque não necessariamente o modelo vai tokenizar a frase ou o prompt por palavras completas por exemplo na OpenAI eles até dão sugestão ali de que não é uma coisa muito certa mas que um token para eles equivale ali a quatro caracteres então aqui a gente vai fazer essa tokenização Então, a gente vai quebrar esse texto em tokens.
+
+[11:57 - 12:12] SPEAKER_00:  A gente vai visualizar esses tokens aqui também que foram gerados. E por final, a gente vai gerar os embeds. O que são esses embeds? Os embeds são a transformação daquele token em um número.
+
+[12:12 - 12:42] SPEAKER_00:  Então, o let aqui nesse caso Pode ser um número aí Que fique entre menos um e um Dependendo também do algoritmo de embedding Que a gente está utilizando Aqui a gente está fazendo um código mais genérico mesmo Só para a gente ter uma representação visual desse processo E não ficar tão preso Só ao código de treinamento do modelo.
+
+[12:43 - 12:54] SPEAKER_00:  E os testes do modelo. Então vamos rodar aqui para a gente. Conseguir visualizar. Muito bem.
+
+[12:55 - 13:05] SPEAKER_00:  As nossas funções rodaram. Vamos ver os nossos tokens. Então aqui é interessante. Para esse caso do SPAC.
+
+[13:05 - 13:27] SPEAKER_00:  Ele realmente pegou e gerou token. a partir de cada palavra. Então, o let é um token, o s, mesmo fazendo parte do let, é considerado ali uma outra palavra, e, por fim, ele praticamente separou pelos espaços.
+
+[13:27 - 13:37] SPEAKER_00:  Mas sem problemas, aqui é mesmo só para a gente visualizar. Então vamos ver a partir da nossa frase, da nossa sentença, o que ele gera para a gente de embed.
+
+[13:37 - 13:40] null: [BLANK_AUDIO]
+
+[13:42 - 13:57] SPEAKER_00:  Então, aqui ele gerou uma matriz, várias matrizes na realidade, porque ele gerou uma matriz bem completa para cada token da nossa frase.
+
+[13:58 - 14:28] SPEAKER_00:  E o que ele quer dizer cada número disso aqui? basicamente ele está pegando o nosso token e está gerando uma matriz ali que nesse primeiro momento parece um pouco aleatória mas que para o modelo se a gente for pensar nos LLMs os LLMs vão pegar, por exemplo, um dicionário da língua inglesa, da língua portuguesa e vão gerar os embeddings de cada uma daquelas palavras
+
+[14:28 - 15:07] SPEAKER_00:  então vão formando essas matrizes bem grandes e que para a gente olhando não faz muito sentido. Mas é a partir disso que o modelo vai sopesar os nossos parâmetros, dependendo do treinamento ele vai ajustando esses valores para conseguir compreender melhor conseguir gerar no final um output melhor dependendo do prompt Ent o que isso significa Que quando a gente est treinando o modelo
+
+[15:07 - 15:39] SPEAKER_00:  o modelo vai pegar o seu prompt, vai tokenizar aquilo, vai gerar os embeddings daquela frase. A partir daqueles embeddings, ele vai rodar, Ele vai atualizando os seus parâmetros ali e vão disparando os neurônios ali para conseguir, de certa forma, pensar qual é a melhor resposta para aquele prompt, dado que ele já foi treinado com uma base muito grande anteriormente.
+
+[15:40 - 15:55] SPEAKER_00:  Então, isso aqui é realmente só para a gente visualizar, porque a matemática é mais complexa que isso, Por isso eu recomendo muito que vocês olhem a playlist de vídeos que eu recomendei.
+
+[15:56 - 16:09] SPEAKER_00:  Então, muito bem. Aqui a gente tem uma visão aí legal sobre o que são os Foundation Models, o que são LLMs. Provavelmente nas outras disciplinas já passaram isso também.
+
+[16:10 - 16:30] SPEAKER_00:  Mas é sempre importante reforçar, porque é um tema aí que está bem atual. a gente tem cada vez mais novos modelos e entre esses modelos eles vão alterando essas questões da tokenização, do embedding, enfim.
+
+[16:31 - 16:50] SPEAKER_00:  É sempre importante estar prestando atenção ali de olho no que os modelos fazem também por trás. Assim você consegue ter uma visão macro, uma visão melhor do que, ou melhor, de como funciona por trás esses modelos, qual que é a base matemática por trás.
+
+[16:52 - 17:11] SPEAKER_00:  Até mesmo se você quiser, para no futuro construir um LLM seu. Então, voltando aqui para o nosso diagrama, a gente já compreendeu que são os Foundation Models, que eles vão ser adaptados para as tarefas, dependendo do use case de quem está treinando ali, está fazendo fine tuning.
+
+[17:11 - 17:44] SPEAKER_00:  Mas então, o que é o fine tuning? O que é realmente essa especialização e como que isso acontece? Então, uma visão bem alto nível de como funciona, a gente vai pegar o nosso modelo que já foi pré-treinado, que já tem ali uma base muito boa, já está gerando prompts bem razoáveis ali, dependendo do input, mas a gente precisa que ele, por exemplo, no nosso caso, a gente já gerou os prompts aqui,
+
+[17:45 - 18:14] SPEAKER_00:  os prompts são aqueles inputs que a gente preparou na última aula ali no nosso arquivo News Dataset, e a forma que a gente faz esse planituning é bem mais simples, porque a gente só vai pegar esse modelo, a gente não precisa fazer o treinamento com dados abertos, porque ele já tem esse treinamento, a gente só precisa realmente pegar os dados do nosso projeto e estruturar de uma forma que ele vai entender que aquilo é um dado de treinamento.
+
+[18:14 - 18:26] SPEAKER_00:  Então, a gente deixa o nosso prompt, nosso prompt no nosso caso seria resumo essa notícia, mandar o conteúdo da notícia e o completion é o output esperado.
+
+[18:27 - 18:40] SPEAKER_00:  Então, a partir daquele input da ordem de resumir e do conteúdo da notícia, o completion vai ser o que a gente gerou ali usando o chat de EPT e também no nosso dataset complementar, o resumo em si.
+
+[18:40 - 18:55] SPEAKER_00:  Com isso, a gente pode já imputar dentro do modelo para ele conseguir gerar novas respostas que sejam mais adequadas para o nosso caso específico.
+
+[18:56 - 19:27] SPEAKER_00:  Então, no final, uma vez que todo esse treinamento funcionou, estamos utilizando muitos dados, por isso que aqui a gente está utilizando mais de 10 mil casos, a gente treina com esses dados e no final a gente tem um modelo fine-tuned, então um modelo especializado naquela tarefa que a gente treinou ele, para fazer, ele vai conseguir entender melhor tanto o nosso prompt quanto o que ele precisa
+
+[19:27 - 19:40] SPEAKER_00:  fazer. E com isso a gente ganha mais performance, se o modelo estiver bom a gente consegue reduzir custos porque ele já vai entender muito melhor o que é para fazer do que um modelo só pré-treinado.
+
+[19:40 - 19:55] SPEAKER_00:  Isso, se a gente pensa em projetos grandes, vai fazer toda a diferença porque uma coisa que a gente não pode esquecer, muito legal ter esses LLMs, mas e as aplicações práticas?
+
+[19:55 - 20:12] SPEAKER_00:  E para treinar isso? Por exemplo, dentro de uma empresa, isso vai gerar muito custo. Por exemplo, se você ficar utilizando apenas o chat GPT e fazer até mesmo um fine tuning para um modelo, muito bem, ele vai funcionar.
+
+[20:13 - 20:44] SPEAKER_00:  Mas talvez se você conseguir fazer um fine tuning de um modelo seu que você pegou um pre-trained open source, um foundation model open source, você fez o fine tuning e você vai ter um modelo que é só seu, da sua empresa e isso agrega muito valor, porque é uma tecnologia interna e não que depende de outras empresas, outros fornecedores para conseguir enfim, melhorar o seu produto ou até mesmo criar um produto novo então, é isso
+
+[20:44 - 21:10] SPEAKER_00:  que eu queria passar, eu acho que a gente já teve uma visão aqui interessante sobre como funcionam esses modelos, como fazer um fine tuning, o que é realmente um fine tuning. Então, na próxima aula, a gente vai pegar o nosso código, o nosso modelo e os nossos dados e vamos fazer um fine tuning nele. Então, é isso, pessoal.
+
+[21:10 - 21:43] SPEAKER_00:  A gente se vê na próxima aula. Até. Toc, toc, toc, toc.
+
+[21:44 - 22:11] SPEAKER_00:  Olá pessoal, bem-vindos e bem-vindas.
+
+[22:11 - 22:27] SPEAKER_00:  Aqui a ideia desse vídeo é que a gente utilize os dados que a gente coletou ao longo da L1 e também dos conteúdos teóricos que a gente conversou no vídeo anterior.
+
+[22:28 - 22:51] SPEAKER_00:  A gente coloca isso em prática aqui treinando o modelo, fazendo fine tuning em cima dele. Também a gente vai entender aqui um pouco das novas tecnologias que são utilizadas para a gente conseguir não só gerar um modelo melhor, mas também gerar ele com mais eficiência, gastando menos memória e menos processamento também.
+
+[22:52 - 23:24] SPEAKER_00:  Então, aqui no nosso código, a primeira parte mais importante é fazer o mount aqui no drive para a gente conseguir pegar os nossos arquivos. Perfeito Na nossa segunda célula A gente instala aqui algumas bibliotecas Essa primeira A Anzloth AI Na realidade é uma ferramenta Que uma empresa criou Que permite ali Um treinamento muito mais rápido Usando menos memória A gente consegue fazer um fine tuning Até duas vezes mais rápido
+
+[23:24 - 23:43] SPEAKER_00:  Então é uma tecnologia muito boa Que a gente tem Na versão gratuita Ela é open source, então dá para olhar o código fonte também. A gente também vai usar algumas outras bibliotecas aqui, como a PFT, que é uma biblioteca adaptada para o LoRa.
+
+[23:44 - 24:07] SPEAKER_00:  O LoRa nada mais é do que uma técnica de otimização do fine-tuning de um modelo, porque se a gente pensa em um modelo LLM como uma grande rede neural, a gente pode pensar que assim, se a gente vai treinar aquele modelo novamente e precisar passar ali, às vezes, por bilhões ou bilhões de parâmetros.
+
+[24:08 - 24:19] SPEAKER_00:  Então, a ideia do LoRa é conseguir apenas treinar os neurônios ali que precisam de um treinamento ali para refinar o nosso resultado.
+
+[24:19 - 24:49] SPEAKER_00:  Então, a Perfix é a biblioteca que a gente usa para aplicar essa técnica no modelo. Então, a gente também vai usar aqui a biblioteca Transformers. Os Transformers são uma arquitetura de rede neural que permite que a gente consiga aplicar mecanismos de atenção de uma forma que o modelo considere o input, todas as partes do input, melhor dizendo, de uma vez só, ao invés de fazer isso de uma forma sequencial,
+
+[24:49 - 25:07] SPEAKER_00:  como funcionam as redes neurais convencionais. Isso permite aí uma paralelização mais eficiente, significa que o modelo vai conseguir dividir melhor o aprendizado e ter mais atenção ali no input completo ao invés de parcialmente.
+
+[25:08 - 25:20] SPEAKER_00:  E também permite aí que a gente consiga ter uma captura melhor do sentido de todo o texto, e não pensando no texto ali como uma sequência de palavras ou de tokens.
+
+[25:20 - 25:34] SPEAKER_00:  E a nossa biblioteca dataset vai servir para a gente conseguir carregar de uma forma mais fácil o nosso dataset, já no formato ali que o modelo vai conseguir entender.
+
+[25:35 - 25:55] SPEAKER_00:  Então, aqui a gente já rodou, mas essa célula é apenas para a gente instalar essas bibliotecas. E aqui a gente já vê pelo menos a nossa parte de configuração das variáveis do modelo e também a importação das bibliotecas que a gente comentou.
+
+[25:56 - 26:27] SPEAKER_00:  Então aqui a gente está no DataPath pegando ali o nosso dataset que a gente gerou. Aqui a gente está fazendo também já uma configuração para um dataset formatado, porque é até importante alentar isso, para você ter uma ideia o código original aqui do modelo foi atualizado, as bibliotecas ali por trás e isso gerou alguma incompatibilidade entre algumas bibliotecas, então a gente teve que dar uma reformulada aqui no código
+
+[26:27 - 26:45] SPEAKER_00:  então a gente também vai acabar precisando dar uma reformatada no nosso dataset, mas não tem problema a gente já tem a função pronta aqui também então, perfeito aqui a gente vai ter o número de tokens máximo que a IA vai gerar.
+
+[26:46 - 27:00] SPEAKER_00:  O D-Type é basicamente só um tipo de dados que pode tornar mais eficiente o treinamento modelo dependendo do formato que você coloca, para a gente não vai ser necessário.
+
+[27:01 - 27:07] SPEAKER_00:  E o loading para o bit. A gente vai usar uma quantitização de 4 bits.
+
+[27:07 - 27:08] :  Então o que é essa quantitização?
+
+[27:09 - 27:40] SPEAKER_00:  No vídeo anterior a gente mostrou ali os embeddings dos textos da nossa frase e a gente viu que o resultado daquilo é uma matriz de vários números ali, números decimais e aqui a ideia é que ao invés da gente utilizar, por exemplo, números decimais com 16, casas depois da vírgula, a gente vai usar apenas 4 porque isso torna o nosso modelo mais eficiente.
+
+[27:40 - 27:59] SPEAKER_00:  Se a gente pensa que essas redes neurais funcionam a partir de multiplicações de matrizes, quanto maior for o número das matrizes, maior vai ser o nível de computação, de gasto computacional.
+
+[27:59 - 28:21] SPEAKER_00:  Com isso, no nosso caso, a gente vai usar apenas o de 4 bits, isso sem perder. a eficiência do modelo. E aqui a gente tem uma lista de vários modelos com essa quantitização de 4 bits dessa ferramenta da Slov.
+
+[28:22 - 28:53] SPEAKER_00:  E nesse caso a gente vai usar o Lhama 3, que é um modelo novo da meta, de 8 bilhões de neurônios, mas apesar de parecer muito grande esse número, com a quantitização de 4 bits a gente consegue treinar isso de uma forma até que rápida usando todo o nosso dataset então descendo aqui para a nossa próxima função a gente vai fazer então a alteração do nosso dataset
+
+[28:53 - 29:05] SPEAKER_00:  original se a gente procura aqui o nosso dataset vamos dar uma olhada em como ele está originalmente A gente vem aqui na nossa aula 2.
+
+[29:11 - 29:29] SPEAKER_00:  E vamos procurar qual era o nosso dataset aqui, no Datapath, o NewsDataset. É um arquivo um pouco grande, né?
+
+[29:29 - 29:42] SPEAKER_00:  A gente lembra que tem mais de 10 mil elementos. Então ele vai demorar aqui um pouquinho. Não tem problema. Enquanto isso, a gente vai conversando aqui um pouco sobre a função.
+
+[29:43 - 30:14] SPEAKER_00:  Porque se vocês se recordam do vídeo anterior e da aula anterior, A gente fez uma estrutura que cada linha ali continha a instru o comando o Summary This News ent resumo essa not Ali entre chaves a gente tinha o News entre chave e o Byte o News e o End News para simular que entre esses dois indicadores estava ali o conteúdo da nossa notícia.
+
+[30:14 - 30:36] SPEAKER_00:  E a mesma coisa para o resumo, com o Summary e o Resummary. Então aqui a gente só vai realmente reestruturar isso de uma forma que nosso código novo, nosso modelo novo, consiga entender os dados do treinamento e a partir disso treinar e melhorar.
+
+[30:37 - 30:56] SPEAKER_00:  Então a gente basicamente só pega esses elementos, a nossa instrução já é bem simples, porque é só o Summarize These News, então aqui ele já pega, o nosso Input Text, que vai ser o conteúdo ali do artigo de notícia, e a resposta, o Output, que vai ser o resumo.
+
+[30:56 - 31:08] SPEAKER_00:  Depois disso, a gente joga tudo dentro de um dicionário, e com esse dicionário, a gente gera aqui o JSON da nossa base formatada.
+
+[31:08 - 31:30] SPEAKER_00:  Muito bem, só esperar aqui a gente carregar para dar uma olhada lá como ele estava. Muito bem pessoal, então a gente demorou um pouquinho aqui, mas abriram os nossos dois arquivos, tanto o nosso dataset que a gente gerou na primeira aula, quanto o formatado agora para esse modelo.
+
+[31:31 - 31:41] SPEAKER_00:  Então no nosso dataset original a gente colocava tudo dentro de uma Unix String, Tanto a instrução, quanto o input e o output.
+
+[31:41 - 31:55] SPEAKER_00:  Cada linha desta aqui contém essas três partes para o modelo. Então, a gente vem vindo aqui. E já no final, a gente vai ter aqui o nosso e-summary.
+
+[31:55 - 32:15] SPEAKER_00:  E se a gente procurar aqui dentro, aqui, essa de baixo está mais fácil. Tem o summary no final. Então, ao invés de colocar, como está aqui, tudo, a instrução, o input e o output em uma única linha, a gente transformou isso em uma...
+
+[32:16 - 32:47] SPEAKER_00:  A gente dividiu, na realidade, entre a instrução, o input e o output, e aí cada uma das instruções, que no nosso caso é sempre a mesma, a gente guarda numa lista para os inputs a gente guarda em outra lista só o conteúdo das notícias e aí por fim a gente vai ter são muitos registros aqui a gente tem mais de 10 mil
+
+[32:47 - 33:03] SPEAKER_00:  elementos para a gente usar para treinar e aqui o output com o resumo Então a gente só fez essa divisão, foi só um novo processamento, mas a gente não alterou em nada os nossos dados, continuam sendo os mesmos.
+
+[33:04 - 33:18] SPEAKER_00:  Então, muito bem. Agora a gente só vai gerar esse novo arquivo, a gente vai chamar a função da célula anterior e já vamos aqui carregar os nossos modelos.
+
+[33:18 - 33:34] SPEAKER_00:  Tanto o modelo mesmo, o próprio LLM quanto o Tokenizer, porque a gente lembra que o modelo não consegue entender diretamente a nossa linguagem, então ele precisa pegar ali o prompt do usuário, dividir em tokens.
+
+[33:34 - 33:44] SPEAKER_00:  Então, para fazer essa tokenização também, vão ter modelos de tokenização específicos para cada LLM.
+
+[33:45 - 33:58] SPEAKER_00:  Então, a gente já usa esses dois, já consegue carregar os dois de um modelo pré-treinado, que é um Foundation Model, que nesse caso é o Lema 3 de 8 bilhões, com a quantitização de 4 bits.
+
+[33:58 - 34:11] SPEAKER_00:  E aí a gente só coloca o MaxLength, que foi aquele número que a gente gerou lá em cima nas nossas variáveis, que é o 2048 ali, que é a quantidade de tokens que o modelo consegue processar de uma vez só.
+
+[34:12 - 34:24] SPEAKER_00:  E a questão do D-Type, que aqui a gente está usando o NUNI, não vai fazer tanta diferença, mas dependendo do caso, se você está procurando mais eficiência computacional, você pode procurar e alterar.
+
+[34:25 - 34:43] SPEAKER_00:  E aí, o carregamento em 4 bits, para que o modelo seja treinado utilizando apenas 4 bits de quantitização, então a gente não vai ocupar tanto espaço e nem vai precisar usar tanto processamento em decorrência de estar usando menos espaço.
+
+[34:44 - 35:15] SPEAKER_00:  Aqui, a gente já carregou, já está com o nosso dataset salvo, a gente carrega o modelo e aqui é interessante que nessa biblioteca, Anzlof ele mostra as versões dos softwares, então do PyTorch do CUDA, que é uma plataforma que acelera o desenvolvimento de inteligência artificial em placas de vídeo, em GPUs da NVIDIA enfim, tem umas informações
+
+[35:15 - 35:32] SPEAKER_00:  aqui interessantes, que a gente está treinando no Linux, uma vez que o Colab roda um Linux por trás. Então, muito bem, agora a gente vai carregar realmente o nosso modelo, que é o modelo que a gente baixou daqui.
+
+[35:34 - 36:05] SPEAKER_00:  Aqui a gente vai ter alguns targets, no nosso caso a gente não vai entrar muito a fundo nisso. Então, aqui a gente também vai ter os os parâmetros do modelo que a gente carregou a gente vai carregar ele usando o Pest então a gente vai estar usando a técnica do LoRa na hora de implementar e treinar esse modelo então aqui a gente está só carregando o modelo que a gente baixou a gente está colocando o R aqui que é
+
+[36:05 - 36:18] SPEAKER_00:  o que vai influenciar ali de certa forma o desenvolvimento a complexidade e a capacidade que o modelo vai ter, então pode ser 16, 32, 64.
+
+[36:18 - 36:37] SPEAKER_00:  No nosso caso aqui a gente quer só mostrar, depois fiquem à vontade para rodar isso com um R diferente, tá bom? Os target models, eles vão especificar, né, basicamente onde que essa aplicação vai ser adaptada.
+
+[36:37 - 36:53] SPEAKER_00:  Então, dependendo ali, pode ser a query que o modelo vai fazer, a questão da atenção. A gente não vai entrar muito na configuração aqui do target modules, uma vez que isso aqui já é padrão dessa biblioteca.
+
+[36:54 - 37:17] SPEAKER_00:  Então, a gente vai ter um alpha aqui e o dropout, que vão influenciar ali a intensidade dessa adaptação do LoRa, porque o LoRa vai, relembrando, adaptar determinados parâmetros para a gente não precisar retreinar o modelo inteiro para o nosso caso.
+
+[37:18 - 37:31] SPEAKER_00:  Então, permite que o fine tuning seja muito mais rápido. Aqui a gente não vai usar nenhum bias. Vai depender muito do caso mesmo, se você vai precisar de um viés, se seus dados estão enviesados.
+
+[37:31 - 37:48] SPEAKER_00:  Aqui a gente vai considerar que não estão. Aí, o gradiente, que nada mais é ali do que um método matemático para conseguir chegar no menor erro possível e ir melhorando o modelo.
+
+[37:49 - 38:00] SPEAKER_00:  O randomState é um número realmente aleatório, não faz tanta diferença. E esses dois aqui a gente não está usando. No nosso caso, não precisa. Então, também não vamos entrar.
+
+[38:00 - 38:31] SPEAKER_00:  com isso a gente chega aqui finalmente no nosso prompt para a gente dar uma adaptada a gente vê aqui que esse modelo que a gente está treinando ele tem uma estrutura diferente a gente não dá o comando direto a gente explica para ele que ele vai ter uma instrução que vai descrever uma tarefa que ele deve executar junto com o input para dar mais contexto E a resposta está sendo esperada.
+
+[38:32 - 38:43] SPEAKER_00:  Aqui a gente declara o End of Sentence token. Isso vai fazer com que o nosso modelo compreenda quando é o fim de uma sentença.
+
+[38:43 - 39:09] SPEAKER_00:  EOS significa isso, fim de sentença. Então, por exemplo, no nosso treinamento, a gente precisa colocar esse End of Sentence no final do output para ele entender que aquilo ali não precisa gerar mais nada a partir daquilo, como se fosse um token ali, um texto, que faz o modelo entender que é a hora de parar de gerar conteúdo.
+
+[39:10 - 39:20] SPEAKER_00:  Então, muito bem. Agora vamos para o nosso treino, tá bom? Então, essa aqui é uma função que vai realmente treinar o modelo.
+
+[39:20 - 39:51] SPEAKER_00:  Então tudo que a gente foi gerando Nas células anteriores A ideia é Chegar aqui para configurar isso aqui Então o modder a gente já falou O tokenizer O nosso trim dataset A gente vai utilizar o nosso dataset inteiro E aí no final a gente vai pegar Novas notícias ali Que o modelo nunca viu e vamos ver Como que ele se comporta O max length Que vai ser a quantidade de tokens não consegue olhar.
+
+[39:54 - 40:08] SPEAKER_00:  Aqui alguns argumentos para o treinamento. O batch size, que vai ser o tamanho do batch que ele vai usar por iteração.
+
+[40:08 - 40:19] SPEAKER_00:  A questão do gradiente, o warm-up para ele começar a rodar e ir ajustando os seus parâmetros. Então, quantos passos ele vai usar para isso.
+
+[40:19 - 40:50] SPEAKER_00:  aqui a gente está dando um limite de 60 steps então vai ser um treinamento bem curto a gente vai ver aqui que não demora muito tempo aí o learning rate que é exatamente a questão se o modelo vai estar mais focado em aprender diretamente daquilo e ficar meio enviesado então é importante que se a gente coloca um learning rate muito alto, o nosso modelo
+
+[40:50 - 41:22] SPEAKER_00:  ele corre o risco de ocorrer um overfilling esse overfilling nada mais é do que o modelo ele trabalhar muito bem com dados que ele já viu que ele aprendeu mas nem tanto com novos dados dados que ele nunca encontrou então aqui a gente coloca um learning rate baixo, para ele não ficar só atento àqueles dados que a gente mandou hoje, porque a gente vai mandar dados novos para ele.
+
+[41:22 - 41:32] SPEAKER_00:  Aí aqui é uma questão dos números do float, então qual vai ser o tamanho dos floats. No nosso caso, a gente está usando a quantização de 4 bits, então a gente não precisa se preocupar.
+
+[41:33 - 42:04] SPEAKER_00:  Aqui uma coisa importante vai ser o Optimizer. O Optimizer vai permitir exatamente a otimização do treinamento para usar menos memória e, por consequência de usar menos memória, usar menos computação em decorrência de usar menos memória aqui ele vai então precisar de menos processamento para conseguir fazer o treinamento aqui a gente só carregou
+
+[42:04 - 42:36] SPEAKER_00:  mapeou o nosso data set e aqui sim a gente fez o treinamento e a gente consegue ver a loss do treinamento ali e baixando, a gente vê que ele sobe e desce, mas não tem problema aqui pro nosso caso mas é importante que vocês fiquem de olho nessa loss se ela tá baixando, se ela tá subindo tá bom? Porque isso vai significar essa loss é a função de erro do modelo então o quanto que ela tá errando e o quanto que ela tá acertando e quão bem
+
+[42:36 - 42:48] SPEAKER_00:  ela tá fazendo isso então, muito bem, aqui a gente já tem nosso treinamento finalizado, a gente vai carregar então esse nosso modelo e vamos fazer uma inferência.
+
+[42:49 - 43:11] SPEAKER_00:  Uma inferência é exatamente pedir, dar um input ali, uma instrução, um input, pedir para ele gerar o nosso output. E vamos ver o que ele retorna. Aqui a gente está usando uma notícia do nosso dataset, a gente já vai utilizar uma notícia nova, a gente vai entrar lá no site e vamos buscar uma notícia nova.
+
+[43:12 - 43:38] SPEAKER_00:  Então a gente vê aqui, BeginOfText, e aí aquele nosso prompt que a gente colocou. Abaixo ali vai ter uma instrução, depois na instrução vai ter um input para dar mais contexto e a gente vai pedir para ele escrever uma resposta que realize, de certa forma, a nossa instrução, que cumpra ali o que a gente pediu na nossa instrução.
+
+[43:38 - 43:52] SPEAKER_00:  Então, muito bem, aqui a gente tem a nossa instrução, na Summarize This News, muito simples. O input, que aí vai ser o texto da notícia, e no final aqui, a resposta, que vai ser o resumo.
+
+[43:53 - 44:18] SPEAKER_00:  Depois a gente também aqui vai comparar com o Charge GPT, vamos entender quais são as diferenças, quais são as limitações também do nosso modelo. É bem importante para a gente fazer essa comparação do benchmark, E aqui a gente está fazendo a mesma coisa, só utilizando uma nova forma de decodar esse output para ficar mais visual.
+
+[44:19 - 44:31] SPEAKER_00:  Então aqui a gente vê que fica mais dividido o que é o nosso prompt de configuração, a nossa instrução, o input e o output que foi gerado pelo modelo.
+
+[44:31 - 45:06] SPEAKER_00:  Por fim, a gente salva esses modelos Porque aqui lembrando que a gente está no Collab Então é uma sessão em uma máquina virtual E se a gente não salvar esses modelos em algum lugar Eles vão ficar como um arquivo temporário E vão ser deletados uma vez que a gente fechar a janela do Collab Ou iniciar uma nova sessão Ent aqui a gente est salvando na nossa pastinha Todos os nossos notebooks vamos ver esses arquivos A gente salva tanto o modelo quanto o tokenizador porque os dois trabalham juntos
+
+[45:08 - 45:19] SPEAKER_00:  O modelo precisa do tokenizador para fazer essa divisão em tokens, para o modelo conseguir ser treinado e entender o que a gente está imputando dentro dele.
+
+[45:19 - 45:37] SPEAKER_00:  Aqui a gente vê o nosso LoRa Model, é uma pasta que ele vai gerar com todos os arquivos desse modelo. A gente vai ter o JSON de configuração, tanto do modelo quanto do tokenizador.
+
+[45:37 - 45:49] SPEAKER_00:  Esse adapter Model Safe Tensors é, a gente pode considerar assim, como se fosse o modelo. Então, quando a gente carregar esse modelo, a gente vai precisar desse arquivo.
+
+[45:49 - 46:03] SPEAKER_00:  Então, é bem importante. E aqui é a mapeação dos tokens especiais para a gente não faz tanta diferença. Então, aqui, por fim, a gente consegue carregar o nosso modelo.
+
+[46:04 - 46:16] SPEAKER_00:  Aqui vocês conseguem ver que a gente já rodou, já fez esse treinamento. Mas, beleza, imagina se a gente fosse precisar realizar isso de novo para cada vez que a gente quisesse usar esse modelo.
+
+[46:17 - 46:27] SPEAKER_00:  Então, uma vez que a gente já salvou, a gente consegue carregar ele diretamente. Vamos fazer um teste aqui. A gente já tem um output. Mas vamos fazer o seguinte.
+
+[46:28 - 46:39] SPEAKER_00:  Aqui a gente tem uma cópia ali de cima, então é a mesma notícia. Então, acho que é legal agora a gente pegar novos dados e ver como que ele se comporta.
+
+[46:39 - 47:10] SPEAKER_00:  Então vamos voltar No nosso script ali Da aula 1 Vamos pegar ali algumas Algumas notícias e vamos testar aqui E vamos ver como é que fica o resultado Então pessoal, aqui a gente está voltando Para os nossos primeiros scripts Ali da aula 1 Então a ideia aqui é que a gente faça O mesmo processo Só que a gente não vai chegar até o final A gente não vai precisar gerar os outputs Para o chat GPT nem coisas do tipo
+
+[47:10 - 47:45] SPEAKER_00:  a gente só vai mesmo buscar e ali fazer o scrapper pra gente conseguir os conteúdos das notícias que estão no portal hoje ali da CNN a gente roda o nosso código aqui novamente e vamos salvar esse resultado desses links dentro de uma pastinha aqui News porque são as nossas notícias que a gente vai usar de teste então pessoal Agora que a gente já conseguiu, usando o nosso News Crapper, os links do portal da CNN,
+
+[47:46 - 47:59] SPEAKER_00:  vamos conseguir agora os conteúdos das notícias para a gente conseguir, então, fazer os testes no nosso modelo. Aqui a gente vai se conectar no Drive.
+
+[47:59 - 48:14] SPEAKER_00:  Aqui já está conectado. E ao invés de a gente pegar novamente várias notícias, vamos apenas pegar 10 delas. Então a gente só limita aqui quantos links a gente vai utilizar.
+
+[48:14 - 48:30] SPEAKER_00:  E vamos rodar aqui e vamos ver. Então aqui a gente já conseguiu, vamos ver lá no nosso arquivo. NewsContent.
+
+[48:30 - 48:43] SPEAKER_00:  Vamos ver como é que está. Muito bem. Agora a gente tem algumas novas notícias para testar o nosso modelo.
+
+[48:43 - 48:57] SPEAKER_00:  Então, muito bem. Vamos voltar agora para o nosso modelo. Vamos testar aqui algumas inferências. Carregando já o nosso modelo. E vamos utilizar aqui.
+
+[48:57 - 49:19] SPEAKER_00:  Então, só para facilitar e deixar o nosso código mais organizado, eu vou criar uma nova célula aqui para a gente ler o arquivo com as novas notícias, com os novos artigos e depois a gente testa ali no modelo carregado já.
+
+[49:20 - 49:45] SPEAKER_00:  Então, vamos lá. Aqui a gente vai fazer um... vou colocar uma variável, né, news test, que vai ser uma lista, né, bem, e abrir o nosso arquivo.
+
+[49:45 - 49:57] SPEAKER_00:  A gente pode pegar já daqui mesmo e colar aqui.
+
+[49:57 - 50:11] SPEAKER_00:  A gente pode vir colar o nosso caminho. A gente vai Só fechar aqui as aspas A gente vai ler, né?
+
+[50:11 - 50:33] SPEAKER_00:  Então vai ser no modo R Daqui o vídeo de News File Então Fazer essa leitura Vamos Printar aqui O nosso File.txt Só pra gente dar uma olhada Como que está?
+
+[50:33 - 50:51] SPEAKER_00:  A gente deu um outro nome, vamos só corrigir. Como é que é o nosso arquivo?
+
+[50:51 - 51:03] SPEAKER_00:  Como é que está? Muito bem. Ele está aqui, vamos ver, dá um read melhor. Olha como ele está.
+
+[51:08 - 51:18] SPEAKER_00:  Aqui a gente acabou, acredito, pegando o arquivo com os links. Então a gente só altera o nosso News Content.
+
+[51:23 - 51:43] SPEAKER_00:  Agora sim. Então, muito bem, a gente já tem o arquivo aqui e vamos atribuir a nossa variável, a nossa lista aqui ao valor.
+
+[51:43 - 51:54] SPEAKER_00:  Vamos ver como é que fica a nossa News Test.
+
+[51:58 - 52:12] SPEAKER_00:  Essa lista é final. Aqui, né, a gente já está com muito das células já rodadas, né, então a gente não está importando as bibliotecas.
+
+[52:13 - 52:23] SPEAKER_00:  Sem problemas. Aqui muito bem. A gente conseguiu. Vamos ver. Então aqui. A gente conseguiu.
+
+[52:23 - 52:33] SPEAKER_00:  Extrair os conteúdos. Só que a gente está precisando ainda usar. Essa News Test. E aí dentro. Do News Test. Funciona como dicionário aqui no Python.
+
+[52:33 - 52:48] SPEAKER_00:  A gente consegue ver. A lista que está dentro. Do campo News Content. Mas já para facilitar. Vamos colocar para cá. E aí, a nossa News Test fica só a lista mesmo das notícias.
+
+[52:49 - 53:06] SPEAKER_00:  Então, muito bem. A gente já está aqui com as nossas notícias e vamos fazer alguns testes e ver como que o nosso modelo está fazendo inferências, se elas estão sendo boas ou não, o que ele vai gerar vai ser o esperado ou não, com dados que ele nunca viu antes.
+
+[53:06 - 53:42] SPEAKER_00:  Então, aqui a gente tem o nosso carregamento do modelo que a gente já treinou e já salvou Aqui a gente altera só o nosso input E vamos colocar como o NewsTest Que é a nossa lista Vamos testar com a primeira e vamos ver Só que aqui vocês já vão ver do output anterior que o texto está bem estranho, não está no formato legal.
+
+[53:42 - 54:00] SPEAKER_00:  Então vamos também adaptar aqui e ver como se faz. Aqui a gente já tem essa nova opção. Então a gente pode, ao invés de gerar aquele texto todo agrupado com o prompt completo, vamos dar uma alterada.
+
+[54:02 - 54:31] SPEAKER_00:  Vamos só comparar aqui os códigos, muito bem, vamos ver se agora já roda, vamos ver como é que fica, como que ele se comporta, aqui deu um probleminha por conta da unslouch, Porque a gente já rodou, então as bibliotecas não estão instaladas.
+
+[54:31 - 54:41] SPEAKER_00:  Mas sem problemas a gente volta lá e faz. Aqui a ideia, era mais que vocês entendessem o código completo.
+
+[54:42 - 54:45] null: [BLANK_AUDIO]
+
+[54:46 - 55:05] SPEAKER_00:  A gente precisa também instalar novamente as bibliotecas. Não tem problema. Um minutinho aí no máximo a gente consegue. Enquanto isso, vamos só dar uma olhada aqui, revisar se a nossa inferência ali vai ser certinha, se a gente precisa de mais alguns dados.
+
+[55:06 - 55:22] SPEAKER_00:  Aqui pediu para a gente reiniciar a sessão, sem problemas, vamos reiniciar. O Collab, às vezes ele acaba sendo um pouco instável também, mas pelo menos a gente consegue usar placas de vídeo bem avançadas para os nossos projetos.
+
+[55:22 - 55:43] SPEAKER_00:  Então, muito bem, já estamos reinstalando. Vamos rodar aqui também o mount, para a gente estar conectado.
+
+[55:43 - 55:59] SPEAKER_00:  Importando aqui nas bibliotecas. Aí a célula vai rodar depois que a que estiver rodando já se encerrar, então a gente não vai ter problema dele não reconhecer alguma biblioteca.
+
+[55:59 - 56:23] SPEAKER_00:  Muito bem, aqui a gente está fazendo a mesma coisa, o input com tokenizer. Então a gente vê que o código é bem parecido, é só mesmo no finalzinho ali que a gente Inclui esse streamer de dados para a gente conseguir ver também o modelo gerando ali em tempo real a nossa resposta.
+
+[56:27 - 56:45] SPEAKER_00:  Bem, aqui a gente já pode até limpar o output dessa célula, para o código ficar mais limpo, mais organizado. Vamos ver se as células já rodaram, já foram instalados, o mount já foi feito e também as importações necessárias.
+
+[56:45 - 56:59] SPEAKER_00:  Vamos testar novamente, só uma coisa importante, seja carregar os dados que a gente acabou de gerar.
+
+[56:59 - 57:32] SPEAKER_00:  Deu certo. vamos rodar aqui e ver o nosso modelo gerando os resumos, aqui a gente vê que já carregou ele está só baixando porque toda vez que você precisa se você não tiver o modelo o arquivo na sua máquina ele vai baixar, mas não tem problema ele já baixa ali do repositório correto já baixou aqui
+
+[57:32 - 58:02] SPEAKER_00:  é uma internet do próprio Collab, então é bem mais rápida e vamos ver o nosso modelo gerando aí na realidade os outputs das notícias e completando então essa primeira parte da nossa disciplina que é realizar o fine-tune, realizar todo o processo de buscar os dados, limpar os dados tratar os dados para no final a gente ver é o nosso modelo
+
+[58:02 - 58:18] SPEAKER_00:  conversando com o nosso preocupado. Tem um erro aqui em algum arquivo, alguma variável, perdão, que a gente não importou corretamente, sem problemas.
+
+[58:22 - 58:53] SPEAKER_00:  Vamos procurar aqui. A gente vai precisar rodar essa célula novamente, porque é nela que a gente está definindo aqui, ou se vocês preferirem a gente já pode inclusive colar aqui mesmo, para já sinalizar qual que é o ponto, e vamos rodar novamente, ele vai acabar carregando o modelo novamente, mas não tem problema, a gente espera um pouquinho.
+
+[58:53 - 59:14] SPEAKER_00:  Então pessoal, aqui a gente vê que o nosso modelo rodou, ele deu o retorno que a gente E precisava no formato muito mais legível, né? Ficar muito mais interessante dessa forma. Então, está falando sobre um problema político na Bolívia recente aí, que estava nas notícias.
+
+[59:15 - 59:28] SPEAKER_00:  E resumiu, bem legal, né? Dando ali uma visão geral da notícia aí, reduzindo ali em frases pequenas, curtas, mas que traduzem o conteúdo, tá?
+
+[59:28 - 59:42] SPEAKER_00:  Se vocês quiserem, peguem esses inputs, coloquem no chat EPT, veem o que ele gera. Teste também aqui alterar os parâmetros do modelo, de geração de tokens, do próprio Lhora.
+
+[59:42 - 59:53] SPEAKER_00:  Se vocês quiserem, enfim, entendendo melhor, porque no ambiente de IA, às vezes os temas ali, os conceitos ficam meio abstrados.
+
+[59:53 - 1:00:04] SPEAKER_00:  Então usem esse código aqui para conseguir associar melhor os conceitos com a prática, com o código que a gente está gerando aqui. Vamos a mais uma.
+
+[1:00:05 - 1:00:19] SPEAKER_00:  Aqui só para a gente fechar o nosso vídeo. Vamos testar com a segunda nova notícia que a gente conseguiu. Vamos fazer até mais simples para a gente não precisar carregar o modelo de novo.
+
+[1:00:19 - 1:00:32] SPEAKER_00:  A gente pode copiar essa parte aqui, até separar se vocês acharem melhor. Coloca aqui embaixo que aí é só a parte do prompt mesmo.
+
+[1:00:33 - 1:00:44] SPEAKER_00:  Fica até mais organizado. E lembrando que esse código vai estar no GitHub disponibilizado para vocês. Vamos ver como ele gera. A gente vê que ele gera bem rápido.
+
+[1:00:44 - 1:01:02] SPEAKER_00:  Ent rapidinho ele conseguiu entender o nosso input e j gerar a nossa not Ent fica agora com voc para voc darem uma estudada tanto no material de apoio nos c que est l no GitHub nos arquivos, se vocês quiserem.
+
+[1:01:03 - 1:01:34] SPEAKER_00:  Recomendo muito que testem também outros modelos, vão entendendo as diferenças de cada um, cada um tem uma arquitetura muito própria. Mas por aqui a gente conseguiu, pelo menos, realizar o fine tuning de uma forma muito mais rápida, quando vocês rodarem, vocês vão ver, usando muito, menos memória, o que significa que até mesmo em hardware em GPUs mais antigas, você consegue treinar um modelo então também recomendo muito olhem no grupo do Discord, se vocês
+
+[1:01:34 - 1:01:46] SPEAKER_00:  quiserem trocar ideia, trocar datasets ou modelos que vocês treinaram, se vocês treinaram modelos diferentes para tirar dúvidas também, tá bom? Então, a gente fica por aqui e até a próxima pessoal!
+
+[1:01:49 - 1:01:50] :  Obrigado.

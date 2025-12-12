@@ -1,0 +1,428 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+News Scraper para CNN - Versão Limpa e Otimizada
+Script para extrair links e conteúdo de notícias da CNN e gerar resumos com IA
+
+Data: 2025
+Objetivo: Demonstrar web scraping + processamento de linguagem natural
+"""
+
+import requests
+from bs4 import BeautifulSoup
+import json
+import time
+from urllib.parse import urljoin
+import sys
+import os
+from openai import OpenAI
+from dotenv import load_dotenv
+
+# Carrega as variáveis de ambiente do arquivo .env
+# Isso é uma boa prática de segurança para não expor chaves de API no código
+load_dotenv()
+
+def scrape_cnn_links(url):
+    """
+    FUNÇÃO PRINCIPAL DE EXTRAÇÃO DE LINKS
+    
+    Esta função faz o "web scraping" da página da CNN para encontrar links de notícias.
+    Web scraping é a técnica de extrair informações de sites automaticamente.
+    
+    Parâmetros:
+        url (str): URL da página que queremos analisar
+        
+    Retorna:
+        list: Lista de URLs válidas encontradas
+    """
+    # Headers para simular um navegador real
+    # Muitos sites bloqueiam requisições que não parecem vir de navegadores
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    
+    try:
+        print(f"🔍 Fazendo requisição para: {url}")
+        # Faz a requisição HTTP para a página
+        response = requests.get(url, headers=headers, timeout=10)
+        print(f"📡 Status da resposta: {response.status_code}")
+        
+        # Verifica se a requisição foi bem-sucedida (código 200 = OK)
+        if response.status_code == 200:
+            # BeautifulSoup é uma biblioteca para analisar HTML
+            # 'html.parser' é o parser padrão do Python
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            valid_links = []
+            # Encontra todos os links (<a>) na página
+            all_links = soup.find_all('a', href=True)
+            print(f"🔗 Total de links encontrados: {len(all_links)}")
+            
+            # Filtro inteligente para encontrar apenas links de notícias
+            # Em vez de ser muito restritivo, usamos múltiplos critérios
+            for a in all_links:
+                href = a['href']
+                
+                # Verifica se é um link de notícia válido usando múltiplos critérios
+                if (href.startswith('/') or href.startswith('http')) and \
+                   ('article' in href or 'story' in href or 'news' in href or 
+                    '2025' in href or '2024' in href or  # Datas para notícias recentes
+                    href.endswith('.html') or href.endswith('/')):
+                    
+                    # Constrói URL completa se for um link relativo
+                    if href.startswith('/'):
+                        full_link = urljoin(url, href)
+                    else:
+                        full_link = href
+                        
+                    # Verifica se é do mesmo domínio (CNN)
+                    if 'cnn.com' in full_link:
+                        valid_links.append(full_link)
+            
+            print(f"✅ Links válidos encontrados: {len(valid_links)}")
+            return valid_links
+        else:
+            print(f"❌ Falha na requisição: {response.status_code}")
+            return []
+            
+    except Exception as e:
+        print(f"💥 Erro durante o scraping: {e}")
+        return []
+
+def get_news_content(links_file):
+    """
+    FUNÇÃO DE EXTRAÇÃO DE CONTEÚDO DAS NOTÍCIAS
+    
+    Esta função visita cada link encontrado e extrai o texto das notícias.
+    É aqui que aplicamos diferentes estratégias para encontrar o conteúdo.
+    
+    Parâmetros:
+        links_file (str): Caminho para o arquivo com os links
+        
+    Retorna:
+        list: Lista com o conteúdo extraído de cada notícia
+    """
+    try:
+        # Lê o arquivo de links e remove linhas vazias
+        with open(links_file, 'r', encoding='utf-8') as file:
+            links = [line.strip() for line in file.readlines() if line.strip()]
+        
+        print(f"📰 Total de links para processar: {len(links)}")
+        
+        # Headers para simular navegador
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        
+        news_contents = []
+        processed_count = 0
+        
+        # Processa cada link individualmente
+        for i, link in enumerate(links):
+            print(f"\n📖 Processando link {i+1}/{len(links)}: {link}")
+            
+            try:
+                # Faz requisição para cada artigo
+                response = requests.get(link, headers=headers, timeout=10)
+                
+                if response.status_code == 200:
+                    # Analisa o HTML da página do artigo
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    
+                    # ESTRATÉGIA DE FALLBACK: Tentamos diferentes seletores CSS
+                    # Se um não funcionar, tentamos o próximo
+                    content = ""
+                    
+                    # Seletor 1: Estrutura original da CNN
+                    article_content = soup.find('div', class_='article__content')
+                    if article_content:
+                        paragraphs = article_content.find_all('p', class_='paragraph inline-placeholder')
+                        content = ' '.join(p.get_text(strip=True) for p in paragraphs)
+                    
+                    # Seletor 2: Todos os parágrafos (filtrados por tamanho)
+                    if not content:
+                        paragraphs = soup.find_all('p')
+                        if paragraphs:
+                            # Filtra parágrafos muito curtos (provavelmente não são conteúdo principal)
+                            content = ' '.join(p.get_text(strip=True) for p in paragraphs 
+                                             if len(p.get_text(strip=True)) > 50)
+                    
+                    # Seletor 3: Classe específica da CNN
+                    if not content:
+                        zn_paragraphs = soup.find_all('div', class_='zn-body__paragraph')
+                        if zn_paragraphs:
+                            content = ' '.join(p.get_text(strip=True) for p in zn_paragraphs)
+                    
+                    # Seletor 4: Container principal
+                    if not content:
+                        container = soup.find('div', class_='l-container')
+                        if container:
+                            paragraphs = container.find_all('p')
+                            if paragraphs:
+                                content = ' '.join(p.get_text(strip=True) for p in paragraphs 
+                                                 if len(p.get_text(strip=True)) > 30)
+                    
+                    # Seletor 5: Tag article (semântica HTML5)
+                    if not content:
+                        article = soup.find('article')
+                        if article:
+                            paragraphs = article.find_all('p')
+                            if paragraphs:
+                                content = ' '.join(p.get_text(strip=True) for p in paragraphs 
+                                                 if len(p.get_text(strip=True)) > 30)
+                    
+                    # Verifica se encontramos conteúdo significativo
+                    if content and len(content) > 100:
+                        # Limita o tamanho do conteúdo para não sobrecarregar a API
+                        limited_content = content[:1000] + '...' if len(content) > 1000 else content
+                        
+                        news_contents.append({
+                            'url': link,
+                            'content': limited_content,
+                            'length': len(content)
+                        })
+                        processed_count += 1
+                        print(f"✅ Conteúdo extraído ({len(content)} caracteres)")
+                    else:
+                        print("⚠️ Conteúdo não encontrado ou muito curto")
+                        news_contents.append({
+                            'url': link,
+                            'content': "Conteúdo não encontrado.",
+                            'length': 0
+                        })
+                else:
+                    print(f"❌ Falha na requisição: {response.status_code}")
+                    news_contents.append({
+                        'url': link,
+                        'content': f"Falha ao extrair o conteúdo da notícia: {response.status_code}",
+                        'length': 0
+                    })
+                
+                # Pausa entre requisições para não sobrecarregar o servidor
+                # Ética e boa prática de web scraping
+                time.sleep(1)
+                
+            except Exception as e:
+                print(f"💥 Erro ao processar {link}: {e}")
+                news_contents.append({
+                    'url': link,
+                    'content': f"Erro: {str(e)}",
+                    'length': 0
+                })
+        
+        print(f"\n🎉 Processamento concluído! {processed_count} de {len(links)} links processados com sucesso.")
+        
+        # Salva o conteúdo em um arquivo JSON
+        # JSON é um formato padrão para troca de dados
+        with open('news_contents.json', 'w', encoding='utf-8') as json_file:
+            json.dump({
+                "total_processed": len(links),
+                "successful_extractions": processed_count,
+                "news_content": news_contents
+            }, json_file, indent=2, ensure_ascii=False)
+        
+        print(f"💾 Conteúdo salvo em news_contents.json")
+        
+        return news_contents
+        
+    except Exception as e:
+        print(f"💥 Erro geral: {e}")
+        return []
+
+def summarize_news_with_ai(news_file):
+    """
+    FUNÇÃO DE RESUMO AUTOMÁTICO COM IA
+    
+    Esta função usa a API da OpenAI (GPT) para gerar resumos automáticos das notícias.
+    É um exemplo prático de como integrar IA com dados extraídos da web.
+    
+    Parâmetros:
+        news_file (str): Caminho para o arquivo JSON com o conteúdo das notícias
+        
+    Retorna:
+        list: Lista com os resumos gerados pela IA
+    """
+    # Obtém a chave da API da variável de ambiente
+    # Nunca coloque chaves de API diretamente no código!
+    api_key = os.getenv('OPENAI_API_KEY')
+    
+    if not api_key:
+        print("❌ Erro: OPENAI_API_KEY não encontrada no arquivo .env")
+        print("💡 Crie um arquivo .env com: OPENAI_API_KEY=sua_chave_aqui")
+        return []
+    
+    # Inicializa o cliente da OpenAI
+    client = OpenAI(api_key=api_key)
+    
+    try:
+        # Carrega o conteúdo das notícias do arquivo JSON
+        with open(news_file, 'r', encoding='utf-8') as file:
+            news_data = json.load(file)
+            news_contents = news_data['news_content']
+        
+        print(f"🤖 Iniciando geração de resumos com IA para {len(news_contents)} notícias...")
+        
+        summaries = []
+        
+        # Processa cada notícia individualmente
+        for i, news_item in enumerate(news_contents):
+            print(f"\n📝 Processando notícia {i+1}/{len(news_contents)}...")
+            
+            # Pula notícias sem conteúdo
+            if news_item['content'] == "Conteúdo não encontrado." or news_item['length'] == 0:
+                print("⚠️ Pulando notícia sem conteúdo")
+                continue
+            
+            try:
+                # PROMPT ENGINEERING: Instruções claras para a IA
+                # Quanto mais específico o prompt, melhor o resultado
+                response = client.chat.completions.create(
+                    model="gpt-3.5-turbo",  # Modelo mais econômico para resumos
+                    response_format={"type": "json_object"},  # Força resposta em JSON
+                    messages=[
+                        {
+                            "role": "system",
+                            "content": """Você é um assistente especializado em resumir notícias. 
+                            Analise o texto da notícia e crie um resumo conciso e informativo.
+                            Retorne APENAS um JSON com o campo 'summary' contendo o resumo."""
+                        },
+                        {
+                            "role": "user",
+                            "content": f"Resuma esta notícia de forma clara e objetiva:\n\n{news_item['content']}"
+                        }
+                    ],
+                    temperature=0.3,  # Baixa temperatura = respostas mais consistentes
+                    max_tokens=150,    # Limita o tamanho do resumo
+                    top_p=1
+                )
+                
+                # Extrai o resumo da resposta da API
+                summary_text = response.choices[0].message.content.strip()
+                
+                # Processa a resposta JSON
+                try:
+                    summary_json = json.loads(summary_text)
+                    summary = summary_json.get('summary', 'Resumo não gerado')
+                except json.JSONDecodeError:
+                    # Fallback se a resposta não for JSON válido
+                    summary = summary_text
+                
+                print(f"✅ Resumo gerado: {summary[:100]}...")
+                
+                # Armazena o resultado
+                summaries.append({
+                    "url": news_item['url'],
+                    "original_content": news_item['content'][:200] + "...",  # Primeiros 200 chars
+                    "summary": summary,
+                    "original_length": news_item['length']
+                })
+                
+                # Pausa entre chamadas da API para não exceder limites
+                time.sleep(0.5)
+                
+            except Exception as e:
+                print(f"💥 Erro ao gerar resumo: {e}")
+                summaries.append({
+                    "url": news_item['url'],
+                    "original_content": news_item['content'][:200] + "...",
+                    "summary": f"Erro na geração: {str(e)}",
+                    "original_length": news_item['length']
+                })
+        
+        print(f"\n🎯 Resumos gerados: {len(summaries)} de {len(news_contents)} notícias")
+        
+        # Salva os resumos em um arquivo JSON
+        with open('news_summaries.json', 'w', encoding='utf-8') as json_file:
+            json.dump({
+                "total_news": len(news_contents),
+                "summaries_generated": len(summaries),
+                "news_summaries": summaries
+            }, json_file, indent=2, ensure_ascii=False)
+        
+        print(f"💾 Resumos salvos em news_summaries.json")
+        
+        return summaries
+        
+    except Exception as e:
+        print(f"💥 Erro geral na geração de resumos: {e}")
+        return []
+
+def main():
+    """
+    FUNÇÃO PRINCIPAL - EXECUÇÃO AUTOMÁTICA
+    
+    Esta é a função principal que orquestra todo o processo:
+    1. Extrai links da CNN
+    2. Extrai conteúdo das notícias
+    3. Gera resumos com IA
+    
+    É um exemplo de pipeline completo de processamento de dados.
+    """
+    print("=" * 70)
+    print("🤖 NEWS SCRAPER CNN + IA - PIPELINE COMPLETO")
+    print("=" * 70)
+    
+    # URL base da seção de notícias internacionais da CNN
+    url = "https://edition.cnn.com/world"
+    
+    # ETAPA 1: EXTRAÇÃO DE LINKS
+    print("\n🚀 ETAPA 1: EXTRAÇÃO DE LINKS")
+    print("-" * 40)
+    links = scrape_cnn_links(url)
+    
+    if not links:
+        print("❌ Nenhum link foi encontrado! Verificando se o site está acessível...")
+        return
+    
+    # Salva os links encontrados
+    with open('CNN_Links.txt', 'w', encoding='utf-8') as file:
+        for link in links:
+            file.write(link + '\n')
+    print(f"💾 Links salvos em CNN_Links.txt: {len(links)} links")
+    
+    # Mostra alguns exemplos dos links encontrados
+    print("\n🔗 Primeiros 5 links encontrados:")
+    for i, link in enumerate(links[:5]):
+        print(f"   {i+1}: {link}")
+    
+    # ETAPA 2: EXTRAÇÃO DE CONTEÚDO
+    print("\n🚀 ETAPA 2: EXTRAÇÃO DE CONTEÚDO")
+    print("-" * 40)
+    news_contents = get_news_content('CNN_Links.txt')
+    
+    if not news_contents:
+        print("❌ Nenhum conteúdo foi extraído!")
+        return
+    
+    # ETAPA 3: GERAÇÃO DE RESUMOS COM IA
+    print("\n🚀 ETAPA 3: GERAÇÃO DE RESUMOS COM IA")
+    print("-" * 40)
+    summaries = summarize_news_with_ai('news_contents.json')
+    
+    # RESUMO FINAL
+    print("\n" + "=" * 70)
+    print("🎉 PIPELINE CONCLUÍDO COM SUCESSO!")
+    print("=" * 70)
+    print(f"📊 RESUMO FINAL:")
+    print(f"   • Links encontrados: {len(links)}")
+    print(f"   • Conteúdo extraído: {len(news_contents)}")
+    print(f"   • Resumos gerados: {len(summaries)}")
+    print(f"   • Arquivos gerados:")
+    print(f"     - CNN_Links.txt (links das notícias)")
+    print(f"     - news_contents.json (conteúdo completo)")
+    print(f"     - news_summaries.json (resumos com IA)")
+    print("\n💡 Próximos passos:")
+    print("   • Use os dados para treinar modelos de IA")
+    print("   • Crie um sistema de recomendação de notícias")
+    print("   • Desenvolva um chatbot de notícias")
+    print("   • Analise tendências e sentimentos das notícias")
+
+if __name__ == "__main__":
+    try:
+        # Executa o pipeline completo automaticamente
+        main()
+    except KeyboardInterrupt:
+        print("\n\n⏹️ Script interrompido pelo usuário.")
+    except Exception as e:
+        print(f"\n💥 Erro inesperado: {e}")
+        sys.exit(1)

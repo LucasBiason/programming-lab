@@ -1,0 +1,6 @@
+opencv-python>=4.8.0
+SpeechRecognition>=3.10.0
+python-docx>=1.1.0
+transformers>=4.35.0
+torch>=2.0.0
+

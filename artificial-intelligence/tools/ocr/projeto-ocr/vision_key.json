@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "iconic-valve-452117-u0",
+  "private_key_id": "7e2bfc0dc986cdb9f220462b49e3f5285c261a6a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDi1GD4rR/JSLAo\nbUj9MLg02N7heD3iAG4p2L4vVPx/y8VRbF3Vols5FBD4JEw3Sx0EcemwWn5NcIUM\np10jWa+ECUvcNRc7h7TeBjcS2YOzzrVmsgGpv8l0yFyHWq1hJ9fMw2ErlOBu4gRL\ndRbQigYx6NtP8sV5tWw+Yt/V4GAuqSHLVN4Ird5zSZEGtVB5kklowD1a0WrDOSTo\n4E354eomwbLYS6hLNt6YCZj/eYOrpfGxxsoZInoguyLu8Vrom1MyfoNn8aViQlSe\nuyhYkdSSJnO2HEdCkLBjtWhR6NlPZgR2kzUxH2sDukv7b0mrto4g2iLrQiUgQW0W\ncl49byiJAgMBAAECggEAEI+zGNUDGh4thnYcOyhAetNOyqWN1x9y66lAkZIh8W6+\nVGiWHVACWxOE/akgy3S3hKiQiGjDCgJqJHdfzIHy17AaEtTpglYxNXi8sqqg/BLe\nmcXraypumhE6+EL9n7daAUBOqvDuxgnIiH3fEZDSTPiUcqzmEDHX2mI7t5DvVNiv\nPqdcAd3RgPOCD5E2KfKcslQVYd5aodKc0cZWA03vEPxAleF5YrXj26MwXLrVqLeD\nHayZv8RgIzuM61kOlFY6rZH2tiIG/CJz+6C2SMrNyzo7q4jYp5YY7WGD7pOUI5Ig\nonTZ8F+ESFVZ2b/0y6qjzQG098m81xD9jqHGkhU8EQKBgQD8BGXNFmyrvVOFz/NM\nGmePJMar+jSRHco+FpQr5M4fcsIqtqub8KgxYCAyovMX8jL+Uy8SNjt8ueQSX2T6\nP/Hpf2rgXU1nGHXTt6w8Jg1b+wNrGwT9Djn1nSyeWVA4SdAG+uPwFkAsd+2kYasN\n3pIq4WkZFtsUM4HoukxDppbGTQKBgQDmahP/68pahwpflIeb4G+nwe1HOm1sA6Jx\nGX+O+aJnhHkAO5+NcMx+Kcj6gjt/z6SAR6f1tpjiWfaRgJ97LI0A2Wb5wsA3wKdQ\nevM2zbe/J+hnC/MPVKqXR3Jos8RoW1U+WRjpjbaaM1REx6B3UGi8gW8dHe2WGRvu\nvTwHOsgBLQKBgDOsuysIVBQK6Bth/mM2btGdGtecoDa5QwTkIFG3wsQUBdg4SIvb\nFsG5EiEP5ISedvJLIDW9xQjYHPnfcZcWkYXtSH7k4sAm9dIJsVlL/CVGHPdTPPye\ndCf2qHV3nslL6UnlG+PYzCPSG3o/RJG9d38vZRtt4lIMFbEgsg6VFAlpAoGBAIVY\nzspFg45wqKg4JWMouHW13cRjJABm+hPKVfBAuKSAHibsWqJYrYA2XoHb7ONDIEi9\nL48cZc5ZkkES1zlJxzC+oMHa27NoY2xIO4lz9OtEBVPdroUo0rFKQAQoRXq/oM28\ncpZ31T3YhuRnQ47JklPF9LA9Kcq8LVY1XhAxDJ7hAoGBAKlCjGrGyJAKRZ2iSSW5\nmEBw+KsjhzUfvNVLaRNlmowK9FfKVboPY4S721JF+xmZrJV9AWR29sIi4uU7RPRH\nr4wULUg0YfArjoe4vZocA17W9rqa+hfgVL2NsofxCPmrM0NQqbauXies9aikPDpK\ngTrSbh9G2oALAX7U4w36xhpS\n-----END PRIVATE KEY-----\n",
+  "client_email": "protipo-ocr@iconic-valve-452117-u0.iam.gserviceaccount.com",
+  "client_id": "114042662903496674745",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/protipo-ocr%40iconic-valve-452117-u0.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

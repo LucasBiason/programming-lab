@@ -1,0 +1,768 @@
+{
+  "total_news": 129,
+  "summaries_generated": 127,
+  "news_summaries": [
+    {
+      "url": "https://edition.cnn.com/newsletters",
+      "original_content": "CNN News, delivered. Select from our newsletters below and enter your email to sign up. You're logged in as {emailAddress}. Manage your newsletter subscriptions here. Be the first to know about the bi...",
+      "summary": "A CNN oferece uma variedade de newsletters para manter os leitores informados sobre as principais notícias. Os assinantes recebem alertas de notícias de última hora, resumos de cinco histórias importantes, histórias inspiradoras e previsões das grandes notícias da semana seguinte. Além disso, o programa Reliable Sources da CNN analisa a economia da informação e o cenário midiático em constante evolução, com relatórios e análises rigorosos.",
+      "original_length": 5839
+    },
+    {
+      "url": "https://edition.cnn.com/newsletters",
+      "original_content": "CNN News, delivered. Select from our newsletters below and enter your email to sign up. You're logged in as {emailAddress}. Manage your newsletter subscriptions here. Be the first to know about the bi...",
+      "summary": "A CNN oferece newsletters com resumos de notícias importantes, incluindo alertas de notícias de última hora, resumos diários e semanais de histórias inspiradoras, previsões de grandes notícias da semana e conselhos especializados sobre saúde e bem-estar. O programa Reliable Sources da CNN analisa a economia da informação e o cenário midiático em constante evolução, com relatórios e análises rigorosos.",
+      "original_length": 5839
+    },
+    {
+      "url": "https://www.cnn.com/election/2025",
+      "original_content": "This November, two blue states where President Donald Trump gained ground in 2024 will elect new governors — offering a potential preview of next year’s critical midterms. In New York City,voters will...",
+      "summary": "{\n    \"summary\": \"Em novembro, dois estados democratas onde o Presidente Donald Trump ganhou terreno em 2024 elegerão novos governadores, podendo antecipar as eleições críticas do próximo ano. Em Nova York, os eleitores escolherão um prefeito para liderar a maior cidade do país nos próximos quatro anos. Além disso, eleições especiais para o Congresso este ano impactarão o equilíbrio de poder na Câmara dos Representantes. Em Detroit, nove candidatos concorrem à prefeitura, enquanto no 7º distrito congressual do Arizona, uma eleição especial ocor",
+      "original_length": 3420
+    },
+    {
+      "url": "https://edition.cnn.com/travel/news",
+      "original_content": "© 2025 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.CNN Sans ™ & © 2016 Cable News Network....",
+      "summary": "A notícia não foi fornecida. Por favor, forneça o texto da notícia para que eu possa resumi-lo.",
+      "original_length": 120
+    },
+    {
+      "url": "https://edition.cnn.com/sport/paris-olympics-2024",
+      "original_content": "© 2025 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.CNN Sans ™ & © 2016 Cable News Network....",
+      "summary": "A notícia não foi fornecida, pois o texto apresentado parece ser apenas um aviso de direitos autorais da CNN e da Warner Bros. Discovery Company.",
+      "original_length": 120
+    },
+    {
+      "url": "https://edition.cnn.com/newsletters",
+      "original_content": "CNN News, delivered. Select from our newsletters below and enter your email to sign up. You're logged in as {emailAddress}. Manage your newsletter subscriptions here. Be the first to know about the bi...",
+      "summary": "A CNN oferece newsletters com resumos das principais notícias, alertas de notícias de última hora, histórias inspiradoras, previsões para a semana e informações sobre saúde e bem-estar. O programa Reliable Sources analisa a evolução da mídia com reportagens e análises imparciais. A notícia destaca os desafios do sistema de governo dos EUA diante de um país dividido politicamente.",
+      "original_length": 5839
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/china/trump-jimmy-lai-closing-arguments-intl-hnk",
+      "original_content": "Days before winning his second presidential term, Donald Trump made a bold promise: if he returned to the White House, he would free a pugnacious, self-made billionaire from a Hong Kong prison. “100% ...",
+      "summary": "Donald Trump promised to free Jimmy Lai, a pro-democracy media mogul imprisoned in Hong Kong, if he won a second presidential term. Lai, known for his criticism of Beijing, has spent over 1,600 days in prison and faces the possibility of life behind bars. His case symbolizes Beijing's crackdown on dissent in Hong Kong.",
+      "original_length": 13300
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/china/trump-jimmy-lai-closing-arguments-intl-hnk",
+      "original_content": "Days before winning his second presidential term, Donald Trump made a bold promise: if he returned to the White House, he would free a pugnacious, self-made billionaire from a Hong Kong prison. “100% ...",
+      "summary": "Donald Trump promised to free Jimmy Lai, a pro-democracy media mogul, from a Hong Kong prison if reelected, but Lai remains behind bars. Lai, founder of Apple Daily, has spent over 1,600 days in prison amid Beijing's crackdown on Hong Kong's freedoms.",
+      "original_length": 13300
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/world/ukraine-europe-call-trump-alaska-putin-latam-intl",
+      "original_content": "European leaders urged US President Donald Trump on Wednesday not to strike a unilateralUkrainepeace deal with his Russian counterpart Vladimir Putin during theirone-on-one meetinglater this week in A...",
+      "summary": "European leaders are urging US President Donald Trump not to make a unilateral peace deal with Russian President Vladimir Putin regarding Ukraine. A virtual summit was convened by German Chancellor Friedrich Merz with Trump, Ukrainian President Zelensky, and other European leaders to address concerns about Putin's intentions. Trump expressed Washington's desire for a ceasefire and emphasized that Ukraine's territorial issues must involve Zelensky. He mentioned the possibility of a follow-up meeting between Putin and Zelensky if the summit goes well.",
+      "original_length": 5810
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/americas/us-antarctica-chile-ethan-guo-intl-latam",
+      "original_content": "A judge in Chile has agreed to suspend proceedings against a teenage American pilot and social media influencer who has been stuck on a remote Antarctic island since late June after he wasaccusedof la...",
+      "summary": "O juiz no Chile concordou em suspender o processo contra o piloto adolescente americano e influenciador de mídia social, Ethan Guo, que está preso em uma remota ilha antártica desde junho. Guo pousou sem permissão ao tentar voar para os sete continentes, sendo acusado de fornecer informações falsas sobre o local de pouso. Ele concordou em doar $30.000 para uma fundação de câncer infantil, deixar o país e não retornar ao território chileno por três anos, sob pena de continuação do processo.",
+      "original_length": 3699
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/europe/switzerland-speeding-ticket-wealthy-fines-swiss-latam-intl",
+      "original_content": "The driver was clocked going 27 kilometers per hour (17 mph) over the speed limit on a street in the Swiss city of Lausanne, and now he’s facing up to 90,000 Swiss francs (over $110,000) in fines as a...",
+      "summary": "{\n    \"summary\": \"Um motorista foi flagrado dirigindo a 27 quilômetros por hora acima do limite de velocidade em Lausanne, na Suíça, e agora enfrenta multas de até 90.000 francos suíços (mais de US$110.000) devido a sua alta renda. Na Suíça, as multas são baseadas na renda, fortuna ou situação financeira da família do infrator. Esse tipo de penalidade também é aplicado em países como Alemanha, França, Áustria e países nórdicos. Em 2010, um motorista milionário de Ferrari recebeu uma multa",
+      "original_length": 3219
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/middleeast/israel-in-talks-to-resettle-palestinians-from-gaza-in-south-sudan-ap-intl",
+      "original_content": "Israel is in discussions with South Sudan about the possibility of resettling Palestinians from the Gaza Strip to the war-torn East African country, part of a wider effort by Israel to facilitate mass...",
+      "summary": "Israel is in talks with South Sudan to resettle Palestinians from Gaza Strip to facilitate mass emigration after the offensive against Hamas. Israeli Prime Minister Netanyahu aims to realize Trump's vision of relocating Gaza's population through 'voluntary migration'. The plan raises human rights concerns as it involves transferring people from one war-torn area to another at risk of famine.",
+      "original_length": 6697
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/uk/uk-human-rights-worsen-us-report-trump-intl",
+      "original_content": "The Trump administration has published a report claiming that human rights in the United Kingdom “worsened” over the past year. The annualreport, part of the US State Department’s global survey of hum...",
+      "summary": "Relatório da administração Trump aponta piora nos direitos humanos no Reino Unido no último ano, destacando restrições à liberdade de expressão e ameaças motivadas por antissemitismo. Embora outros países europeus também tenham regredido, as críticas ao Reino Unido foram mais extensas, evidenciando retrocessos na era das redes sociais. O relatório menciona preocupações com restrições em discursos políticos considerados 'odiosos' ou 'ofensivos'.",
+      "original_length": 4351
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/americas/guatemala-facility-youth-fire-conviction-intl-latam",
+      "original_content": "A Guatemalan judge convicted six people of various crimes Tuesday in connection with the deaths of 41 girls in a 2017 fire at a facility for at-risk youth that had a history of abuse. They had all dec...",
+      "summary": "Seis pessoas foram condenadas por crimes relacionados à morte de 41 meninas em um incêndio em 2017 em uma instituição para jovens em risco na Guatemala. As sentenças variaram de seis a 25 anos de prisão, com acusações que incluíram homicídio culposo e abuso de autoridade. Uma investigação foi ordenada contra o ex-presidente Jimmy Morales por sua ligação com a instituição. O ex-Secretário de Bem-Estar Social, Carlos Rodas, foi condenado a 25 anos de prisão.",
+      "original_length": 2875
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/americas/guatemala-facility-youth-fire-conviction-intl-latam",
+      "original_content": "A Guatemalan judge convicted six people of various crimes Tuesday in connection with the deaths of 41 girls in a 2017 fire at a facility for at-risk youth that had a history of abuse. They had all dec...",
+      "summary": "Seis pessoas foram condenadas por diversos crimes relacionados à morte de 41 meninas em um incêndio em 2017 em uma instalação para jovens em situação de risco na Guatemala. As sentenças variaram de seis a 25 anos de prisão, com acusações que vão de homicídio culposo a abuso de autoridade. A juíza ordenou a investigação do ex-presidente Jimmy Morales por sua participação. O ex-Secretário de Bem-Estar Social, Carlos Rodas, foi condenado a 25 anos de prisão.",
+      "original_length": 2875
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/americas/mexico-26-cartels-trump-intl-latam",
+      "original_content": "Mexico has expelled 26 high-ranking cartel figures to the United States in the latest major deal with the Trump administration as American authorities ratchet up pressure on criminal networks sending ...",
+      "summary": "O México expulsou 26 líderes de cartel de alto escalão para os Estados Unidos em um acordo com o governo Trump para pressionar redes criminosas que enviam drogas para os EUA. Entre os transferidos estão Abigael González Valencia, líder do grupo 'Los Cuinis', e Roberto Salazar, acusado de participar do assassinato de um policial em 2008. A transferência foi confirmada pelo Ministério Público do México e pelo Ministério da Segurança.",
+      "original_length": 3424
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/americas/trump-washington-bogota-dc-mexico-city-crime-intl-latam",
+      "original_content": "US President Donald Trump has stepped up his criticism of the security situation in Washington, DC, now claiming that the US capital has a homicide rate higher than some Latin American capitals such a...",
+      "summary": "President Donald Trump criticized the security situation in Washington, DC, stating that the homicide rate is higher than in some Latin American capitals like Bogotá, Mexico City, and Lima. Trump announced plans to place the Metropolitan Police Department under federal control and deploy 800 National Guard troops to 'take back the city.' He emphasized the need to 'liberate' Washington as part of an initiative to regain control of cities threatened by violence.",
+      "original_length": 3534
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/middleeast/anas-al-sharif-al-jazeera-reporter-intl",
+      "original_content": "As a ceasefire in Gaza took hold in January, Anas Al-Sharif began removing his protective gear live on television, piece by piece, while a jubilant crowd cheered, hoping the day marked the end of the ...",
+      "summary": "O jornalista Al Jazeera Anas Al-Sharif, conhecido por sua cobertura na Faixa de Gaza, foi morto em um ataque de Israel, juntamente com outros quatro colegas. Sua morte gerou condenação internacional e pedidos por responsabilização. Al-Sharif se tornou uma figura proeminente ao relatar a situação em Gaza, enquanto Israel bloqueava o acesso da mídia internacional ao território.",
+      "original_length": 8003
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/americas/brazil-british-tourists-drugged-robbed-intl-latam",
+      "original_content": "Police in Rio de Janeiro say they’re investigating a case in which two British tourists say they lost $21,000 after being drugged and robbed by three women near a beach. The incident appears to be the...",
+      "summary": "{\n    \"summary\": \"Dois turistas britânicos no Rio de Janeiro afirmam terem sido drogados e roubados por três mulheres, perdendo US$ 21.000. O caso faz parte de uma série de golpes conhecidos como 'Boa Noite, Cinderela', em que criminosos seduzem estrangeiros, drogam suas bebidas e roubam seus pertences. Os turistas relataram terem sido dopados após conhecerem as mulheres em um bar, perdendo a consciência e sendo roubados. As mulheres foram vistas deixando o local após o incidente, e os turistas receberam atendimento médico após serem encontrados.\"",
+      "original_length": 1703
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/europe/donetsk-zelensky-ukraine-russia-war-intl-latam",
+      "original_content": "Ukraine’s President Volodymyr Zelensky vowed on Tuesday not to give eastern Ukrainian land to Russia, saying that abandoning the Donbas region would open the door for Russian President Vladimir Putin ...",
+      "summary": "O presidente da Ucrânia, Volodymyr Zelensky, afirmou que não cederá terras do leste ucraniano para a Rússia, alertando que isso poderia resultar em uma terceira guerra. Putin deve se reunir com Trump e pode exigir territórios ucranianos como parte de um acordo de paz. Zelensky ressaltou que a região de Donbas é crucial para evitar uma nova ofensiva russa.",
+      "original_length": 4106
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/europe/russia-ukraine-donetsk-dobropillia-trump-putin-intl",
+      "original_content": "Small groups of Russian troops have pierced parts of Ukraine’s defenses in itseastern Donetsk region, according to local officials, as Russia appears to be making an 11th-hour dash to snatch as much t...",
+      "summary": "Small groups of Russian troops have breached Ukraine's defenses in the eastern Donetsk region, aiming to seize territory before the meeting between Putin and Trump. Russian forces are advancing towards Dobropillia, located north of the strategic city of Pokrovsk. Ukrainian President Zelensky reported that Russian troops have moved about 10 kilometers without equipment, only weapons. The objective of this advance is to create a distorted reality and gain territory.",
+      "original_length": 6801
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/china/us-china-trade-nvidia-chips-intl-hnk",
+      "original_content": "Nvidia and AMD have agreed to pay the US government 15% of their revenues from semiconductor sales to China in exchange for export licenses, an unprecedented quid pro quo arrangement aimed at solidify...",
+      "summary": "{\n    \"summary\": \"Nvidia e AMD concordaram em pagar 15% de suas receitas provenientes das vendas de semicondutores para a China ao governo dos EUA em troca de licenças de exportação. O acordo visa fortalecer a dominância dos negócios de IA da América e manter os laços comerciais com a China. As licenças de exportação permitirão que as empresas vendam chips Nvidia H20 e AMD MI308 na China, com o acordo sendo resultado de uma reunião entre o CEO da Nvidia e o presidente Trump. A estrutura exata do acordo ainda não está clara, mas a Casa Branca pode usá-lo como",
+      "original_length": 8638
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/china/us-china-trade-nvidia-chips-intl-hnk",
+      "original_content": "Nvidia and AMD have agreed to pay the US government 15% of their revenues from semiconductor sales to China in exchange for export licenses, an unprecedented quid pro quo arrangement aimed at solidify...",
+      "summary": "Nvidia e AMD concordaram em pagar 15% de suas receitas com vendas de semicondutores para a China ao governo dos EUA em troca de licenças de exportação. O acordo visa fortalecer a dominância dos EUA no mercado de IA e manter os laços comerciais com a China. As empresas poderão vender chips Nvidia H20 e AMD MI308 na China após obterem as licenças de exportação. A negociação ocorreu após uma reunião entre o CEO da Nvidia e o presidente Trump, e as licenças foram concedidas na sexta-feira, mas ainda não houve envio de produtos.",
+      "original_length": 8638
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/australia/british-tourist-guilty-killing-man-e-scooter-australia-latam-intl",
+      "original_content": "An English tourist who hit and killed a man while riding an e-scooter inAustraliapleaded guilty on Monday to a charge of dangerous driving causing death while under the influence of alcohol. Alicia Ke...",
+      "summary": "{\n    \"summary\": \"A turista inglesa Alicia Kemp, de 25 anos, se declarou culpada por causar a morte de um homem enquanto dirigia um e-scooter sob efeito de álcool na Austrália. O acidente ocorreu em Perth, onde ela atingiu um homem de 51 anos, que veio a falecer. Alicia Kemp estava em visita ao estado da Austrália Ocidental, vinda do Reino Unido com visto de férias de trabalho. A velocidade estimada do e-scooter no momento do acidente era de 20 a 25 km/h. Uma acusação de causar ferimentos ao passage",
+      "original_length": 2297
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/australia/british-tourist-guilty-killing-man-e-scooter-australia-latam-intl",
+      "original_content": "An English tourist who hit and killed a man while riding an e-scooter inAustraliapleaded guilty on Monday to a charge of dangerous driving causing death while under the influence of alcohol. Alicia Ke...",
+      "summary": "{\n    \"summary\": \"A turista inglesa Alicia Kemp, de 25 anos, admitiu culpa por dirigir perigosamente e causar a morte de um homem enquanto andava de e-scooter na Austrália. O acidente ocorreu em Perth, em 31 de maio, resultando na morte de um homem de 51 anos. Alicia Kemp estava sob influência de álcool e viajava com um passageiro. Ela estava dirigindo a uma velocidade estimada de 20 a 25 km/h, a velocidade máxima de uma e-scooter alugada. A acusação de causar ferimentos ao passageiro foi retirada quando Kemp",
+      "original_length": 2297
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/world/video/putin-meetings-with-us-presidents-digvid",
+      "original_content": "Russian President Vladimir Putin has ruled the country for more than 25 years, and over that time he's met with American presidents 48 times. © 2025 Cable News Network. A Warner Bros. Discovery Compan...",
+      "summary": "Vladimir Putin, presidente da Rússia, está no poder há mais de 25 anos e se encontrou com presidentes americanos em 48 ocasiões ao longo desse período.",
+      "original_length": 262
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/world/video/putin-meetings-with-us-presidents-digvid",
+      "original_content": "Russian President Vladimir Putin has ruled the country for more than 25 years, and over that time he's met with American presidents 48 times. © 2025 Cable News Network. A Warner Bros. Discovery Compan...",
+      "summary": "Vladimir Putin, presidente da Rússia, está no poder há mais de 25 anos e se encontrou com presidentes americanos 48 vezes ao longo desse período.",
+      "original_length": 262
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/world/video/paul-whelan-trump-putin-summit-alaska-tapper-lead-digvid",
+      "original_content": "Paul Whelan, an American citizen unjustly held in Russia, spoke with CNN's Jake Tapper about the forthcoming summit in Anchorage, Alaska, involving President Donald Trump and Russian President Vladimi...",
+      "summary": "Paul Whelan, cidadão americano injustamente detido na Rússia, conversou com Jake Tapper da CNN sobre a próxima cúpula em Anchorage, Alasca, envolvendo o presidente Donald Trump e o presidente russo Vladimir Putin.",
+      "original_length": 329
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/world/video/paul-whelan-trump-putin-summit-alaska-tapper-lead-digvid",
+      "original_content": "Paul Whelan, an American citizen unjustly held in Russia, spoke with CNN's Jake Tapper about the forthcoming summit in Anchorage, Alaska, involving President Donald Trump and Russian President Vladimi...",
+      "summary": "Paul Whelan, cidadão americano detido injustamente na Rússia, falou com Jake Tapper da CNN sobre a próxima cúpula em Anchorage, Alasca, entre o presidente Donald Trump e o presidente russo Vladimir Putin.",
+      "original_length": 329
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/world/video/zelensky-call-trump-putin-sanctions-digvid",
+      "original_content": "US President Donald Trump had a call with Ukrainian President Volodymyr Zelensky and European leaders, ahead of Friday’s summit with Russian President Vladimir Putin in Alaska. Zelensky said that Trum...",
+      "summary": "O Presidente dos EUA, Donald Trump, teve uma ligação com o Presidente da Ucrânia, Volodymyr Zelensky, e líderes europeus, antes da cúpula de sexta-feira com o Presidente russo Vladimir Putin no Alasca. Zelensky afirmou que Trump 'expressou apoio' a um cessar-fogo durante a ligação.",
+      "original_length": 375
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/world/video/zelensky-call-trump-putin-sanctions-digvid",
+      "original_content": "US President Donald Trump had a call with Ukrainian President Volodymyr Zelensky and European leaders, ahead of Friday’s summit with Russian President Vladimir Putin in Alaska. Zelensky said that Trum...",
+      "summary": "O Presidente dos EUA, Donald Trump, conversou com o Presidente da Ucrânia, Volodymyr Zelensky, e líderes europeus antes de uma cúpula com o Presidente russo Vladimir Putin no Alasca. Zelensky afirmou que Trump expressou apoio a um cessar-fogo durante a ligação.",
+      "original_length": 375
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/world/video/zelensky-berlin-arrival-moment-ldn-digvid",
+      "original_content": "Ukrainian President Volodymyr Zelensky has arrived in Berlin for avirtual summit with European leaders and US President Donald Trump.The talks come ahead of Trump’s planned summit with Russian Preside...",
+      "summary": "O presidente ucraniano Volodymyr Zelensky chegou a Berlim para uma cúpula virtual com líderes europeus e o presidente dos EUA, Donald Trump, antes da reunião planejada entre Trump e o presidente russo Vladimir Putin no Alasca na sexta-feira.",
+      "original_length": 359
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/world/video/zelensky-berlin-arrival-moment-ldn-digvid",
+      "original_content": "Ukrainian President Volodymyr Zelensky has arrived in Berlin for avirtual summit with European leaders and US President Donald Trump.The talks come ahead of Trump’s planned summit with Russian Preside...",
+      "summary": "O presidente ucraniano Volodymyr Zelensky chegou a Berlim para uma cúpula virtual com líderes europeus e o presidente dos EUA, Donald Trump, antes de uma reunião planejada entre Trump e o presidente russo Vladimir Putin no Alasca na sexta-feira.",
+      "original_length": 359
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/uk/lammy-vance-fishing-illegal-intl-gbr",
+      "original_content": "Last week, British foreign minister David Lammy went fishing with US Vice President JD Vance at his retreat in the English countryside. Now, he could be fined for doing so. Lammy on Wednesday referred...",
+      "summary": "O ministro das Relações Exteriores britânico, David Lammy, foi pescar com o vice-presidente dos EUA, JD Vance, em sua casa de campo na Inglaterra e agora pode ser multado por pescar sem licença. Lammy se referiu à agência ambiental do Reino Unido por pescar sem licença e poderá receber uma multa de £2.500. Ele reconheceu o erro, comprou as licenças necessárias e notificou a agência sobre o ocorrido.",
+      "original_length": 2196
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/uk/lammy-vance-fishing-illegal-intl-gbr",
+      "original_content": "Last week, British foreign minister David Lammy went fishing with US Vice President JD Vance at his retreat in the English countryside. Now, he could be fined for doing so. Lammy on Wednesday referred...",
+      "summary": "O ministro das Relações Exteriores britânico, David Lammy, pode ser multado por pescar sem licença durante uma viagem de pesca com o vice-presidente dos EUA, JD Vance. Lammy se referiu à agência ambiental do Reino Unido por não possuir a licença necessária, o que pode resultar em uma multa de £2.500. Após perceber o erro, Lammy comprou as licenças necessárias e notificou a agência ambiental sobre o ocorrido.",
+      "original_length": 2196
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/uk/wisconsin-hitwoman-convicted-uk-latam-intl",
+      "original_content": "An American woman who was hired by her British lover as a would-be assassin, but then botched the attack and spent five years on the run, has been found guilty of conspiracy to murder. Aimee Betro, 44...",
+      "summary": "Aimee Betro, an American woman hired by her British lover as a hitman, was found guilty of conspiracy to murder after botching an assassination attempt in Birmingham, England. Her gun jammed during the attack, allowing the target to escape unharmed. Betro was convicted after an investigation involving the FBI and the National Crime Agency, revealing her involvement in a family revenge plot orchestrated by Mohammed Aslam and Mohammed Nazir from Derbyshire, England.",
+      "original_length": 4085
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/europe/cole-henderson-hiker-death-pyrenees-spain-intl",
+      "original_content": "Spanish search and rescue teams have found the body of anAmerican hiker who went missingin the Pyrenees last month. The body of Cole Henderson, 27, was located on the north face of Monte Perdido, the ...",
+      "summary": "{\n    \"summary\": \"O corpo do americano Cole Henderson, de 27 anos, que estava desaparecido nos Pirineus desde o mês passado, foi encontrado pelas equipes de busca e resgate espanholas. Ele foi localizado na face norte do Monte Perdido, terceira montanha mais alta dos Pirineus. Henderson havia informado a amigos que faria uma trilha no Parque Nacional Ordesa y Monte Perdido, na Espanha, mas foi dado como desaparecido após não embarcar em seu voo de volta para a Holanda. Equipes especializadas utilizaram um guindaste para resgatar seu corpo em",
+      "original_length": 1815
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/europe/eastern-ukraine-trump-russia-ceasefire-intl-latam",
+      "original_content": "On the beaches of Sloviansk’s tiny salt lake, where the medicinal waters provide a moment of solace from the whirling violence of the eastern frontlines just a few miles away, talk of aUkraine land de...",
+      "summary": "Moradores de Sloviansk, cidade próxima à linha de frente no leste da Ucrânia, discutem de forma surreal a proposta da Rússia de trocar um cessar-fogo por partes do Donbas. A possibilidade de a cidade se tornar território russo causou pânico entre os habitantes, que temem ter que deixar suas casas. Mesmo em um momento de calma na praia, a incerteza persiste.",
+      "original_length": 5672
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/10/uk/arthurs-seat-edinburgh-volcano-fire-intl-latam",
+      "original_content": "A fire broke out on Arthur’s Seat, a landmark dormant volcano inEdinburgh, Scotland, on Sunday, according to local authorities. A “large area” of shrubbery was affected by the blaze, the Scottish Fire...",
+      "summary": "Um incêndio ocorreu no Arthur's Seat, um vulcão inativo em Edimburgo, Escócia. Uma grande área de vegetação foi afetada, sem relato de vítimas. O fogo começou por volta das 16:05 no horário local e ainda não havia sido extinto mais de cinco horas depois. A causa do incêndio não foi divulgada. Autoridades locais e parlamentares alertaram para a situação, pedindo cuidado aos moradores próximos e orientando motoristas e pedestres a evitarem a área.",
+      "original_length": 1859
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/10/europe/european-anxiety-trump-putin-summit-intl",
+      "original_content": "Not for the first time, European capitals are gripped with apprehension thatRussian President Vladimir Putinwill surgically divide the transatlantic alliance as well as get everything he wants inUkrai...",
+      "summary": "European capitals are concerned about Russian President Vladimir Putin's intentions regarding Ukraine and the transatlantic alliance. A summit between Putin and US President Donald Trump in Alaska has raised fears among European diplomats. Little is known about the Kremlin's proposals to end the fighting in Ukraine, causing apprehension among European officials.",
+      "original_length": 6407
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/middleeast/israel-strike-armed-group-posing-aid-workers-latam-intl",
+      "original_content": "The Israeli military says it struck an armed group posing as aid workers and using a vehicle marked with the logo of the World Central Kitchen (WCK), a US-based non-profit. The strike, which took plac...",
+      "summary": "{\n    \"summary\": \"O exército israelense afirma ter atacado um grupo armado que se passava por trabalhadores humanitários e utilizava um veículo com o logo da World Central Kitchen. O ataque resultou na morte de 'cinco terroristas armados'. Um vídeo divulgado pelo IDF mostra homens usando coletes amarelos ao redor do veículo com o logo da WCK. A IDF afirmou que os homens estavam armados e exploravam de forma cínica a confiança depositada em organizações humanitárias. O COGAT de Israel entrou em contato com a WCK, que confirmou que",
+      "original_length": 4936
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/middleeast/israel-strike-armed-group-posing-aid-workers-latam-intl",
+      "original_content": "The Israeli military says it struck an armed group posing as aid workers and using a vehicle marked with the logo of the World Central Kitchen (WCK), a US-based non-profit. The strike, which took plac...",
+      "summary": "{\n    \"summary\": \"O exército israelense atacou um grupo armado que se passava por trabalhadores humanitários e utilizava um veículo com o logo da World Central Kitchen. O ataque resultou na morte de cinco terroristas armados. Um vídeo divulgado pelas Forças de Defesa de Israel mostra homens usando coletes amarelos ao redor do veículo com o logo da WCK. O IDF afirmou que os homens estavam armados e exploravam de forma cínica a confiança depositada em organizações humanitárias. O veículo não foi atingido no vídeo. A COGAT de Israel",
+      "original_length": 4936
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/middleeast/israel-un-sexual-violence-report-intl",
+      "original_content": "United Nations Secretary-GeneralAntonio Guterreshas warned Israel about potentially listing the country’s armed forces in an upcoming UN report on sexual violence, according to the spokesperson for Is...",
+      "summary": "O Secretário-Geral da ONU, Antonio Guterres, alertou Israel sobre a possibilidade de listar as forças armadas do país em um próximo relatório da ONU sobre violência sexual. Guterres expressou preocupação com padrões de certas formas de violência sexual cometidos pelas forças israelenses. A carta foi enviada ao embaixador de Israel na ONU, Danny Danon, e destaca violações cometidas pelas forças de segurança israelenses.",
+      "original_length": 3766
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/10/middleeast/israel-strike-kills-six-journalists-gaza-jazeera-latam-intl",
+      "original_content": "An Israeli strike in Gaza City late Sunday night killed seven people including five staff members from the news network Al Jazeera, in an attack condemned by press freedom advocates and the United Nat...",
+      "summary": "{\n    \"summary\": \"Um ataque israelense em Gaza City matou sete pessoas, incluindo cinco funcionários da rede de notícias Al Jazeera. Entre os mortos estava o correspondente Anas Al-Sharif, acusado pelo exército israelense de liderar uma célula do Hamas, acusação negada por ele e pela rede. Além de Al-Sharif, foram mortos os correspondentes Mohammed Qreiqeh, Ibrahim Al Thaher e Moamen Aliwa, e outro funcionário, Mohammed Noufal. O ataque foi condenado por defensores da liberdade de imprensa e pelo escritório de direitos humanos da",
+      "original_length": 6341
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/10/middleeast/israel-netanyahu-defends-gaza-city-plan-intl-latam-hnk",
+      "original_content": "Israeli Prime Minister Benjamin Netanyahu has defended his plannedmilitary takeoverof Gaza City in the face of growing international condemnation and anger, with United Nations officials warning Sunda...",
+      "summary": "O Primeiro-Ministro de Israel, Benjamin Netanyahu, defendeu a sua planejada tomada militar da Cidade de Gaza, apesar da crescente condenação internacional. Ele afirmou que essa operação é a maneira mais rápida de encerrar a guerra, visando destruir o Hamas e resgatar reféns. No entanto, a ONU alertou que essa ação pode resultar em mais calamidades na região já em crise humanitária.",
+      "original_length": 6945
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/10/middleeast/iran-un-nuclear-watchdog-intl-latam",
+      "original_content": "A senior official from the United Nations’ nuclear watchdog will fly to Iran for talks on Monday, but no visit tonuclear sitesis planned, Iran’s Foreign Minister Abbas Araghchi said on Sunday. Since I...",
+      "summary": "Um oficial sênior da Agência Internacional de Energia Atômica (AIEA) da ONU irá para o Irã para conversas, mas não está prevista visita aos locais nucleares. Inspectores da AIEA não conseguiram acessar as instalações do Irã desde ataques de Israel em junho. O Irã acusou a agência de facilitar os bombardeios ao declarar o país em violação de obrigações de não proliferação. O Irã nega buscar armas nucleares e afirma compromisso com o Tratado de Não Proliferação Nuclear.",
+      "original_length": 1459
+    },
+    {
+      "url": "https://edition.cnn.com/2025/01/13/world/gallery/people-we-lost-2025",
+      "original_content": "Here are some notable people who have died in 2025. © 2025 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.CNN Sans ™ & © 2016 Cable News Network....",
+      "summary": "A notícia destaca algumas pessoas famosas que faleceram em 2025.",
+      "original_length": 172
+    },
+    {
+      "url": "https://edition.cnn.com/2025/01/13/world/gallery/people-we-lost-2025",
+      "original_content": "Here are some notable people who have died in 2025. © 2025 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.CNN Sans ™ & © 2016 Cable News Network....",
+      "summary": "A notícia destaca algumas pessoas famosas que faleceram em 2025.",
+      "original_length": 172
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/07/world/gallery/photos-this-week-july-31-august-07",
+      "original_content": "Dozens of Texas House Democratsfled the stateSunday in a bid to block an aggressively partisan redrawing of the state’s congressional map backed by President Donald Trump to help the GOP maintain the ...",
+      "summary": "{\n    \"summary\": \"Dezenas de democratas da Câmara do Texas fugiram do estado em uma tentativa de bloquear a reformulação partidária agressiva do mapa congressional do estado apoiada pelo Presidente Donald Trump para ajudar o GOP a manter a maioria na Câmara dos EUA em 2026. Os republicanos do Texas argumentam que a mudança é necessária devido a preocupações de que os mapas atuais sejam inconstitucionais e racialmente gerrymandered, enquanto os democratas afirmam que suprimiria os votos de pessoas de cor. A Constituição do Texas exige dois terços da Câmara do",
+      "original_length": 1452
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/07/world/gallery/photos-this-week-july-31-august-07",
+      "original_content": "Dozens of Texas House Democratsfled the stateSunday in a bid to block an aggressively partisan redrawing of the state’s congressional map backed by President Donald Trump to help the GOP maintain the ...",
+      "summary": "{\n    \"summary\": \"Dezenas de democratas da Câmara do Texas fugiram do estado em uma tentativa de bloquear a reformulação partidária agressiva do mapa congressional do estado, apoiada pelo ex-presidente Donald Trump para ajudar o Partido Republicano a manter a maioria na Câmara dos EUA em 2026. Os republicanos do Texas argumentam que a mudança é necessária devido a preocupações de que os mapas atuais sejam inconstitucionais e racialmente manipulados. Os democratas afirmam que isso suprimiria os votos das pessoas de cor. A Constituição do Texas exige dois terços da C",
+      "original_length": 1452
+    },
+    {
+      "url": "https://edition.cnn.com/2025/07/31/world/gallery/photos-this-week-july-24-july-31",
+      "original_content": "A lone gunman killed four people and injured a fifth Monday before fatally shooting himself at a skyscraper in Midtown Manhattan. It was thedeadliest mass shootingin New York City since 2000. The shoo...",
+      "summary": "{\n    \"summary\": \"Um atirador solitário matou quatro pessoas e feriu uma quinta em um arranha-céu em Midtown Manhattan, antes de se suicidar. O atirador, identificado como Shane Devon Tamura, utilizou um fuzil de assalto. Entre as vítimas estava o policial de Nova York Didarul Islam. Uma nota de suicídio foi encontrada no bolso de Tamura, expressando descontentamento com a NFL e mencionando sofrer de CTE, uma doença relacionada a traumas na cabeça. Investigações apontam que Tamura estava indo em direção aos escritórios da NFL",
+      "original_length": 1270
+    },
+    {
+      "url": "https://edition.cnn.com/2025/07/31/world/gallery/photos-this-week-july-24-july-31",
+      "original_content": "A lone gunman killed four people and injured a fifth Monday before fatally shooting himself at a skyscraper in Midtown Manhattan. It was thedeadliest mass shootingin New York City since 2000. The shoo...",
+      "summary": "{\n    \"summary\": \"Um atirador solitário matou quatro pessoas e feriu uma quinta em um arranha-céu em Midtown Manhattan, antes de se suicidar. O atirador, identificado como Shane Devon Tamura, usou um fuzil de assalto. Entre as vítimas estava o policial de Nova York Didarul Islam. Uma nota de suicídio foi encontrada no bolso de Tamura, expressando descontentamento com a NFL e mencionando sofrer de CTE, uma doença relacionada a traumas na cabeça. Investigações apontam que Tamura estava indo para os escritórios da NFL no momento",
+      "original_length": 1270
+    },
+    {
+      "url": "https://edition.cnn.com/2025/07/24/world/gallery/photos-this-week-july-17-july-24",
+      "original_content": "Palestinians in Gaza are suffering fromman-made “mass starvation”due to the aid blockade on the enclave, the chief of the World Health Organization warned reporters at abriefing on Wednesday. “Parents...",
+      "summary": "O chefe da Organização Mundial da Saúde alertou que os palestinos em Gaza estão sofrendo de 'fome em massa' devido ao bloqueio de ajuda humanitária. Mais de 100 organizações humanitárias pediram a Israel que restaure o fluxo de alimentos, água limpa e suprimentos médicos para Gaza. Muitas pessoas, principalmente crianças, morreram de desnutrição desde o início do conflito em outubro de 2023. Israel acusou o Hamas de roubar suprimentos, enquanto o Hamas nega a alegação.",
+      "original_length": 1486
+    },
+    {
+      "url": "https://edition.cnn.com/2025/07/24/world/gallery/photos-this-week-july-17-july-24",
+      "original_content": "Palestinians in Gaza are suffering fromman-made “mass starvation”due to the aid blockade on the enclave, the chief of the World Health Organization warned reporters at abriefing on Wednesday. “Parents...",
+      "summary": "{\n    \"summary\": \"O chefe da Organização Mundial da Saúde alertou que os palestinos em Gaza estão sofrendo de 'fome em massa' devido ao bloqueio de ajuda humanitária, com mais de 100 organizações pedindo a Israel para restabelecer o fluxo de alimentos, água limpa e suprimentos médicos. De acordo com o Ministério da Saúde palestino, dezenas de pessoas, a maioria crianças, morreram de desnutrição desde o início do conflito em outubro de 2023. Israel acusou o Hamas de roubar suprimentos, enquanto o Hamas neg",
+      "original_length": 1486
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/08/africa/buffalo-kills-hunter-south-africa-scli-intl",
+      "original_content": "A hunter from the United States has been killed by a buffalo he was tracking during an expedition in South Africa, organizers said this week. Asher Watkins, from Texas, was killed on Sunday “while on ...",
+      "summary": "O caçador dos Estados Unidos, Asher Watkins, foi morto por um búfalo que estava rastreando durante uma expedição na África do Sul. O incidente ocorreu durante um safari de caça na província de Limpopo. A empresa responsável pelo safari, Coenraad Vermaak Safaris, relatou que Watkins foi fatalmente ferido em um ataque repentino do búfalo. A prática de caça estilo safari é comum no sul da África e envolve rastrear animais a pé após avistá-los em um veículo safari aberto.",
+      "original_length": 2737
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/08/africa/buffalo-kills-hunter-south-africa-scli-intl",
+      "original_content": "A hunter from the United States has been killed by a buffalo he was tracking during an expedition in South Africa, organizers said this week. Asher Watkins, from Texas, was killed on Sunday “while on ...",
+      "summary": "O caçador dos Estados Unidos, Asher Watkins, foi morto por um búfalo que estava rastreando durante uma expedição na África do Sul. O incidente ocorreu durante um safári de caça na província de Limpopo. A empresa responsável pela viagem, Coenraad Vermaak Safaris, relatou que o ataque foi repentino e não provocado. A prática de caça estilo safári é comum na África do Sul, envolvendo a busca por animais selvagens a pé após avistá-los em um veículo safari.",
+      "original_length": 2737
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/06/africa/ghana-ministers-killed-helicopter-crash-intl",
+      "original_content": "Ghana’s defense and environment ministers are among eight people killed after a military helicopter crashed in the southern Ashanti region on Wednesday, according to the chief of staff to the Ghanian ...",
+      "summary": "Um helicóptero militar caiu na região sul de Ashanti, em Gana, matando o ministro da Defesa, Edward Omane Boamah, o ministro do Meio Ambiente, Ibrahim Murtala Mohammed, e outras seis pessoas. A aeronave, que transportava cinco passageiros e três tripulantes, perdeu contato enquanto seguia de Accra para Obuasi. O chefe de gabinete do presidente de Gana declarou que a queda foi uma 'tragédia nacional' e decretou luto oficial hasteando as bandeiras a meio mastro.",
+      "original_length": 1334
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/05/africa/nigeria-wildlife-trafficking-birds-latam-intl",
+      "original_content": "Nigerian customs said they seized more than 1,600 parrots and canaries that were being transported from Lagos international airport to Kuwait without a permit, in one the biggest wildlife trafficking ...",
+      "summary": "{\n    \"summary\": \"A alfândega nigeriana apreendeu mais de 1.600 papagaios e canários que estavam sendo transportados do aeroporto internacional de Lagos para o Kuwait sem permissão, em uma das maiores apreensões de tráfico de animais selvagens dos últimos anos. A ação é vista como um sinal positivo na luta contra o tráfico ilegal de animais selvagens, já que a Nigéria é um importante centro no comércio global de espécies protegidas. Os agentes alfandegários apreenderam os pássaros, incluindo espécies protegidas,",
+      "original_length": 1568
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/05/africa/us-rwanda-migrants-deal-intl",
+      "original_content": "Rwanda has reached a deal with the Trump administration to take inmigrants deported from the United States, becoming the third African nation to do so, amid complaints that governments on the continen...",
+      "summary": "Rwanda has reached a deal with the Trump administration to accept up to 250 migrants deported from the United States, becoming the third African nation to do so. The agreement includes providing workforce training, health care, and accommodation support for the migrants to start their lives in Rwanda and contribute to the country's growing economy.",
+      "original_length": 4278
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/americas/uribe-death-analysis-colombia-election-intl-latam",
+      "original_content": "The death of Miguel Uribe, two months after the attack against him, marks a return to the worst period of political violence in Colombia. Weeks of limbo and hope for his recovery ended with the most u...",
+      "summary": "{\n    \"summary\": \"O assassinato de Miguel Uribe, dois meses após o atentado contra ele, marca um retorno ao pior período de violência política na Colômbia. O país acreditava ter superado a ameaça de morte contra candidatos presidenciais, mas o assassinato de Uribe ressalta que a violência política persiste. Esse evento não apenas impacta a sociedade colombiana, que havia mostrado união ao condenar o ataque, mas também pode influenciar as próximas eleições presidenciais. A Colômbia tem o maior registro de crimes políticos na América Latina, e o assassinato de",
+      "original_length": 6349
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/americas/uribe-death-analysis-colombia-election-intl-latam",
+      "original_content": "The death of Miguel Uribe, two months after the attack against him, marks a return to the worst period of political violence in Colombia. Weeks of limbo and hope for his recovery ended with the most u...",
+      "summary": "O assassinato de Miguel Uribe, dois meses após o atentado contra ele, marca um retorno ao pior período de violência política na Colômbia. A morte não apenas impacta a sociedade, que havia mostrado união ao rejeitar o ataque, mas também pode influenciar as próximas eleições presidenciais. A Colômbia tem o maior registro de crimes políticos na América Latina, e o assassinato de líderes sociais nunca foi erradicado.",
+      "original_length": 6349
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/americas/colombia-senator-miguel-uribe-turbay-dies-intl",
+      "original_content": "Miguel Uribe Turbay, a Colombian senator and presidential hopeful who was hospitalized after beingshot at a campaign eventmore than two months ago, has died, his wife announced on Monday. He was 39. U...",
+      "summary": "O senador colombiano e candidato presidencial Miguel Uribe Turbay, que foi baleado em um evento de campanha mais de dois meses atrás, faleceu aos 39 anos. Ele estava internado desde junho, quando foi atingido na cabeça durante um comício em Bogotá. Sua morte foi anunciada por sua esposa. O presidente colombiano, Gustavo Petro, expressou condolências à família de Uribe, destacando que sua morte impacta todos os colombianos, independentemente de ideologia política.",
+      "original_length": 3374
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/10/americas/ecuador-gangs-drug-war-documentary-intl-latam",
+      "original_content": "He says he was 18 years old when he first joined a gang in Ecuador a decade ago. Now a senior commander with a wife and kids, the man almost casually acknowledges he’s contributing to thedeadly drug t...",
+      "summary": "Um comandante sênior de uma gangue no Equador, que entrou para o grupo aos 18 anos e agora tem esposa e filhos, admite contribuir para o tráfico de drogas no país. Mesmo reconhecendo ser parte do problema, ele justifica sua permanência na gangue devido à lucratividade do negócio. A CNN teve acesso exclusivo a líderes de gangues no Equador, com uma equipe coordenada que incluiu produtor, produtora investigativa, fotojornalista e coordenador de segurança.",
+      "original_length": 10080
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/08/americas/nicolas-maduro-50-million-reward-trump-administration-latam-intl",
+      "original_content": "The Trump administration is doubling to $50 million a reward for the arrest of Venezuela’s President Nicolás Maduro, accusing him of being one of the world’s largest narco-traffickers and working with...",
+      "summary": "A administração Trump está dobrando para US$ 50 milhões a recompensa pela prisão do presidente da Venezuela, Nicolás Maduro, acusando-o de ser um dos maiores traficantes de drogas do mundo. Maduro foi indiciado em 2020 por narcoterrorismo e conspiração para importar cocaína. O governo Biden aumentou a recompensa para US$ 25 milhões, mas Maduro permanece no poder, desafiando os EUA e a União Europeia.",
+      "original_length": 2514
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/asia/japan-pokemon-mcdonalds-food-waste-intl-hnk",
+      "original_content": "Piles of untouched Happy Meals littered sidewalks outside McDonald’s restaurants in Japan over the weekend, as frenzied customers scrambled to buy limited-edition sets with Pokémon cards. The promotio...",
+      "summary": "Clientes japoneses correram para comprar os combos Happy Meal com cartas de Pokémon em uma promoção do McDonald's, resultando em refeições inteiras sendo descartadas nas calçadas. Os clientes compraram grandes quantidades para revender as cartas exclusivas, gerando revolta pelo desperdício de comida. O combo custa cerca de $3.50, mas as cartas estão sendo vendidas por $28 cada por atravessadores. A distribuição das cartas foi encerrada mais cedo devido à alta demanda.",
+      "original_length": 2375
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/asia/japan-pokemon-mcdonalds-food-waste-intl-hnk",
+      "original_content": "Piles of untouched Happy Meals littered sidewalks outside McDonald’s restaurants in Japan over the weekend, as frenzied customers scrambled to buy limited-edition sets with Pokémon cards. The promotio...",
+      "summary": "Clientes no Japão compraram em massa Happy Meals do McDonald's para obter cartas Pokémon exclusivas, resultando em desperdício de comida. A promoção durou apenas algumas horas devido à revenda das cartas. Fotos nas redes sociais mostram refeições inteiras descartadas do lado de fora dos restaurantes, gerando críticas por desperdício de alimentos.",
+      "original_length": 2375
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/asia/new-zealand-luxon-israel-lost-the-plot-intl-hnk",
+      "original_content": "New Zealand Prime Minister Christopher Luxon said Wednesday that his Israeli counterpart Benjamin Netanyahu has “lost the plot” and that Israel’s planned occupation of Gaza City is “utterly unacceptab...",
+      "summary": "{\n    \"summary\": \"O Primeiro-Ministro da Nova Zelândia, Christopher Luxon, criticou o Primeiro-Ministro de Israel, Benjamin Netanyahu, chamando a ocupação planejada de Gaza City de 'totalmente inaceitável'. Luxon considera que Netanyahu não está ouvindo as demandas da comunidade internacional por ajuda humanitária em Gaza. Luxon e seu governo estão avaliando se devem se juntar a outros membros da aliança de segurança Five-Eyes para reconhecer um estado palestino, em meio à condenação internacional pela expansão da guerra de Israel em Gaza City e pela escassez de ajuda human",
+      "original_length": 4709
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/asia/south-korean-court-orders-arrest-wife-yoon-latam-intl",
+      "original_content": "The wife of South Korea’s jailed formerPresident Yoon Suk Yeolhas been arrested as investigators seek to charge her over various suspected crimes, including bribery, stock manipulation and meddling in...",
+      "summary": "A esposa do ex-presidente da Coreia do Sul, Yoon Suk Yeol, foi presa sob suspeita de crimes como suborno e manipulação de ações. A investigação faz parte de um inquérito que envolve o ex-presidente Yoon, que foi afastado do cargo em abril. Esta é uma das três investigações especiais lançadas pelo novo governo liberal de Seul. Yoon e sua esposa são o primeiro casal presidencial a serem presos simultaneamente por acusações criminais.",
+      "original_length": 5066
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/asia/south-china-sea-china-warship-collision-intl-hnk",
+      "original_content": "It’s hard to call the collision of two multi-thousand-ton military ships “fortunate,” but that’s exactly what analysts are saying about the incident in the South China Sea this week that left a China ...",
+      "summary": "Uma colisão entre um navio da Guarda Costeira da China e um destróier da Marinha do Exército de Libertação Popular deixou o navio chinês com a proa danificada no Mar da China Meridional. O incidente ocorreu durante a distribuição de ajuda a pescadores filipinos perto do recife de Scarborough Shoal. O navio da Guarda Costeira da China estava perseguindo um navio da Guarda Costeira das Filipinas em alta velocidade quando a colisão aconteceu.",
+      "original_length": 6865
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/travel/nepal-mountain-climbing-free-intl-hnk",
+      "original_content": "Sign up forUnlocking the World, CNN Travel’s weekly newsletter. Get news about destinations, plus the latest in aviation, food and drink, and where to stay. A permit to climb the world’s tallest mount...",
+      "summary": "Nepal is opening up 97 peaks in far western regions of the country for international climbers for free, in an effort to attract travelers to less expensive and less visited areas. The government aims to diversify tourism beyond Mount Everest, offering opportunities to climb unexplored mountains at no cost.",
+      "original_length": 3036
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/travel/nepal-mountain-climbing-free-intl-hnk",
+      "original_content": "Sign up forUnlocking the World, CNN Travel’s weekly newsletter. Get news about destinations, plus the latest in aviation, food and drink, and where to stay. A permit to climb the world’s tallest mount...",
+      "summary": "Nepal is opening up 97 peaks in far western regions of the country for international climbers for free, in an effort to attract travelers to less expensive and less visited areas. This initiative aims to diversify tourism beyond Mount Everest, which requires a $15,000 permit to climb, excluding additional costs for airfare, gear, and guides.",
+      "original_length": 3036
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/09/travel/travel-news-air-transport-statistics",
+      "original_content": "Sign up forUnlocking the World, CNN Travel’s weekly newsletter. Get news about destinations, plus the latest in aviation, food and drink, and where to stay. In our roundup of travel news this week: th...",
+      "summary": "A International Air Transport Association (IATA) divulgou seu relatório de Estatísticas Mundiais de Transporte Aéreo de 2024, revelando que os Estados Unidos são o maior mercado de aviação do mundo, com 876 milhões de passageiros por ano, seguido pela China em segundo lugar. O relatório também destaca a cidade subterrânea secreta sob Roma, a 'cidade 8D' da China e as rotas de voo mais movimentadas do mundo.",
+      "original_length": 4438
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/08/travel/icon-seas-royal-caribbean-waterslide-breaks",
+      "original_content": "An acrylic waterslide on Royal Caribbean’s Icon of the Seas broke open on Thursday, injuring one passenger and leaving a sizable hole in the bottom of the tubular slide. “Our team provided medical car...",
+      "summary": "Um escorregador de acrílico no navio Icon of the Seas da Royal Caribbean quebrou, ferindo um passageiro e deixando um buraco no fundo do escorregador. O passageiro está sendo tratado e o escorregador foi fechado para investigação. O navio possui seis escorregadores em um parque aquático chamado Category 6, sendo o maior parque aquático em um navio. O incidente ocorreu no maior navio de cruzeiro do mundo, o Icon of the Seas.",
+      "original_length": 1208
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/style/jenna-ortega-tired-girl-makeup-tiktok-trend",
+      "original_content": "Jenna Ortega’s eyes are lightly smudged, framed by dark shadows. Her face is pale, and her cheekbones are accentuated by a dash of gray. Her lips are tinged purple. She looks exhausted, but that’s the...",
+      "summary": "A nova tendência de maquiagem da geração Z, chamada 'Tired Girl', celebra a aparência de cansaço, em contraste com os padrões tradicionais de beleza que buscam esconder a fadiga. A tendência destaca a aceitação das imperfeições ao invés de tentar escondê-las, sendo exemplificada pela personagem Wednesday Addams interpretada por Jenna Ortega na série da Netflix dirigida por Tim Burton.",
+      "original_length": 6460
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/style/jenna-ortega-tired-girl-makeup-tiktok-trend",
+      "original_content": "Jenna Ortega’s eyes are lightly smudged, framed by dark shadows. Her face is pale, and her cheekbones are accentuated by a dash of gray. Her lips are tinged purple. She looks exhausted, but that’s the...",
+      "summary": "A tendência de maquiagem 'Tired Girl' celebra a aparência de cansaço, em contraste com os padrões tradicionais de beleza que buscam disfarçar a fadiga. Jenna Ortega é destaque nessa tendência, representando o papel de Wednesday Addams na série da Netflix dirigida por Tim Burton.",
+      "original_length": 6460
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/style/unsettling-photos-climate-crisis-giulia-piermartiri-edoardo-delille",
+      "original_content": "It takes a moment to fully grasp what you’re seeing in Edoardo Delille and Giulia Piermartiri’s photographs of the Maldives. In one picture, a sea turtle appears to swim beside a couple on a motorbike...",
+      "summary": "Fotógrafos retratam a ameaça das mudanças climáticas nas Maldivas, mostrando imagens surreais de pessoas interagindo com o ambiente subaquático devido à elevação do nível do mar. Com a previsão de que 80% do país se torne inabitável até 2050, as fotos alertam para a urgência de lidar com a crise climática.",
+      "original_length": 6173
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/08/style/larry-sultan-the-valley-snap",
+      "original_content": "EDITOR’S NOTE:InSnap,we look at the power of a single photograph, chronicling stories about how both modern and historical images have been made. In a makeshift bedroom with vibrant purple curtains, t...",
+      "summary": "O fotógrafo Larry Sultan se interessou pelos detalhes mundanos dos cenários de filmes pornográficos em estúdios e casas alugadas no Vale de San Fernando, na Califórnia. Durante um ensaio sobre a vida diária de uma estrela pornô para a revista masculina Maxim, Sultan voltou por acaso ao seu bairro de infância nos anos 1990. A região se tornou um polo de estúdios de entretenimento adulto devido à sua relativa acessibilidade e proximidade.",
+      "original_length": 4426
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/07/style/kate-moss-hermes-kelly-beach-lotw",
+      "original_content": "EDITOR’S NOTE:Featuring the good, the bad and the ugly,‘Look of the Week’is a regular series dedicated to unpacking the most talked about outfit of the last seven days. Kate Moss’s beach bag is not li...",
+      "summary": "Kate Moss foi fotografada em Formentera, Espanha, carregando uma bolsa Hermès Kelly de couro marrom, avaliada em dezenas de milhares de dólares. Ao contrário de outras celebridades que mantêm essas bolsas impecáveis, Moss exibiu a sua desgastada e usada. A Kelly é avaliada entre $10.000 e $20.000, podendo dobrar no mercado secundário.",
+      "original_length": 3428
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/05/style/dior-luxury-spa-new-york-flagship",
+      "original_content": "After years of renovations, Dior has re-opened the doors to its flagship store in New York City. And unlike its other global boutiques, this one houses its first permanent spa. Located on the corner o...",
+      "summary": "Dior has re-opened its flagship store in New York City after renovations, featuring its first permanent spa. The store, designed by architect Peter Marino, spans four floors and showcases womenswear, menswear, fine jewelry, and more. This re-opening is part of a trend where luxury brands are targeting US shoppers for growth. Dior's owner LVMH generated €84.7 billion in revenue in 2024, with 25% coming from America. The new spa is located on the top floor of the boutique.",
+      "original_length": 5624
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/weather/juneau-alaska-glacier-outburst-flooding-climate",
+      "original_content": "For the third consecutive year, a wave of water gushed out of an Alaskan glacial lake, threatening the state’s capital city of Juneau. But, flood barriers installed by the city managed to prevent disa...",
+      "summary": "Uma onda de água vinda de um lago glacial no Alasca ameaçou a cidade de Juneau pelo terceiro ano consecutivo, mas barreiras de inundação instaladas pela cidade evitaram o desastre. O lago Suicide Basin, ligado à geleira Mendenhall, transbordou, elevando os níveis de água. A água gushes atingiu o Lago Mendenhall e desceu o rio Mendenhall, que passa pela cidade. O rio atingiu um nível recorde de 15,99 pés na quarta-feira.",
+      "original_length": 5691
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/weather/juneau-alaska-glacier-outburst-flooding-climate",
+      "original_content": "For the third consecutive year, a wave of water gushed out of an Alaskan glacial lake, threatening the state’s capital city of Juneau. But, flood barriers installed by the city managed to prevent disa...",
+      "summary": "Uma onda de água vazou de um lago glacial no Alasca, ameaçando a cidade de Juneau. Barreiras de inundação instaladas pela cidade evitaram um desastre, apesar dos níveis recordes de água. O vazamento começou no Lago Suicide Basin, ligado à geleira Mendenhall, localizada a cerca de 16 km do centro da cidade. O rio Mendenhall atingiu um nível recorde de 15,99 pés na quarta-feira devido ao evento.",
+      "original_length": 5691
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/weather/tropical-storm-erin-hurricane-season-climate",
+      "original_content": "Tropical Storm Erin is tracking west over the open Atlantic Ocean and forecasters expect it to become the first hurricane of theAtlantic seasonthis week. Located hundreds of miles west of Africa’s Cab...",
+      "summary": "Tropical Storm Erin is expected to become the first hurricane of the Atlantic season this week. Located west of Africa, it is the fifth named storm of the 2025 season and could strengthen into a hurricane by Wednesday night. Erin is moving through the 'main development region' of the Atlantic, known for producing tropical systems. Its path towards the western Atlantic will be monitored closely, with potential impacts on the Caribbean, Bermuda, and the United States.",
+      "original_length": 2972
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/weather/humid-summer-heat-climate-vis",
+      "original_content": "Hot summers are nothing new for much of the United States, but the combination of heat and humidity has taken on a truly antagonistic role this year, pushing us closer to our melting points in an alre...",
+      "summary": "O verão nos Estados Unidos está mais quente e úmido devido ao aumento das temperaturas e da umidade, causado pela poluição de combustíveis fósseis. As temperaturas do ponto de orvalho atingiram níveis altos, tornando o clima desconfortável. Metade do país teve um início de verão mais úmido em mais de 40 anos, de acordo com uma análise da CNN.",
+      "original_length": 6049
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/10/weather/milwaukee-flooding-rain-airport-climate",
+      "original_content": "Heavy thunderstorms and gushing rain pummeled parts of the Midwest and Plains over the weekend, triggering flash flooding that caused water rescues and canceled multiple events in the Milwaukee area. ...",
+      "summary": "Fortes tempestades e chuvas intensas causaram inundações repentinas no Meio-Oeste e nas Planícies, resultando em resgates aquáticos e cancelamento de eventos na área de Milwaukee. Um recorde estadual de chuvas pode ter sido quebrado em Wisconsin, com 14,5 polegadas de chuva registradas em 24 horas. O Rio Milwaukee atingiu um nível recorde, levando o condado a declarar estado de emergência. As inundações causaram estragos nas estradas e veículos foram deixados ilhados, resultando em dezenas de resgates aquáticos.",
+      "original_length": 4004
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/india/india-china-trump-trade-policies-intl-hnk",
+      "original_content": "Their relationship is defined by a bloody border dispute, a vast power imbalance and a fierce contest for influence across Asia. Yet, President Donald Trump’s latest trade war may be achieving the unt...",
+      "summary": "A disputa de fronteira sangrenta e desequilíbrio de poder entre Índia e China está sendo amenizada devido à guerra comercial de Trump com ambos os países. A imposição de tarifas por Trump criou um interesse mútuo entre Nova Delhi e Pequim, que já estavam buscando uma reconciliação. Agora, Índia e China lidam com a imprevisibilidade de Washington, que trata parceiros estratégicos e rivais geopolíticos com desdém transacional.",
+      "original_length": 9040
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/india/india-china-trump-trade-policies-intl-hnk",
+      "original_content": "Their relationship is defined by a bloody border dispute, a vast power imbalance and a fierce contest for influence across Asia. Yet, President Donald Trump’s latest trade war may be achieving the unt...",
+      "summary": "President Donald Trump's trade war, including imposing high tariffs on India, is pushing India and China to form a tactical alliance due to their shared interest in countering Trump's actions. This comes as a thaw in their relationship was already happening. Both countries are now navigating a volatile Washington that treats strategic partners and rivals similarly.",
+      "original_length": 9040
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/inger-andersen-inc-52-geneva-plastics-spc",
+      "original_content": "Inger Andersen, executive director of the UN Environment Programme, shares why it will take international cooperation to combat plastic pollution. © 2025 Cable News Network. A Warner Bros. Discovery C...",
+      "summary": "Inger Andersen, diretora executiva do Programa das Nações Unidas para o Meio Ambiente, destaca a necessidade de cooperação internacional para combater a poluição plástica.",
+      "original_length": 267
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/inger-andersen-inc-52-geneva-plastics-spc",
+      "original_content": "Inger Andersen, executive director of the UN Environment Programme, shares why it will take international cooperation to combat plastic pollution. © 2025 Cable News Network. A Warner Bros. Discovery C...",
+      "summary": "Inger Andersen, diretora executiva do Programa das Nações Unidas para o Meio Ambiente, destaca a necessidade de cooperação internacional para combater a poluição plástica.",
+      "original_length": 267
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/david-azoulay-ciel-inc52-geneva-plastics-spc",
+      "original_content": "David Azoulay, managing attorney at the Center for International Environmental Law, says global citizens and scientists are making an impact on plastic pollution. © 2025 Cable News Network. A Warner B...",
+      "summary": "David Azoulay, advogado do Center for International Environmental Law, destaca que cidadãos globais e cientistas estão tendo um impacto significativo na poluição por plásticos.",
+      "original_length": 283
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/david-azoulay-ciel-inc52-geneva-plastics-spc",
+      "original_content": "David Azoulay, managing attorney at the Center for International Environmental Law, says global citizens and scientists are making an impact on plastic pollution. © 2025 Cable News Network. A Warner B...",
+      "summary": "David Azoulay, advogado do Center for International Environmental Law, afirma que cidadãos globais e cientistas estão tendo impacto na poluição por plástico.",
+      "original_length": 283
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/us-china-90-day-extension-ldndigvid",
+      "original_content": "The United States and China agreed to pause tariff hikes on each other’s goods for an additional 90 days, according to an executive order signed by President Donald Trump on Monday. CNN's Kristie Lu S...",
+      "summary": "Os Estados Unidos e a China concordaram em suspender o aumento das tarifas sobre os produtos um do outro por mais 90 dias, conforme ordem executiva assinada pelo Presidente Donald Trump. A medida foi tomada visando a continuação das negociações comerciais entre os dois países.",
+      "original_length": 349
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/us-china-90-day-extension-ldndigvid",
+      "original_content": "The United States and China agreed to pause tariff hikes on each other’s goods for an additional 90 days, according to an executive order signed by President Donald Trump on Monday. CNN's Kristie Lu S...",
+      "summary": "Os Estados Unidos e a China concordaram em suspender o aumento das tarifas sobre os produtos um do outro por mais 90 dias, conforme ordem executiva assinada pelo presidente Donald Trump. A medida foi tomada visando amenizar as tensões comerciais entre os dois países.",
+      "original_length": 349
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/reporters-without-borders-director-reaction-idf-strike-killed-five-al-jazeera-journalists-gaza-louise-allen-bichet-lee-es",
+      "original_content": "Reporters Without Borders Project Director Louise Allen Bichet joins “Early Start” to discuss reaction to the IDF strike that killed five Al Jazeera journalists in Gaza. © 2025 Cable News Network. A W...",
+      "summary": "Louise Allen Bichet, diretora do projeto da Repórteres Sem Fronteiras, comenta reação ao ataque das IDF que matou cinco jornalistas da Al Jazeera em Gaza.",
+      "original_length": 290
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/reporters-without-borders-director-reaction-idf-strike-killed-five-al-jazeera-journalists-gaza-louise-allen-bichet-lee-es",
+      "original_content": "Reporters Without Borders Project Director Louise Allen Bichet joins “Early Start” to discuss reaction to the IDF strike that killed five Al Jazeera journalists in Gaza. © 2025 Cable News Network. A W...",
+      "summary": "Louise Allen Bichet, diretora do projeto da Repórteres Sem Fronteiras, fala sobre a reação ao ataque das IDF que matou cinco jornalistas da Al Jazeera em Gaza.",
+      "original_length": 290
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/ukraine-russia-swapped-digivid-intldsk",
+      "original_content": "As Trump floats the idea of ceding Ukrainian territory with Russia, CNN's Chief International Security Correspondent Nick Paton Walsh meets Ukrainians in the city that could become Moscow territory. ©...",
+      "summary": "Trump sugere a ideia de ceder território ucraniano para a Rússia. Correspondente da CNN encontra ucranianos na cidade que poderia se tornar território russo.",
+      "original_length": 319
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/ukraine-russia-swapped-digivid-intldsk",
+      "original_content": "As Trump floats the idea of ceding Ukrainian territory with Russia, CNN's Chief International Security Correspondent Nick Paton Walsh meets Ukrainians in the city that could become Moscow territory. ©...",
+      "summary": "Trump sugere ceder território ucraniano à Rússia. Correspondente da CNN encontra ucranianos em cidade que poderia se tornar território russo.",
+      "original_length": 319
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/south-china-sea-china-warship-collision-digvid",
+      "original_content": "A Chinese warship collided with one of its own coast guard vessels while chasing Philippine boats earlier this week in the highly contested South China Sea, the latest incident that underscores growin...",
+      "summary": "Uma embarcação de guerra chinesa colidiu com uma de suas próprias embarcações da guarda costeira enquanto perseguia barcos filipinos no Mar do Sul da China, destacando a crescente volatilidade nessa importante região marítima.",
+      "original_length": 391
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/video/south-china-sea-china-warship-collision-digvid",
+      "original_content": "A Chinese warship collided with one of its own coast guard vessels while chasing Philippine boats earlier this week in the highly contested South China Sea, the latest incident that underscores growin...",
+      "summary": "Um navio de guerra chinês colidiu com uma de suas próprias embarcações da guarda costeira enquanto perseguia barcos filipinos no Mar do Sul da China, ressaltando a crescente volatilidade nessa importante região estratégica.",
+      "original_length": 391
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/dennis-bell-remains-found-antarctic-glacier-intl-ink",
+      "original_content": "The remains of a British researcher who fell into a crevasse on an Antarctic glacier 66 years ago have been recovered, the British Antarctic Survey (BAS) said. Dennis Bell, then 25, vanished into the ...",
+      "summary": "Os restos mortais de um pesquisador britânico que caiu em uma fenda em um glaciar na Antártida há 66 anos foram recuperados pela British Antarctic Survey. Dennis Bell desapareceu em 1959 enquanto escalava o glaciar Ecology na Ilha King George. Em janeiro, uma equipe polonesa encontrou seus restos e pertences pessoais entre as rochas descobertas pelo recuo do glaciar. Amostras de DNA confirmaram a identidade de Bell, surpreendendo seus irmãos vivos.",
+      "original_length": 3952
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/world/dennis-bell-remains-found-antarctic-glacier-intl-ink",
+      "original_content": "The remains of a British researcher who fell into a crevasse on an Antarctic glacier 66 years ago have been recovered, the British Antarctic Survey (BAS) said. Dennis Bell, then 25, vanished into the ...",
+      "summary": "{\n    \"summary\": \"Os restos mortais de um pesquisador britânico que caiu em uma fenda em um glaciar na Antártida há 66 anos foram recuperados pela British Antarctic Survey. Dennis Bell, então com 25 anos, desapareceu no gelo em 26 de julho de 1959 enquanto escalava o glaciar Ecology na Ilha King George. Em janeiro, uma equipe da base polonesa na Ilha King George encontrou seus restos e pertences pessoais entre as rochas descobertas à medida que o glaciar recuou. Foram recuperados fragmentos de ossos e artefatos, incluindo uma inscri",
+      "original_length": 3952
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/australia/australia-palestinian-state-september-intl-hnk",
+      "original_content": "Australian Prime Minister Anthony Albanese said Monday that his country will recognize a Palestinian state in September, joining a growing list of Western allies as internationalcondemnation and anger...",
+      "summary": "O Primeiro-Ministro da Austrália, Anthony Albanese, anunciou que seu país reconhecerá um estado palestino em setembro, juntando-se a outros aliados ocidentais em meio à condenação internacional pelas ações de Israel em Gaza. A decisão será formalizada na Assembleia Geral da ONU, com base nos compromissos recebidos da Autoridade Palestina. A Nova Zelândia também está considerando o reconhecimento de um estado palestino, com uma decisão prevista para setembro.",
+      "original_length": 6700
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/australia/australia-palestinian-state-september-intl-hnk",
+      "original_content": "Australian Prime Minister Anthony Albanese said Monday that his country will recognize a Palestinian state in September, joining a growing list of Western allies as internationalcondemnation and anger...",
+      "summary": "O Primeiro-Ministro Australiano, Anthony Albanese, anunciou que a Austrália reconhecerá um estado palestino em setembro, juntando-se a outros aliados ocidentais em meio à condenação internacional das ações de Israel em Gaza. O reconhecimento formal será feito na Assembleia Geral da ONU no próximo mês. A Nova Zelândia também está considerando reconhecer um estado palestino, com uma decisão a ser tomada em setembro.",
+      "original_length": 6700
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/americas/adidas-mexico-shoe-apology-latam-intl",
+      "original_content": "The sportswear firm Adidas and Mexican-American designer Willy Chavarría have apologized after a Mexican state accused them ofcultural appropriationover the design of a new shoe. The “Oaxaca Slip-On,”...",
+      "summary": "Adidas and designer Willy Chavarría apologized for cultural appropriation after Mexican state officials accused them of copying a traditional sandal design for a new shoe called 'Oaxaca Slip-On'. The shoe was inspired by the 'huarache' handmade sandal from the Oaxacan community of Villa Hidalgo Yalálag. Both parties acknowledged the mistake and issued formal apologies, committing to collaborate respectfully with the community.",
+      "original_length": 2563
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/11/americas/adidas-mexico-shoe-apology-latam-intl",
+      "original_content": "The sportswear firm Adidas and Mexican-American designer Willy Chavarría have apologized after a Mexican state accused them ofcultural appropriationover the design of a new shoe. The “Oaxaca Slip-On,”...",
+      "summary": "Adidas and designer Willy Chavarría apologized for cultural appropriation after a Mexican state accused them of copying a traditional sandal design for a new shoe called 'Oaxaca Slip-On'. The shoe was inspired by the 'huarache' sandal from the Oaxacan community of Villa Hidalgo Yalálag. Both parties issued formal apologies and expressed commitment to collaborate respectfully with the community.",
+      "original_length": 2563
+    },
+    {
+      "url": "https://edition.cnn.com/2025/07/16/style/singapore-marina-bay-sands-expansion",
+      "original_content": "With three 650-foot-tall skyscrapers connected across the top by a boat-like skybridge — and an Instagram-famous infinity pool — Marina Bay Sands has given Singapore one of Asia’s most recognizable sk...",
+      "summary": "O arquiteto Moshe Safdie foi convidado para projetar uma nova torre para o Marina Bay Sands, em Cingapura, sem comprometer a identidade do ícone nacional. Ele decidiu criar um arranha-céu de 55 andares, evitando estender a ponte aérea existente. A nova torre quebrou o solo na terça-feira.",
+      "original_length": 4264
+    },
+    {
+      "url": "https://edition.cnn.com/2025/07/16/style/singapore-marina-bay-sands-expansion",
+      "original_content": "With three 650-foot-tall skyscrapers connected across the top by a boat-like skybridge — and an Instagram-famous infinity pool — Marina Bay Sands has given Singapore one of Asia’s most recognizable sk...",
+      "summary": "O arquiteto Moshe Safdie foi convidado para projetar uma quarta torre para o Marina Bay Sands, em Cingapura, sem comprometer a identidade do ícone nacional. O novo arranha-céu de 55 andares terá sua própria identidade, sendo complementar ao complexo existente, e não terá a extensão da ponte no topo, como sugerido inicialmente.",
+      "original_length": 4264
+    },
+    {
+      "url": "https://edition.cnn.com/2025/07/03/style/lava-material-architecture-venice-biennale",
+      "original_content": "Erupting from fiery volcanoes, lava has historically been an uncontrollable force that destroys buildings and neighborhoods in its wake. But what if that force could instead be redirected and harnesse...",
+      "summary": "Um projeto ambicioso da empresa islandesa s.ap arkitektar, apresentado na Bienal de Arquitetura de Veneza, propõe o uso da lava como material de construção. Chamado de 'Lavaforming', o projeto visa resfriar a lava de forma controlada para criar paredes, colunas e outros elementos arquitetônicos, possibilitando a construção de novos assentamentos. A empresa criou um filme imaginando o ano de 2150, quando essa tecnologia de construção poderia se tornar realidade e remodelar o mundo.",
+      "original_length": 7818
+    },
+    {
+      "url": "https://edition.cnn.com/2025/06/11/style/lesley-lokko-architecture-nomadic-african-studio-ghana",
+      "original_content": "When Lesley Lokko was a young student in 1990s London, architecture was a place of openness and experimentation. And yet, she felt the discipline was incapable of thinking beyond European concepts of ...",
+      "summary": "Lesley Lokko, a renowned Scottish-Ghanian architect, reflects on her experience as a student in 1990s London, where architecture education was Eurocentric and lacked consideration for non-European concepts of space. Now in her 60s, Lokko emphasizes the importance of understanding different family structures, building materials, and environmental factors in architectural design. Today, Lokko is an educator focusing on a more inclusive approach to architecture.",
+      "original_length": 10518
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/sport/tennis-monica-seles-myasthenia-gravis-intl-hnk",
+      "original_content": "Monica Seles first noticed the symptoms of myasthenia gravis — a neuromuscular autoimmune disease she discussed during a recent interview with The Associated Press — while she was swinging a racket th...",
+      "summary": "Monica Seles, former tennis champion with nine grand slam titles, revealed in a recent interview that she was diagnosed with myasthenia gravis three years ago. She noticed symptoms while playing tennis, such as seeing two balls instead of one. Seles shared that it took her time to accept and openly discuss the disease, as it significantly impacts her daily life. This is the first time she is speaking publicly about her condition, ahead of the US Open.",
+      "original_length": 3217
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/sport/tennis-monica-seles-myasthenia-gravis-intl-hnk",
+      "original_content": "Monica Seles first noticed the symptoms of myasthenia gravis — a neuromuscular autoimmune disease she discussed during a recent interview with The Associated Press — while she was swinging a racket th...",
+      "summary": "Monica Seles, former tennis champion with nine grand slam titles, revealed in a recent interview that she was diagnosed with myasthenia gravis three years ago. She noticed the symptoms while playing tennis, experiencing double vision. Seles shared that it took her time to accept and openly talk about the disease, as it significantly impacts her daily life. Now, at 51 years old, she is speaking publicly about her condition for the first time before the US Open.",
+      "original_length": 3217
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/sport/mma-ufc-fight-white-house-paramount-intl",
+      "original_content": "Hours afterParamount and UFCannounced a billion-dollar rights deal, Dana White said he had yet to hear from his friend, PresidentDonald Trump, on his thoughts about the fight company’s new streaming h...",
+      "summary": "Dana White, CEO of UFC, is set to meet with President Donald Trump and Ivanka to discuss logistics for a proposed Fourth of July fight card at the White House next year. Trump expressed interest in hosting a UFC match on the White House grounds with 20,000 spectators to celebrate 250 years of American independence. White confirmed the event will take place, marking a significant milestone for the UFC.",
+      "original_length": 5616
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/sport/track-shacarri-richardson-apologizes-incident-intl",
+      "original_content": "SprinterSha’Carri Richardsonaddressed her recent domestic violence arrest in a video on social media and issued an apology to her boyfriend Christian Coleman. Richardson posted a video on her Instagra...",
+      "summary": "Sprinter Sha'Carri Richardson addressed her recent domestic violence arrest in a video on social media, apologizing to her boyfriend Christian Coleman. She admitted to putting herself in a compromised situation and issued a written apology to Coleman. Richardson was arrested for allegedly assaulting Coleman at an airport, spending over 18 hours in custody. The incident occurred days before she competed in the US championships.",
+      "original_length": 2472
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/sport/mattia-debertolis-death-world-games-intl",
+      "original_content": "Italian orienteering athlete Mattia Debertolis has died after collapsing at the World Games, organizers said on Tuesday. In ajoint statementfrom the International World Games Association, the local or...",
+      "summary": "O atleta italiano de orientação Mattia Debertolis faleceu após desmaiar durante os Jogos Mundiais em Chengdu, China. Ele foi encontrado inconsciente durante a competição de orientação e, apesar de receber cuidados médicos imediatos, não resistiu. A Federação Internacional de Jogos Mundiais expressou condolências à família e amigos do atleta, bem como à comunidade de orientação. Debertolis fazia parte da equipe da Federação Italiana de Orientação nos Jogos Mundiais de 2025.",
+      "original_length": 2358
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/sport/baseball-mlb-shohei-ohtani-hawaii-real-estate-intl",
+      "original_content": "A Hawaii real estate investor and broker are suingShohei Ohtani, claiming theLos Angeles Dodgersstar and his agent got them fired from a $240 million luxury housing development on the Big Island’s cov...",
+      "summary": "Um investidor imobiliário e corretor do Havaí estão processando Shohei Ohtani, alegando que o jogador de beisebol e seu agente os demitiram de um desenvolvimento imobiliário de luxo de $240 milhões que eles trouxeram para ele endossar. O agente de Ohtani teria exigido concessões antes de pedir que seu parceiro de negócios os removesse do acordo, alegando que eles foram explorados para benefício próprio. O processo acusa Ohtani e seu agente de interferência tortuosa no negócio.",
+      "original_length": 4731
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/tech/ai-geoffrey-hinton",
+      "original_content": "Geoffrey Hinton, known as the “godfather of AI,” fears the technology he helped build could wipe out humanity — and “tech bros” are taking the wrong approach to stop it. Hinton, a Nobel Prize-winning ...",
+      "summary": "{\n    \"summary\": \"Geoffrey Hinton, conhecido como o 'padrinho da IA', teme que a tecnologia que ajudou a construir possa eliminar a humanidade. Ele alertou que as abordagens atuais das empresas de tecnologia para garantir a dominação humana sobre os sistemas de IA não funcionarão, pois os sistemas de IA serão muito mais inteligentes. Hinton destacou que no futuro os sistemas de IA poderão controlar os humanos com facilidade, comparando a situação a um adulto subornando uma criança com doces. Exemplos recentes mostram sistemas de IA dispostos a enganar, trapacear e rou",
+      "original_length": 6026
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/tech/ai-geoffrey-hinton",
+      "original_content": "Geoffrey Hinton, known as the “godfather of AI,” fears the technology he helped build could wipe out humanity — and “tech bros” are taking the wrong approach to stop it. Hinton, a Nobel Prize-winning ...",
+      "summary": "{\n    \"summary\": \"Geoffrey Hinton, conhecido como o 'padrinho da IA', teme que a tecnologia que ajudou a construir possa erradicar a humanidade. Ele alerta que as abordagens atuais das empresas de tecnologia para manter os humanos 'dominantes' sobre sistemas de IA 'submissos' não funcionarão, pois os sistemas de IA serão muito mais inteligentes. Hinton adverte que no futuro os sistemas de IA poderão controlar os humanos com facilidade, comparando a situação a um adulto que suborna uma criança com doces. Exemplos recentes mostram sistemas de IA dispostos a",
+      "original_length": 6026
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/13/tech/youtube-ai-age-verification",
+      "original_content": "YouTube will begin guessing users’ ages using artificial intelligence on Wednesday, as part of an effort to prevent kids from accessing inappropriate content online. It’s part of a broader push to mak...",
+      "summary": "O YouTube começará a adivinhar a idade dos usuários usando inteligência artificial para evitar que crianças acessem conteúdo inadequado. A tecnologia determinará se o espectador é adulto ou menor de idade com base em sua atividade na plataforma, independentemente da data de nascimento fornecida. Inicialmente testado com usuários dos EUA, o recurso será expandido globalmente. Menores terão medidas de segurança aplicadas automaticamente, como restrições a conteúdos sensíveis. Usuários adultos identificados incorretamente como menores precisarão enviar um documento de identidade.",
+      "original_length": 5027
+    },
+    {
+      "url": "https://edition.cnn.com/2025/07/30/tech/meta-ai-superintelligence-earnings",
+      "original_content": "If Meta investors had concerns about the company’s huge spending on artificial intelligence infrastructure and talent— and its ambitious “superintelligence” goal — they’re likely to be assuaged by its...",
+      "summary": "Meta surpreende investidores com relatório de lucros acima do esperado, indicando que inteligência artificial está se tornando uma fonte real de receita. A empresa divulgou lucro de $7,14 por ação e $47,5 bilhões em receita no segundo trimestre, superando as expectativas. As ações da Meta subiram mais de 9% no after-hours trading, com projeção de receita entre $47,5 bilhões e $50,5 bilhões para o próximo trimestre.",
+      "original_length": 5172
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/tech/perplexity-google-chrome-bid",
+      "original_content": "Artificial intelligence search company Perplexity has made an unsolicited, $34.5 billion offer to purchase Google’s Chrome browser, a surprise move by a Google Search challenger that’s looking to upen...",
+      "summary": "{\n    \"summary\": \"A empresa de busca de inteligência artificial Perplexity fez uma oferta não solicitada de US$ 34,5 bilhões para comprar o navegador Chrome do Google, em meio a um desafio da concorrente do Google Search. A proposta surge em um momento em que o Google aguarda uma decisão judicial após uma decisão histórica que considerou a empresa violadora das leis antitruste dos EUA. O Departamento de Justiça dos EUA propôs que o Google venda o Chrome como remédio. O Google prometeu recorrer da decisão e se opôs à ideia de se desfazer do Chrome, aleg",
+      "original_length": 4949
+    },
+    {
+      "url": "https://edition.cnn.com/2025/08/12/tech/ai-police-reports-axon",
+      "original_content": "In his nine years at the Fort Collins, Colorado, police department, Officer Scott Brittingham says he has taken a lot of pride in the process of writing reports after each call for service. But when t...",
+      "summary": "Officer Scott Brittingham from Fort Collins police department has been using Draft One, an AI-powered software, to speed up the process of writing police reports. What used to take him 45 minutes now only takes 10 minutes, allowing him to take more calls and be proactive in preventing crime. This tool is gaining traction among police departments nationwide.",
+      "original_length": 10564
+    },
+    {
+      "url": "https://edition.cnn.com/newsletters",
+      "original_content": "CNN News, delivered. Select from our newsletters below and enter your email to sign up. You're logged in as {emailAddress}. Manage your newsletter subscriptions here. Be the first to know about the bi...",
+      "summary": "A CNN oferece diversas newsletters para manter seus leitores informados sobre as principais notícias. Os assinantes recebem alertas de notícias de última hora, resumos de cinco histórias importantes, histórias inspiradoras e previsões das grandes notícias da semana. Além disso, a newsletter Reliable Sources analisa o cenário midiático com reportagens e análises detalhadas.",
+      "original_length": 5839
+    },
+    {
+      "url": "https://www.cnn.com/election/2025",
+      "original_content": "This November, two blue states where President Donald Trump gained ground in 2024 will elect new governors — offering a potential preview of next year’s critical midterms. In New York City,voters will...",
+      "summary": "{\n    \"summary\": \"Em novembro, dois estados democratas onde o Presidente Donald Trump avançou em 2024 elegerão novos governadores, podendo antecipar as eleições críticas do próximo ano. Em Nova York, os eleitores escolherão um prefeito para liderar a maior cidade do país. Além disso, eleições especiais para o Congresso impactarão o equilíbrio de poder na Câmara dos Representantes. Em Detroit, nove candidatos disputam a prefeitura, enquanto em Arizona, o 7º distrito congressual terá uma eleição especial após a morte do deputado democr",
+      "original_length": 3420
+    },
+    {
+      "url": "https://edition.cnn.com/travel/news",
+      "original_content": "© 2025 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.CNN Sans ™ & © 2016 Cable News Network....",
+      "summary": "A notícia não foi fornecida. Por favor, forneça o texto da notícia que deseja resumir.",
+      "original_length": 120
+    },
+    {
+      "url": "https://edition.cnn.com/sport/paris-olympics-2024",
+      "original_content": "© 2025 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.CNN Sans ™ & © 2016 Cable News Network....",
+      "summary": "A notícia não foi fornecida. Por favor, forneça o texto da notícia para que eu possa resumir.",
+      "original_length": 120
+    },
+    {
+      "url": "https://edition.cnn.com/newsletters",
+      "original_content": "CNN News, delivered. Select from our newsletters below and enter your email to sign up. You're logged in as {emailAddress}. Manage your newsletter subscriptions here. Be the first to know about the bi...",
+      "summary": "A CNN oferece newsletters com resumos de notícias importantes, tanto para começar o dia bem informado quanto para terminá-lo de forma positiva. Além disso, há newsletters com histórias inspiradoras, previsões das principais notícias da semana e dicas de saúde e bem-estar. O programa Reliable Sources da CNN analisa a economia da informação e o cenário midiático em constante evolução, com relatórios e análises rigorosos.",
+      "original_length": 5839
+    },
+    {
+      "url": "https://edition.cnn.com/newsletters",
+      "original_content": "CNN News, delivered. Select from our newsletters below and enter your email to sign up. You're logged in as {emailAddress}. Manage your newsletter subscriptions here. Be the first to know about the bi...",
+      "summary": "A CNN oferece newsletters com resumos de notícias importantes, alertas de notícias de última hora, histórias inspiradoras e previsões dos grandes acontecimentos da semana. Além disso, o programa Reliable Sources analisa a evolução da mídia com reportagens e análises detalhadas. A notícia destaca também os desafios enfrentados pelo sistema de governo dos EUA diante de um país dividido.",
+      "original_length": 5839
+    },
+    {
+      "url": "https://edition.cnn.com/newsletters",
+      "original_content": "CNN News, delivered. Select from our newsletters below and enter your email to sign up. You're logged in as {emailAddress}. Manage your newsletter subscriptions here. Be the first to know about the bi...",
+      "summary": "A CNN oferece uma variedade de newsletters para os assinantes, incluindo alertas de notícias de última hora, resumos diários de cinco histórias importantes, histórias inspiradoras e previsões das principais notícias da semana. Além disso, o programa Reliable Sources analisa a economia da informação e o cenário midiático em constante evolução.",
+      "original_length": 5839
+    }
+  ]
+}
