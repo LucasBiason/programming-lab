@@ -1,0 +1,42 @@
+---
+description: Contexto do Agente de Estudo — Bootcamp Pythonando (encerrado; resumos em Apostilas)
+globs: "**/*"
+alwaysApply: true
+---
+
+# Agente de Estudo — Contexto Bootcamp Pythonando (encerrado)
+
+Projeto **encerrado**. Todo o conteúdo didático está consolidado em **4 resumos** fora deste repositório.
+
+## Onde estão os resumos
+
+- **Apostilas e Materiais de Cursos (Estudos):**  
+  `[Pythonando] Bootcamp Programação Web + IA/Resumos/`
+  - `01-RAG-Completo.md` — Bloco 1 (RAG com LangChain e FAISS)
+  - `02-Sistema-Construcao-da-Base.md` — Bloco 2 (Jury AI, Django, roteiro, mapeamento Notion)
+  - `03-Funcionalidades-IA.md` — Bloco 3 (Chat, RAG, análise jurisprudencial)
+  - `04-Google-Calendar-WhatsApp.md` — Bloco 4 (Evolution API, Google Calendar, prompt injection)
+
+Os resumos **não** ficam no repositório programming-lab; ficam em Notion (corpo dos cards) e como backup local em Apostilas.
+
+## Estrutura deste repositório (formations)
+
+- **RAG/** — Código do Bloco 1 (app.py, FAISS, scripts extras)
+- **Sistema/** — Jury AI (Django, apps, API, WhatsApp, Calendar)
+- **amostras/** — Exemplos de dashboard
+
+## Regra geral (resumos de cursos/formações)
+
+Os resumos didáticos devem existir em **dois lugares**:
+1. **Notion** — corpo ou propriedade Descrição dos cards (base Studies / Roadmap).
+2. **Backup local** — arquivos `.md` em pastas tipo `Apostilas e Materiais de Cursos/[Curso]/Resumos/` (fora do repositório de código, quando for o caso).
+
+Não versionar em programming-lab os textos longos de resumo; usar Apostilas (Estudos) ou equivalente.
+
+## Links oficiais (referência)
+
+| Recurso | URL |
+|--------|-----|
+| Notion – Construção da base | https://grizzly-amaranthus-f6a.notion.site/Constru-o-da-base-2fb6cf8ea89f80b4b118cf36f5c2aa51 |
+| Notion – Funcionalidades com IA | https://grizzly-amaranthus-f6a.notion.site/Funcionalidades-com-IA-2fc6cf8ea89f80d18000dfac39b15b46 |
+| Figma – Arcane-3 | https://www.figma.com/design/4IF8seRuIodeRCwlzJg8GO/Arcane-3 |

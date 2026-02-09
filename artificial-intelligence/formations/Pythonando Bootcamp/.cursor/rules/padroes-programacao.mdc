@@ -1,0 +1,20 @@
+---
+description: Padrões de programação — Bootcamp alinhado ao cursor-multiagent-system
+globs: "**/*"
+alwaysApply: true
+---
+
+# Padrões de programação (Bootcamp)
+
+O código deste projeto deve seguir os **padrões e regras** definidos em:
+
+**`Infraestrutura/cursor-multiagent-system`**
+
+- **Regras gerais:** `.cursorrules` e `.cursor/rules/programming.md`
+- **Skills obrigatórias:** Django, Python, Ruff, CHANGELOG, Code Modification, Migrations (nunca alterar existentes), uma classe por arquivo quando houver múltiplas classes no módulo.
+
+## Aplicação no Bootcamp
+
+- **Bloco 2 (jury_ai):** Código Django com mesma funcionalidade do arcabe3-completo, revisado por esses padrões (Ruff em `jury_ai/pyproject.toml`, models em pastas com um arquivo por classe, CHANGELOG na raiz do Bootcamp).
+- **Referência de funcionalidade:** `Apostilas e Materiais de Cursos/[Pythonando] Bootcamp Programação Web + IA/arcabe3-completo-master`.
+- **Documentação e contexto:** CONSTRUCAO_DA_BASE.md, ROTEIRO.md em Bloco 2; agente-estudo-contexto.mdc para links Notion/Figma.

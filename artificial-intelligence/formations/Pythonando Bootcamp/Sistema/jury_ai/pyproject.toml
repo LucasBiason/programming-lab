@@ -1,0 +1,26 @@
+[project]
+name = "jury-ai"
+version = "0.1.0"
+description = "Jury AI - Django base do Bootcamp Pythonando (Construção da base + IA)"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = ["migrations", "__pycache__", ".venv", "staticfiles"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "-v --tb=short"
+DJANGO_SETTINGS_MODULE = "config.settings.local"

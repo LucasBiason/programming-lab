@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Juri.AI{% endblock %}</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; min-height: 100vh; display: flex; }
+    .auth-container { display: flex; width: 100%; min-height: 100vh; }
+    .auth-form-side {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem;
+      background: #fff;
+    }
+    .auth-form-side .logo { width: 100px; height: auto; margin-bottom: 1.5rem; }
+    .auth-form-side h1 { font-size: 1.5rem; font-weight: 700; color: #1a1a2e; margin-bottom: 2rem; }
+    .auth-image-side {
+      width: 60%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label { display: block; font-size: 0.85rem; color: #6b7280; margin-bottom: 0.4rem; font-weight: 500; }
+    .form-group input {
+      width: 100%;
+      padding: 0.65rem 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: #1a1a2e;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus { outline: none; border-color: #6366f1; box-shadow: 0 0 0 3px rgba(99,102,241,0.1); }
+    .btn-auth-primary {
+      width: 100%;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: #22c55e;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      transition: opacity 0.2s;
+    }
+    .btn-auth-primary:hover { opacity: 0.9; }
+    .btn-auth-secondary {
+      width: 100%;
+      padding: 0.65rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: #6366f1;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      transition: opacity 0.2s;
+    }
+    .btn-auth-secondary:hover { opacity: 0.9; }
+    .divider { text-align: center; color: #9ca3af; font-size: 0.85rem; margin-bottom: 1rem; }
+    .social-buttons { display: flex; gap: 0.75rem; }
+    .btn-social {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      background: #fff;
+      color: #374151;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-social:hover { background: #f3f4f6; }
+    .btn-social svg { width: 18px; height: 18px; }
+    .alert { padding: 0.65rem 0.85rem; border-radius: 6px; margin-bottom: 1rem; font-size: 0.9rem; display: none; }
+    .alert-error { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+    .alert-success { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+    @media (max-width: 768px) {
+      .auth-container { flex-direction: column; }
+      .auth-form-side { width: 100%; padding: 2rem 1.5rem; }
+      .auth-image-side { display: none; }
+    }
+  </style>
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-form-side">
+      <img class="logo" src="{% static 'jury_ai/images/logo.png' %}" alt="JURI AI" />
+      {% block content %}{% endblock %}
+    </div>
+    <div class="auth-image-side" style="background-image: url('{% static 'jury_ai/images/banner.jpg' %}');"></div>
+  </div>
+  <script>
+    function apiHeaders() {
+      var t = localStorage.getItem('jury_ai_token');
+      return { 'Content-Type': 'application/json', 'Authorization': t ? 'Bearer ' + t : '' };
+    }
+  </script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

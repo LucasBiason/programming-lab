@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Juri.AI{% endblock %}</title>
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --bg-card: #ffffff;
+      --text: #1a1a2e;
+      --text-secondary: #6b7280;
+      --accent: #6366f1;
+      --success: #22c55e;
+      --danger: #ef4444;
+      --border: #e5e7eb;
+      --input-border: #d1d5db;
+      --btn-dark: #1a1a2e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* Profile Header (cliente detail, config empresas) */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .profile-header .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #1a1a2e;
+    }
+    .profile-header .info { flex: 1; }
+    .profile-header .info .email { font-size: 0.85rem; color: var(--text-secondary); }
+    .profile-header .info .name { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .profile-header .actions { display: flex; gap: 0.5rem; }
+
+    main { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 1.5rem; font-weight: 700; margin: 0; }
+    h2 { font-size: 1.15rem; font-weight: 700; margin: 0; }
+    .subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.25rem; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-dark { background: var(--btn-dark); color: #fff; }
+    .btn-outline { background: #fff; color: var(--text); border: 1px solid var(--border); }
+    .btn-accent { background: var(--accent); color: #fff; }
+    .btn-danger { background: #fef2f2; color: var(--danger); border: 1px solid #fecaca; }
+    .btn-success { background: var(--success); color: #fff; }
+    .btn-sm { padding: 0.35rem 0.7rem; font-size: 0.8rem; }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--input-border);
+      background: #fff;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(99,102,241,0.1); }
+    label { display: block; margin-bottom: 0.35rem; color: var(--text); font-size: 0.9rem; font-weight: 600; }
+    .form-group { margin-bottom: 1rem; }
+    .form-actions { margin-top: 1.25rem; display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+    .help-text { font-size: 0.8rem; color: var(--accent); margin-top: 0.25rem; }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .alert { padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1rem; font-size: 0.9rem; }
+    .alert-error { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+    .alert-success { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 0.75rem 1rem; text-align: left; }
+    th { color: var(--accent); font-weight: 600; font-size: 0.85rem; border-bottom: 2px solid var(--border); }
+    td { border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    tr:last-child td { border-bottom: none; }
+
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.65rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-inactive { background: #fef2f2; color: var(--danger); }
+    .badge-active { background: #f0fdf4; color: var(--success); }
+    .badge-vip { background: #eff6ff; color: #3b82f6; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; }
+    .stat-card .stat-label { font-size: 0.75rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; }
+    .stat-card .stat-value { font-size: 2rem; font-weight: 700; color: var(--text); margin-top: 0.25rem; }
+
+    .empty { text-align: center; padding: 2rem; color: var(--text-secondary); }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .search-bar input {
+      max-width: 350px;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+    }
+    .search-bar select {
+      max-width: 150px;
+      border-radius: 20px;
+      padding: 0.5rem 0.75rem;
+    }
+    .search-bar .spacer { flex: 1; }
+
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      main { padding: 1rem; }
+      .profile-header { flex-wrap: wrap; }
+    }
+  </style>
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  {% block body %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  {% endblock %}
+  <script>
+    function apiHeaders(isFormData) {
+      var t = localStorage.getItem('jury_ai_token');
+      var h = { 'Authorization': t ? 'Bearer ' + t : '' };
+      if (!isFormData) h['Content-Type'] = 'application/json';
+      return h;
+    }
+  </script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

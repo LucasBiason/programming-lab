@@ -1,0 +1,4 @@
+# Google Calendar (Bloco 4) - nunca commitar
+token.json
+credentials/
+**/client_secret*.json

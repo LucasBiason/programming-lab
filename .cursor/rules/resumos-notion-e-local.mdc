@@ -1,0 +1,28 @@
+---
+description: Plano de resumos — Notion e backup local (contexto dos agentes)
+globs: "**/*"
+alwaysApply: false
+---
+
+# Plano de resumos — Notion e repositório / Apostilas
+
+## Regra
+
+Os resumos didáticos dos cursos/formações devem existir em **dois lugares**:
+
+1. **Notion** — corpo ou propriedade Descrição dos cards (base Studies / Roadmap).
+2. **Backup local** — arquivos `.md` em pastas `Resumos/` como referência (ex.: em `Apostilas e Materiais de Cursos/[Nome do Curso]/Resumos/`).
+
+## Onde está definido
+
+- **Full Cycle:** `Apostilas e Materiais de Cursos/[Full Cycle] Engenharia de Computação com IA/ESTRUTURA.md`  
+  "Resumos: arquivos `.md` com resumos locais (espelhamento do Notion). Os resumos didáticos ricos continuam no Notion (corpo dos cards). Os arquivos em `Resumos/` servem como backup local e referência."
+
+## Exemplos
+
+- **Pythonando Bootcamp:** Resumos em `Apostilas e Materiais de Cursos/[Pythonando] Bootcamp Programação Web + IA/Resumos/` (01-RAG, 02-Sistema, 03-Funcionalidades-IA, 04-Google-Calendar-WhatsApp). Cards no Notion (Roadmap 2026) com descrição/corpo que espelham esse conteúdo.
+- **Quick Wins (Full Circle):** textos em `NOTION_DADOS_PARA_COLAR.md`; script em cursor-multiagent-system atualiza os cards no Notion.
+
+## Verificação
+
+Ao criar ou atualizar resumos de cursos/formações: preencher corpo ou Descrição no Notion e manter backup local em `Resumos/` (ou equivalente na pasta de Apostilas do curso).

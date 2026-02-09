@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Contextos RAG - Juri.AI{% endblock %}
+
+{% block extra_css %}
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+  body {
+    background: rgb(248 250 252 / 0.4);
+  }
+  details[open] summary {
+    margin-bottom: 0.75rem;
+  }
+  details summary {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+  }
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
+{% endblock %}
+
+{% block body %}
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">
+      Contextos Utilizados pelo RAG
+    </h1>
+    <p class="text-gray-600">
+      Veja os contextos que foram utilizados para responder sua pergunta
+    </p>
+  </div>
+
+  <!-- Question Card -->
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">
+      Pergunta
+    </h2>
+    <p class="text-gray-900 text-lg">
+      {{ pergunta.pergunta }}
+    </p>
+  </div>
+
+  <!-- Contexts Grid -->
+  {% if contextos %}
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    {% for contexto in contextos %}
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200">
+      <!-- Card Header -->
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-4 border-b border-gray-200">
+        <div class="flex items-center gap-3">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+            {{ forloop.counter }}
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {{ contexto.tool_name }}
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Body -->
+      <div class="px-6 py-5">
+        <!-- Content (Collapsible) -->
+        <details class="mb-4">
+          <summary class="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-2">
+            <svg class="w-4 h-4 transform transition-transform" style="transition: transform 0.2s" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            <span>Conteudo do Contexto</span>
+          </summary>
+          <div class="bg-gray-50 rounded-md p-4 border border-gray-200">
+            <pre class="text-xs text-gray-700 whitespace-pre-wrap font-mono leading-relaxed">{{ contexto.content }}</pre>
+          </div>
+        </details>
+
+        <!-- Tool Arguments (if present) -->
+        {% if contexto.tool_args %}
+        <div class="mb-4">
+          <h4 class="text-sm font-semibold text-gray-700 mb-2">
+            Argumentos da Ferramenta
+          </h4>
+          <div class="bg-blue-50 rounded-md p-3 border border-blue-200">
+            <code class="text-xs text-blue-900 font-mono">{{ contexto.tool_args }}</code>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- Card Footer -->
+      <div class="bg-gray-50 px-6 py-3 border-t border-gray-200">
+        <div class="flex items-center justify-between text-xs text-gray-500">
+          <span class="font-medium">ID Contexto: <span class="text-gray-700">{{ contexto.id }}</span></span>
+          <span class="font-medium">ID Pergunta: <span class="text-gray-700">{{ contexto.pergunta.id }}</span></span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <!-- Empty State -->
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-12">
+    <div class="text-center">
+      <svg class="mx-auto h-16 w-16 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+      </svg>
+      <h3 class="text-lg font-semibold text-gray-900 mb-2">
+        Nenhum contexto encontrado
+      </h3>
+      <p class="text-gray-600">
+        Nao ha contextos RAG associados a esta pergunta.
+      </p>
+    </div>
+  </div>
+  {% endif %}
+</main>
+
+<script>
+  // Rotate arrow icon when details is opened/closed
+  document.querySelectorAll('details').forEach(details => {
+    details.addEventListener('toggle', function() {
+      const arrow = this.querySelector('summary svg');
+      if (this.open) {
+        arrow.style.transform = 'rotate(90deg)';
+      } else {
+        arrow.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+</script>
+{% endblock %}

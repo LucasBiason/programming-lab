@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Jury AI - API (Bloco 2)" tests="11" time="1.289">
+  <testsuite name="Authentication / Cadastro" id="a901dc0c-d19c-4a66-8173-f3f3307bf0af" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.209">
+    <testcase name="Cadastro 201 ou 400 (email já existe)" time="0.209" classname="AuthenticationCadastro"/>
+  </testsuite>
+  <testsuite name="Authentication / Login" id="f06b31e0-32e7-46a0-b395-9375824a242c" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.869">
+    <testcase name="Status 200" time="0.869" classname="AuthenticationLogin"/>
+  </testsuite>
+  <testsuite name="Authentication / Refresh Token" id="ef34886f-4a66-4fee-91e3-9768a0fa5953" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.021">
+    <testcase name="Status 200" time="0.021" classname="AuthenticationRefreshToken"/>
+  </testsuite>
+  <testsuite name="Authentication / Me (perfil)" id="6bb3364c-9194-4144-8eda-64d1aada35a2" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.016">
+    <testcase name="Status 200" time="0.016" classname="AuthenticationMePerfil"/>
+  </testsuite>
+  <testsuite name="Clientes / List Clientes" id="c7bb51ce-b49d-4717-aae7-ab1ae63bea0f" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.020">
+    <testcase name="Status 200" time="0.020" classname="ClientesListClientes"/>
+  </testsuite>
+  <testsuite name="Clientes / Create Cliente" id="c2c33a01-9dda-4178-be31-79aff9127fd6" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.031">
+    <testcase name="Status 201" time="0.031" classname="ClientesCreateCliente"/>
+  </testsuite>
+  <testsuite name="Clientes / Get Cliente" id="4a3a82e2-e75d-4a6f-9673-046b6f34a63a" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.027">
+    <testcase name="Status 200" time="0.027" classname="ClientesGetCliente"/>
+  </testsuite>
+  <testsuite name="Clientes / Update Cliente" id="6f07e646-6e5a-4a32-9208-143aca7415d4" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.046">
+    <testcase name="Status 200" time="0.046" classname="ClientesUpdateCliente"/>
+  </testsuite>
+  <testsuite name="Clientes / Delete Cliente" id="2b979599-6375-46f3-bbc0-6b439a6108b4" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.030">
+    <testcase name="Status 204" time="0.030" classname="ClientesDeleteCliente"/>
+  </testsuite>
+  <testsuite name="Documentos (IA) / Documentos - placeholder" id="9dd5ff88-b73d-427f-a37d-4d7ca69953f3" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.011">
+    <testcase name="Status 200" time="0.011" classname="DocumentosIaDocumentosPlaceholder"/>
+  </testsuite>
+  <testsuite name="Chat (IA) / Chat - placeholder" id="40f1a7df-a5e1-4834-9588-2bb0e3fb6122" timestamp="2026-02-07T17:02:18.011Z" tests="1" failures="0" errors="0" time="0.009">
+    <testcase name="Status 200" time="0.009" classname="ChatIaChatPlaceholder"/>
+  </testsuite>
+</testsuites>

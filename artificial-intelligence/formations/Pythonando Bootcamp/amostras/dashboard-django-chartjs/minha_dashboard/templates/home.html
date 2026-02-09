@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}Dashboard{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/css.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md informacoes_basicas">
+      <h1> R$ <span id="faturamento_total">0</span></h1>
+    </div>
+    <div class="col-md informacoes_basicas">
+      <h1> R$ 4343</h1>
+    </div>
+    <div class="col-md informacoes_basicas">
+      <h1> R$ 4343</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md">
+      <br>
+      <h1>Faturamento:</h1>
+      <canvas id="faturamento_mensal" width="250" height="200"></canvas>
+    </div>
+    <div class="col-md">
+      <br>
+      <h1>Despesas:</h1>
+      <canvas id="despesas_mensal" width="250" height="200"></canvas>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md">
+      <br>
+      <h1>Produtos mais vendidos:</h1>
+      <canvas id="produtos_mais_vendidos" width="250" height="200"></canvas>
+    </div>
+    <div class="col-md">
+      <br>
+      <h1>Funcionarios do mes:</h1>
+      <canvas id="funcionarios_do_mes" width="250" height="200"></canvas>
+    </div>
+  </div>
+</div>
+<br>
+<footer class="container">
+  <br>
+  <div class="row">
+    <div style="color: white;" class="col-md centralizar">CNPJ: 00.000.000/0000-00</div>
+    <div style="color: white;" class="col-md centralizar">2021 Pythonando. Todos os direitos reservados.</div>
+    <div style="color: white;" class="col-md centralizar">email@email.com.br</div>
+  </div>
+  <br>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'js/js.js' %}"></script>
+<script>
+  window.onload = function(){
+    renderiza_total_vendido('{% url "retorna_total_vendido" %}');
+    renderiza_faturamento_mensal('{% url "relatorio_faturamento" %}');
+    renderiza_despesas_mensal();
+    renderiza_produtos_mais_vendidos('{% url "relatorio_produtos" %}');
+    renderiza_funcionario_mes('{% url "relatorio_funcionario" %}');
+  };
+</script>
+{% endblock %}

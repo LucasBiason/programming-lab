@@ -1,0 +1,628 @@
+{
+  "info": {
+    "_postman_id": "jury-ai-bloco2-2026",
+    "name": "Jury AI - API (Bloco 2)",
+    "description": "# Jury AI - Documentação da API\n\n## Visão geral\n\nAPI REST do projeto **Jury AI** (Bootcamp Pythonando - Construção da base). Todas as requisições (exceto Cadastro, Login e Refresh) devem enviar o header **Authorization: Bearer &lt;access_token&gt;**.\n\n## Variáveis de ambiente\n\n| Variável | Descrição | Exemplo |\n|----------|------------|--------|\n| `base_url` | URL base da API | http://localhost:8000 |\n| `user_email` | E-mail do usuário de teste | teste@jury.ai |\n| `user_password` | Senha do usuário de teste | senha1234 |\n| `auth_token` | JWT access (preenchido após Login/Cadastro) | — |\n| `refresh_token` | JWT refresh (preenchido após Login/Cadastro) | — |\n| `cliente_id` | ID de um cliente (preenchido após List/Create) | 1 |\n\n## Módulos\n\n| Módulo | Prefixo | Descrição |\n|--------|---------|----------|\n| Auth | /api/auth/ | Cadastro, login, refresh, perfil |\n| Clientes | /api/clientes/ | CRUD de clientes |\n| Documentos | /api/documents/ | Placeholder (IA/RAG) |\n| Chat | /api/chat/ | Placeholder (Chat IA) |\n",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": { "type": "noauth" },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "if (pm.environment.get('auth_token')) {",
+          "  pm.request.headers.upsert({ key: 'Authorization', value: 'Bearer ' + pm.environment.get('auth_token') });",
+          "}"
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "name": "Authentication",
+      "description": "Endpoints de **Cadastro**, **Login**, **Refresh Token** e **Me** (perfil). Login e Cadastro retornam `access` e `refresh`; use `access` no header Authorization nas demais requisições.",
+      "item": [
+        {
+          "name": "Cadastro",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "Obrigatório para body JSON"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{user_email}}\",\n  \"username\": \"teste\",\n  \"first_name\": \"Teste\",\n  \"last_name\": \"User\",\n  \"password\": \"{{user_password}}\",\n  \"password_confirm\": \"{{user_password}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/cadastro/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "cadastro", ""]
+            },
+            "description": "## POST /api/auth/cadastro/\n\nCria um novo usuário e retorna tokens JWT.\n\n### Parâmetros do body (JSON)\n\n| Campo | Tipo | Obrigatório | Descrição |\n|-------|------|-------------|----------|\n| email | string | Sim | E-mail único (será usado no login) |\n| username | string | Sim | Nome de usuário |\n| first_name | string | Não | Nome |\n| last_name | string | Não | Sobrenome |\n| password | string | Sim | Mínimo 8 caracteres |\n| password_confirm | string | Sim | Deve ser igual a password |\n\n### Resposta de sucesso (201)\n\n- `user`: objeto com id, email, username, first_name, last_name\n- `access`: JWT access token\n- `refresh`: JWT refresh token\n\n### Erros\n\n- **400** — Validação: senhas não coincidem, e-mail já existe, campo obrigatório ausente."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Cadastro 201 ou 400 (email já existe)', function () { pm.expect([201, 400]).to.include(pm.response.code); });",
+                  "var res = pm.response.json();",
+                  "if (res.access) { pm.environment.set('auth_token', res.access); }",
+                  "if (res.refresh) { pm.environment.set('refresh_token', res.refresh); }",
+                  "if (res.user && res.user.id) { pm.environment.set('user_id', res.user.id); }"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 201 - Usuário criado",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  { "key": "Content-Type", "value": "application/json" }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"email\": \"novo@jury.ai\", \"username\": \"novo\", \"first_name\": \"Novo\", \"last_name\": \"User\", \"password\": \"senha1234\", \"password_confirm\": \"senha1234\"}"
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"user\": {\n    \"id\": 1,\n    \"email\": \"novo@jury.ai\",\n    \"username\": \"novo\",\n    \"first_name\": \"Novo\",\n    \"last_name\": \"User\"\n  },\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\",\n  \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\"\n}"
+            },
+            {
+              "name": "❌ 400 - E-mail já existe",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  { "key": "Content-Type", "value": "application/json" }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"email\": \"existente@jury.ai\", \"username\": \"x\", \"password\": \"senha1234\", \"password_confirm\": \"senha1234\"}"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"email\": [\"user with this e-mail already exists.\"]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "Obrigatório"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{user_email}}\",\n  \"password\": \"{{user_password}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/token/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "token", ""]
+            },
+            "description": "## POST /api/auth/token/\n\nAutentica e retorna tokens JWT. Use o **access** no header `Authorization: Bearer <access>` nas próximas requisições.\n\n### Parâmetros do body (JSON)\n\n| Campo | Tipo | Obrigatório | Descrição |\n|-------|------|-------------|----------|\n| email | string | Sim | E-mail do usuário |\n| password | string | Sim | Senha |\n\n### Resposta de sucesso (200)\n\n- `access`: JWT access token\n- `refresh`: JWT refresh token\n- `user`: objeto com id, email, username, first_name, last_name\n\n### Erros\n\n- **400** — E-mail ou senha inválidos (`non_field_errors`)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "var res = pm.response.json();",
+                  "if (res.access) { pm.environment.set('auth_token', res.access); }",
+                  "if (res.refresh) { pm.environment.set('refresh_token', res.refresh); }",
+                  "if (res.user && res.user.id) { pm.environment.set('user_id', res.user.id); }"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 200 - Login OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  { "key": "Content-Type", "value": "application/json" }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"email\": \"teste@jury.ai\", \"password\": \"senha1234\"}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\",\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\",\n  \"user\": {\n    \"id\": 1,\n    \"email\": \"teste@jury.ai\",\n    \"username\": \"teste\",\n    \"first_name\": \"Teste\",\n    \"last_name\": \"User\"\n  }\n}"
+            },
+            {
+              "name": "❌ 400 - E-mail ou senha inválidos",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  { "key": "Content-Type", "value": "application/json" }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"email\": \"errado@jury.ai\", \"password\": \"errada\"}"
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"detail\": \"E-mail ou senha inválidos.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refresh\": \"{{refresh_token}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/token/refresh/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "token", "refresh", ""]
+            },
+            "description": "## POST /api/auth/token/refresh/\n\nRenova o **access token** usando o **refresh token**. Não requer Authorization.\n\n### Parâmetros do body (JSON)\n\n| Campo | Tipo | Obrigatório | Descrição |\n|-------|------|-------------|----------|\n| refresh | string | Sim | Refresh token JWT obtido no Login/Cadastro |\n\n### Resposta de sucesso (200)\n\n- `access`: novo JWT access token\n\n### Erros\n\n- **401** — Refresh token inválido ou expirado."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "var res = pm.response.json();",
+                  "if (res.access) { pm.environment.set('auth_token', res.access); }"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 200 - Novo access",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  { "key": "Content-Type", "value": "application/json" }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"refresh\": \"<refresh_token>\"}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Me (perfil)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/auth/me/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "me", ""]
+            },
+            "description": "## GET /api/auth/me/\n\nRetorna os dados do usuário autenticado. **Requer** header `Authorization: Bearer <access_token>`.\n\n### Resposta de sucesso (200)\n\nObjeto com: `id`, `email`, `username`, `first_name`, `last_name`.\n\n### Erros\n\n- **401** — Token ausente ou inválido."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "var res = pm.response.json();",
+                  "pm.expect(res).to.have.property('email');",
+                  "pm.expect(res).to.have.property('id');"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 200 - Perfil",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  { "key": "Authorization", "value": "Bearer <access_token>" }
+                ]
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"id\": 1,\n  \"email\": \"teste@jury.ai\",\n  \"username\": \"teste\",\n  \"first_name\": \"Teste\",\n  \"last_name\": \"User\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Clientes",
+      "description": "CRUD de **Clientes**. Todas as requisições exigem autenticação. Cada usuário vê apenas seus próprios clientes.",
+      "item": [
+        {
+          "name": "List Clientes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/clientes/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "clientes", ""]
+            },
+            "description": "## GET /api/clientes/\n\nLista todos os clientes do usuário logado.\n\n### Headers\n\n- **Authorization**: Bearer &lt;access_token&gt; (obrigatório)\n\n### Resposta de sucesso (200)\n\nArray de objetos cliente, cada um com: `id`, `nome`, `email`, `telefone`, `cpf_cnpj`, `observacoes`, `criado_em`, `atualizado_em`.\n\n### Erros\n\n- **401** — Não autenticado."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "var res = pm.response.json();",
+                  "pm.expect(res).to.be.an('array');",
+                  "if (res.length > 0 && res[0].id) { pm.environment.set('cliente_id', res[0].id); }"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 200 - Lista",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  { "key": "Authorization", "value": "Bearer <access_token>" }
+                ]
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "[\n  {\n    \"id\": 1,\n    \"nome\": \"Maria Silva\",\n    \"email\": \"maria@email.com\",\n    \"telefone\": \"11999990000\",\n    \"cpf_cnpj\": \"123.456.789-00\",\n    \"observacoes\": \"Cliente desde 2024\",\n    \"criado_em\": \"2026-02-07T18:00:00Z\",\n    \"atualizado_em\": \"2026-02-07T18:00:00Z\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Create Cliente",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Cliente Postman\",\n  \"email\": \"cliente@postman.com\",\n  \"telefone\": \"11999999999\",\n  \"cpf_cnpj\": \"\",\n  \"observacoes\": \"\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/clientes/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "clientes", ""]
+            },
+            "description": "## POST /api/clientes/\n\nCria um novo cliente vinculado ao usuário logado.\n\n### Parâmetros do body (JSON)\n\n| Campo | Tipo | Obrigatório | Descrição |\n|-------|------|-------------|----------|\n| nome | string | Sim | Nome do cliente |\n| email | string | Não | E-mail |\n| telefone | string | Não | Até 32 caracteres |\n| cpf_cnpj | string | Não | CPF ou CNPJ |\n| observacoes | string | Não | Texto livre |\n\n### Resposta de sucesso (201)\n\nObjeto cliente criado com `id`, `nome`, `email`, `telefone`, `cpf_cnpj`, `observacoes`, `criado_em`, `atualizado_em`.\n\n### Erros\n\n- **400** — Validação (ex.: nome vazio).\n- **401** — Não autenticado."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 201', function () { pm.response.to.have.status(201); });",
+                  "var res = pm.response.json();",
+                  "if (res.id) { pm.environment.set('cliente_id', res.id); }"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 201 - Cliente criado",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  { "key": "Content-Type", "value": "application/json" }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"nome\": \"Cliente Postman\", \"email\": \"cliente@postman.com\"}"
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"id\": 1,\n  \"nome\": \"Cliente Postman\",\n  \"email\": \"cliente@postman.com\",\n  \"telefone\": \"11999999999\",\n  \"cpf_cnpj\": \"\",\n  \"observacoes\": \"\",\n  \"criado_em\": \"2026-02-07T18:00:00Z\",\n  \"atualizado_em\": \"2026-02-07T18:00:00Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Cliente",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/clientes/{{cliente_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "clientes", "{{cliente_id}}", ""],
+              "variable": [
+                {
+                  "key": "cliente_id",
+                  "value": "1",
+                  "description": "ID do cliente (inteiro)"
+                }
+              ]
+            },
+            "description": "## GET /api/clientes/:id/\n\nRetorna o detalhe de um cliente. Só retorna se o cliente pertencer ao usuário logado.\n\n### Path parameters\n\n| Nome | Tipo | Descrição |\n|------|------|----------|\n| id | integer | ID do cliente |\n\n### Resposta de sucesso (200)\n\nObjeto com: `id`, `nome`, `email`, `telefone`, `cpf_cnpj`, `observacoes`, `criado_em`, `atualizado_em`.\n\n### Erros\n\n- **401** — Não autenticado.\n- **404** — Cliente não encontrado ou de outro usuário."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "var res = pm.response.json();",
+                  "pm.expect(res).to.have.property('nome');",
+                  "pm.expect(res).to.have.property('id');"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 200 - Detalhe",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  { "key": "Authorization", "value": "Bearer <access_token>" }
+                ]
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"id\": 1,\n  \"nome\": \"Maria Silva\",\n  \"email\": \"maria@email.com\",\n  \"telefone\": \"11999990000\",\n  \"cpf_cnpj\": \"123.456.789-00\",\n  \"observacoes\": \"Cliente desde 2024\",\n  \"criado_em\": \"2026-02-07T18:00:00Z\",\n  \"atualizado_em\": \"2026-02-07T18:00:00Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Cliente",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Cliente Atualizado\",\n  \"email\": \"cliente@postman.com\",\n  \"telefone\": \"11988887777\",\n  \"cpf_cnpj\": \"\",\n  \"observacoes\": \"Editado via Postman\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/clientes/{{cliente_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "clientes", "{{cliente_id}}", ""],
+              "variable": [
+                {
+                  "key": "cliente_id",
+                  "value": "1",
+                  "description": "ID do cliente"
+                }
+              ]
+            },
+            "description": "## PUT /api/clientes/:id/\n\nAtualiza um cliente. Envie **todos** os campos no body (PUT completo).\n\n### Path parameters\n\n| Nome | Tipo | Descrição |\n|------|------|----------|\n| id | integer | ID do cliente |\n\n### Body (JSON)\n\nMesmos campos do Create: `nome` (obrigatório), `email`, `telefone`, `cpf_cnpj`, `observacoes`.\n\n### Erros\n\n- **400** — Validação.\n- **401** — Não autenticado.\n- **404** — Cliente não encontrado."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 200 - Atualizado",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  { "key": "Content-Type", "value": "application/json" }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"nome\": \"Cliente Atualizado\", \"email\": \"c@c.com\", \"telefone\": \"\", \"cpf_cnpj\": \"\", \"observacoes\": \"\"}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"id\": 1,\n  \"nome\": \"Cliente Atualizado\",\n  \"email\": \"cliente@postman.com\",\n  \"telefone\": \"11988887777\",\n  \"cpf_cnpj\": \"\",\n  \"observacoes\": \"Editado via Postman\",\n  \"criado_em\": \"2026-02-07T18:00:00Z\",\n  \"atualizado_em\": \"2026-02-07T18:05:00Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Cliente",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/clientes/{{cliente_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "clientes", "{{cliente_id}}", ""],
+              "variable": [
+                {
+                  "key": "cliente_id",
+                  "value": "1",
+                  "description": "ID do cliente a excluir"
+                }
+              ]
+            },
+            "description": "## DELETE /api/clientes/:id/\n\nExclui um cliente. Retorna **204 No Content** sem body.\n\n### Path parameters\n\n| Nome | Tipo | Descrição |\n|------|------|----------|\n| id | integer | ID do cliente |\n\n### Erros\n\n- **401** — Não autenticado.\n- **404** — Cliente não encontrado."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 204', function () { pm.response.to.have.status(204); });"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 204 - Excluído",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  { "key": "Authorization", "value": "Bearer <access_token>" }
+                ]
+              },
+              "status": "No Content",
+              "code": 204,
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Documentos (IA)",
+      "description": "Placeholder para o módulo **Documentos - IA** (upload, RAG, petições).",
+      "item": [
+        {
+          "name": "Documentos - placeholder",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/documents/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "documents", ""]
+            },
+            "description": "## GET /api/documents/\n\nEndpoint placeholder. Retorna mensagem informando que o módulo está em construção."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "var res = pm.response.json();",
+                  "pm.expect(res).to.have.property('detail');"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 200 - Placeholder",
+              "originalRequest": { "method": "GET" },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"detail\": \"Documentos-IA: em construção (RAG, petições).\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat (IA)",
+      "description": "Placeholder para o módulo **Chat - IA**.",
+      "item": [
+        {
+          "name": "Chat - placeholder",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/chat/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "chat", ""]
+            },
+            "description": "## GET /api/chat/\n\nEndpoint placeholder. Retorna mensagem informando que o módulo está em construção."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "var res = pm.response.json();",
+                  "pm.expect(res).to.have.property('detail');"
+                ]
+              }
+            }
+          ],
+          "response": [
+            {
+              "name": "✅ 200 - Placeholder",
+              "originalRequest": { "method": "GET" },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"detail\": \"Chat-IA: em construção.\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
