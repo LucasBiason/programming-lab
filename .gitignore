@@ -1,3 +1,5 @@
-
-
+# Sessão e credenciais FIAP (nunca versionar)
+.fiap_session*.json
+.env
+.env.local
 
