@@ -3,3 +3,6 @@
 .env
 .env.local
 
+# Scripts FIAP — contexto privado dos agentes de estudo (não versionar)
+Resumos/FIAP-IA-para-Devs/scripts/
+
